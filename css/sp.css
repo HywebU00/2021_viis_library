@@ -1,0 +1,52 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/*.sp h2 { background: url(../images/h2_bg.gif) no-repeat left top; padding-top: 12px; padding-bottom: 19px; display: block; font-size: 1.2em; }
+.sp h2 span { padding-left: 65px; font-weight: bold; color: #0b90e1; }*/
+/*--------------------------------------*/
+.member { margin-right: 10px; margin-left: 10px; }
+/*.member h2 { background: url(../images/h2_bg.gif) no-repeat left top; padding-top: 12px; padding-bottom: 20px; display: block; font-size: 1.2em; }
+.member h2 span { padding-left: 65px; font-weight: bold; color: #0b90e1; }*/
+.member .desc .box { font-size: 0.938em; text-align: left; margin: 5px 0; padding: 10px 0; }
+.desc { margin: 10px 0; padding: 5px; background-color: #fbecd6; }
+.loginBlock { }
+.loginBlock caption { font-weight: bold; text-align: left; margin: 5px 0; }
+.loginBlock table { width: 100%; border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: #f6b37f; border-top-width: 1px; border-top-style: solid; border-top-color: #f6b37f; }
+.loginBlock table th { width: 200px; text-align: right; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #CCC; padding-right: 10px; }
+.loginBlock table td { padding: 5px; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #CCC; }
+.logoin { width: 100%; }
+.logoin caption { color: #C00; margin-bottom: 10px; }
+.logoin table { width: 50%; margin-top: 10px; margin-right: auto; margin-bottom: 10px; margin-left: auto; border: 1px solid #C9C9C9; }
+.logoin table th { width: 100px; text-align: right; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #FFF; padding-right: 5px; background-color: #EBEBEB; }
+.logoin table td { padding: 5px; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #CCC; }
+.logoin td .text { width: 90%; }
+.formBtn { text-align: center; margin: 5px 0; }
+/*.formBtn .btn { padding: 10px;}*/
+.formBtn2 { text-align: right; }
+/*---------------------------------------------------------------- start (A)*/
+.fontSet { margin: 15px 0 15px 15px; display: block; height: 100px; }
+#toggleFont { font-weight: bold; display: block; line-height: 2em; }
+#fontSwitcherLayer ul{margin: 0;padding: 0;}
+#fontSwitcherLayer li { display: inline; width: 48px; height: 48px; }
+#fontSwitcherLayer li a { float: left; margin: 15px 15px 15px 0; }
+.colorSet { margin: 15px 0 15px 15px; display: block; height: 100px; clear: both;}
+#toggleColor { font-weight: bold; line-height: 2em; }
+#colorSwitcherLayer { display: block; }
+#colorSwitcherLayer ul{margin: 0;padding: 0;}
+#colorSwitcherLayer li { display: inline; width: 48px; height: 48px; }
+#colorSwitcherLayer li a { float: left; margin: 15px 15px 15px 0; }
+/* #header { float: left; width: 100%; background-color: #52a3e4; font-size: 0.93em; line-height: normal; }
+#header ul { margin: 0; padding: 10px 10px 0 5px; list-style: none; }
+#header li { display: inline; margin: 0; padding: 0; }
+#header a { float: left; background: url("tableft.gif") no-repeat left top; margin: 0; padding: 0 0 0 4px; text-decoration: none; }
+#header a span { float: left; display: block; background: url("tabright.gif") no-repeat right top; padding: 5px 15px 4px 6px; color: #fff; }
+#header #current span { color: #222; } */
+/* Commented Backslash Hack hides rule from IE5-Mac \*/
+/* #header a span { float: none; } */
+/* End IE5-Mac hack */
+/* #header a:hover span { color: #FF9834; }
+#header a:hover { background-position: 0% -42px; }
+#header a:hover span { background-position: 100% -42px; }
+#header #current a { background-position: 0% -42px; }
+#header #current a span { background-position: 100% -42px; background: #fff; } */

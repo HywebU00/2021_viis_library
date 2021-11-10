@@ -1,0 +1,38 @@
+﻿@charset "utf-8";
+/* CSS Document */
+/*\\10.10.5.89\e$\GIP1.5\HyGIP\LayoutDesign\xconfig\template\style\webpac\css*/
+/*----------------------------------------------------------------header start (A)*/
+
+@charset "utf-8";
+/* CSS Document */
+
+html, body{
+	_text-align:center;
+	background:#000000;
+}
+body{
+	background:#000000;
+}
+footer{background: #000000!important;} 
+.wrap {
+	background:#000000;
+
+}
+.accesskey{
+	position:absolute;
+	text-decoration:none;
+	color:#FFFFFF;
+	filter:alpha(opacity=30);
+
+}
+.accesskey a{
+	filter:alpha(opacity=30);
+	font-size:0.4em;
+}
+a:hover {
+	color:#fff;
+	cursor: pointer;
+	background:#000;
+}
+a:active { color:#fff;background:#000;}
+

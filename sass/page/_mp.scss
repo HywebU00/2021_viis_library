@@ -1,0 +1,320 @@
+/////////////////////////////////////////////////////////以下為demo範例///
+// 首頁模組
+.slick-prev {
+    left: 3px;
+}
+.slick-next {
+    right: 3px;
+}
+%paragraph {
+    font-size: .938em;
+    margin: 0 auto .5em;
+    width: 90%;
+    display: block;
+    color: #444;
+}
+// more有顏色按鈕
+%more_color {
+    width: 100%;
+    color: #FFF;
+    background: $secondaryColor;
+    border: 1px solid $secondaryColor;
+    &:focus {
+        background: darken($secondaryColor, 10);
+        border: 1px solid darken($secondaryColor, 10);
+        &:before {
+            background: darken($secondaryColor, 20);
+        }
+    }
+}
+%time {
+    font-size: .9em;
+    margin: .2em auto .2em 0;
+    // max-width: 100px;
+    // @include border-radius(10px);
+    display: inline-block;
+    overflow: hidden;
+    color: #cc0000;
+    padding: .1em .5em;
+    vertical-align: middle;
+    // background: #F1F1F1;
+    &:before {
+        // display: inline-block;
+        // content: "";
+        // width: 12px;
+        // height: 15px;
+        // margin-right: .5em;
+        // background: url(../images/icon/icon_clock.svg) no-repeat center bottom;
+        // background-size: 10px;
+        // opacity: .5;
+    }
+}
+
+
+// 常用服務熱區
+.hot_service {
+    @include gutter;
+    ul {
+        @include li-reset;
+        text-align: center;
+        li {
+            vertical-align: top;
+            margin: 0px 0em 1em -4px;
+            width: 16%;
+            display: inline-block;
+            @include box-sizing;
+            @include screen('mobile') {
+                margin: 0px 0em 1em -4px;
+                @include box-sizing;
+                width: 32%; // outline: 1px solid red;
+            }
+            @include screen('xs_mobile') {
+                margin: 0px 0 1em;
+                @include gutter;
+                @include box-sizing;
+                width: 49%; // outline: 1px solid red;
+            }
+            a {
+                &:hover,
+                &:focus {
+                    .pic {
+                        background: darken($secondaryColor, 5);
+                    }
+                    h3 a {
+                        color: $secondaryColor;
+                    }
+                }
+            }
+            text-align: center;
+            .pic {
+                width: 100px;
+                height: 100px;
+                margin: 0 auto 1em;
+                @include border-radius(50%);
+                background: #888;
+                img {
+                    // object-fit: cover;
+                    margin: 20px auto 0;
+                    width: 60px;
+                    height: 60px;
+                }
+            }
+            h3 {
+                font-size: 1em;
+                text-align: center;
+                width: 80%;
+                line-height: 1.5em;
+                display: block;
+                height: 4.5em;
+                margin: 0px auto;
+                overflow: hidden;
+            }
+        }
+    }
+}
+
+.conbox{
+    margin: .5em 1em;
+    @include screen('xs_mobile') {
+       margin: .5em .3em; 
+   }
+}
+.s-inquiry{
+    margin: 1em 0;
+    .btn_grp{
+        text-align: left;
+    }
+}
+.searchMore{
+    input{
+        background: #fcb632;
+        color:#000;
+        border: none;
+    }
+}
+// book-browse
+.book-browse {
+    margin: 1em 0 2em;
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        overflow: hidden;
+        li {
+            @include make-xs-column(6);
+            @include make-sm-column(6);
+            @include make-md-column(3);
+            @include make-lg-column(3);
+            text-align: center;
+            margin: 1em 0;
+            img{
+                width: 60%;
+                margin: .5em auto;
+            }
+            h3{
+                text-align: center;
+                margin: 1em 0;
+            }
+        }
+    }
+}
+//user
+.user { 
+    position: relative;
+    top: .3em;
+    padding: 0;
+    z-index:99;
+    ul{
+        margin: 0;
+        padding: 0;
+        text-align: right;
+
+        li{
+            list-style: none; 
+            border-right-width: 1px; 
+            border-right-style: solid; 
+            border-right-color: #dcdcdc;
+            display: inline-block;
+            a{
+                display: block;
+                padding: 3px 10px 3px 10px;
+            }
+        }  
+    }
+    @include screen('mobile') {
+        top: .5em;
+    }
+}
+// mpbook
+.mpbook {
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        overflow: hidden;
+        li {
+            @include make-xs-column(6);
+            @include make-sm-column(6);
+            @include make-md-column(3);
+            @include make-lg-column(3);
+            text-align: center;
+            margin: .5em 0;
+            
+            .mlImg{
+                img{
+                    width: 60%;
+                    margin: .5em auto;
+                    @include screen('mobile') {
+                       width: 80%; 
+                   }
+               }    
+           }
+           .mlTitle{
+            text-align: center;
+            margin: 1em 0;
+            display: block;
+            height: 3em;
+            overflow: hidden;
+            @include screen('mobile') {
+                margin: .5em 0 .5em 1em;
+                text-align: left; 
+            }
+        }
+    }
+}
+.more{
+    clear: both;
+    margin-bottom: 3em;
+    a{
+        color: #ff6600;
+        background: url(../images/icon01.png) no-repeat left center; 
+        padding-left: 1em;
+        float: right;
+        &:hover{
+          color: #000;  
+      }
+  }
+}
+}
+
+.form_inline span{
+    display: inline-block;
+    img{
+        vertical-align: middle;
+        margin: -5px 0 0 0;
+    }
+}
+.webimg{
+    margin-left: 8px;
+    a{
+        display: inline-block;
+        color:#0068b7;
+        &:hover{
+            color:#f00;
+        }
+    }
+}
+
+.applink{
+    width: 100%;
+    height: 68px;
+    position: relative;
+    background: #333;
+    vertical-align: top;
+    z-index:99999;
+    display: none;
+    @include screen('mobile') {
+        display: block;
+
+    }
+    .close-icon{
+        width: 30px;
+        position: absolute;
+        left:3px;
+        top:22px;
+        a{
+            display: block;
+        }
+        img{
+            width: 24px;
+            height:24px;
+        }
+    }
+    .applogo{
+        display: inline-block;
+        margin: 10px 70px 0 32px;
+        vertical-align: top;
+        img{
+            width: 48px;
+            height: 48px;
+            margin-right: 5px;
+            float: left;
+            border-radius: 8px;
+        }
+        p{
+            margin: 0!important;
+            padding: 0!important;
+            color:#fff;
+            line-height: 1.2em;
+            font-size: .875em;
+            display: table-cell;
+            vertical-align: middle;
+            height: 50px;
+        }
+    }
+    .goapp-btn{
+        position: absolute;
+        top:20px;
+        right:5px;
+        a{
+            display: block;
+            color:#fff;
+            // border: solid 1px #ccc;
+            border-radius: 3px;
+            padding: 2px 5px;
+            font-size: .938em;
+            background: #ff6600;
+            font-weight: bold;
+        }
+    }
+}

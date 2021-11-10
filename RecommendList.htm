@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>國立臺灣圖書館視障電子資源整合查詢系統</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+  <![endif]-->
+  <!-- slick css-->
+  <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+  <!-- hyUI css -->
+  <link rel="stylesheet" href="css/hyui.css">
+  <link rel="stylesheet" type="text/css" href="css/design.css">
+</link>
+<link rel="alternate stylesheet" type="text/css" title="color1" cat="color" href="css/design1.css">
+</link>
+<link rel="alternate stylesheet" type="text/css" title="color2" cat="color" href="css/design2.css">
+</link>
+<link rel="alternate stylesheet" type="text/css" title="color3" cat="color" href="css/design3.css">
+</link>
+<link rel="alternate stylesheet" type="text/css" title="color4" cat="color" href="css/design4.css">
+</link>
+<link rel="alternate stylesheet" type="text/css" title="small" cat="font" href="css/fontS.css">
+</link>
+<link rel="alternate stylesheet" type="text/css" title="medium" cat="font" href="css/fontM.css">
+</link>
+<link rel="alternate stylesheet" type="text/css" title="large" cat="font" href="css/fontL.css">
+</link>
+<link rel="alternate stylesheet" type="text/css" title="other" cat="font" href="css/fontO.css">
+</link>
+<link rel="alternate stylesheet" type="text/css" title="bold01" cat="bold" href="css/otherO1.css">
+</link>
+<link rel="alternate stylesheet" type="text/css" title="bold02" cat="bold" href="css/otherO2.css">
+</link>
+<link rel="alternate stylesheet" type="text/css" title="bold03" cat="bold" href="css/otherO3.css">
+</link>
+<styleSwitcher cat="color"/>
+<styleSwitcher cat="font"/>
+<styleSwitcher cat="bold"/>
+<script src="js/cookies.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/Zoom.js"></script>
+<script type="text/javascript" src="js/styleswitcher.js"></script>
+<link href="js/dialog.css" rel="stylesheet"></link>
+<script src="js/dialog.js" type="text/javascript"></script>
+
+</head>
+
+<body id="aaa" onload="getFontSize('fontsize');">
+
+  <!-- 直接跳主內容區 -->
+  <a class="goCenter" href="#center" tabindex="0">按 Enter 到主內容區</a>
+  <!-- wrapper 最大寬度 -->
+  <div class="wrapper">
+    <!-- sidebar star -->
+    <aside class="sidebar">
+      <div class="m_area">
+        <nav class="menu">
+          <ul>
+            <li><a href="http://www.google.com" target="_blank">最新消息</a></li>
+            <li><a href="#">圖書資訊</a></li>
+            <li><a href="#">圖書精選</a></li>
+            <li><a href="#">資源教室</a></li>
+            <li><a href="#">資源網站</a></li>
+            <li><a href="#">常見問題</a></li>
+            <li><a href="#">聯絡我們</a></li>
+            <li><a href="#">網站統計</a></li>
+            <li class="hasChild"><a href="#">相關下載</a>
+              <ul style="display: none;">
+                <li><a target="_blank" title="IOS APP,另外新視窗" href="https://itunes.apple.com/tw/app/id934249135?mt=8">IOS APP</a></li>
+                <li><a target="_blank" title="Android APP,另外新視窗" href="https://play.google.com/store/apps/details?id=tw.edu.ntl.viis.ntl_vilib">Android APP</a></li>
+                <li><a title="電子書閱讀器下載" target="_blank" href="http://viis.ntl.edu.tw/reader/VNTLReaderSetup.exe">電子書閱讀器下載</a></li>
+              </ul>
+            </li>
+            <li><a href="#">問卷調查</a></li>
+          </ul>
+        </nav>
+        <nav class="navigation">
+          <!-- 一組ul預設靠右 可同時存在2組-->
+          <ul>
+            <li><a href="#">網站說明</a></li>
+            <li><a href="#">登入</a></li>
+            <li><a href="#">註冊</a></li>
+            <li><a href="#">回首頁</a></li>
+            <li><a href="#">回圖書館首頁</a></li>
+          </ul>
+
+        </nav>
+        <button type="button" class="sidebarClose">關閉</button>
+      </div>
+      <div class="menu_overlay"></div>
+    </aside>
+    <!-- sidebar end -->
+
+    <!-- header Start -->
+    <header class="header">
+      <div class="container">
+        <!-- sidebarCtrl star -->
+        <button type="button" class="sidebarCtrl">側欄選單<span></span><span></span><span></span></button>
+        <!-- sidebarCtrl end -->
+
+        <!-- navigation Start -->
+        <nav class="navigation">
+          <!-- 一組ul預設靠右 可同時存在2組-->
+          <ul>
+            <li><a class="accesskey" href="#aU" id="aU" accesskey="U" title="上方連結區">:::</a></li>
+            <li><a href="#">網站說明</a></li>
+            <li><a href="#">登入</a></li>
+            <li><a href="#">註冊</a></li>
+            <li><a href="#">回首頁</a></li>
+            <li><a href="#">回圖書館首頁</a></li>
+          </ul>
+        </nav>
+        <h1>
+          <a href="../index.htm"><img src="images/logo.png" alt="網站標題"/></a>
+        </h1>
+        <div class="update">
+          <ul>
+            <li>您好，歡迎光臨本網站！</li> 
+            <li>現在時間：<em>2019/6/12 下午 03:03:27</em></li>
+          </ul>
+        </div>
+
+        <!-- noscript -->
+        <noscript> 您的瀏覽器不支援JavaScript語法，JavaScript語法並不影響內容的陳述。您可使用按鍵盤上的Ctrl鍵+ (+)鍵放大/(-)鍵縮小來改變字型大小；回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←) 快速鍵功能；列印可使用瀏覽器提供的(Ctrl+P)功能。您的瀏覽器，不支援script語法，若您的瀏覽器無法支援請點選此超連結 <a href="#">網站導覽</a>
+        </noscript>
+
+      </div>
+    </header>
+    <!-- header End -->
+    <!-- main Start -->
+    <div id="center" class="main innerpage">
+      <div class="container">
+       <!-- menu Start -->
+       <div class="main_menu">
+        <nav class="menu">
+          <ul>
+            <li><a href="http://www.google.com" target="_blank">最新消息</a></li>
+            <li><a href="#">圖書資訊</a></li>
+            <li><a href="#">圖書精選</a></li>
+            <li><a href="#">資源教室</a></li>
+            <li><a href="#">資源網站</a></li>
+            <li><a href="#">常見問題</a></li>
+            <li><a href="#">聯絡我們</a></li>
+            <li><a href="#">網站統計</a></li>
+            <li><a href="#">相關下載</a>
+              <ul>
+                <li><a target="_blank" title="IOS APP,另外新視窗" href="https://itunes.apple.com/tw/app/id934249135?mt=8">IOS APP</a></li>
+                <li><a target="_blank" title="Android APP,另外新視窗" href="https://play.google.com/store/apps/details?id=tw.edu.ntl.viis.ntl_vilib">Android APP</a></li>
+                <li><a title="電子書閱讀器下載" target="_blank" href="http://viis.ntl.edu.tw/reader/VNTLReaderSetup.exe">電子書閱讀器下載</a></li>
+              </ul>
+            </li>
+            <li><a href="#">問卷調查</a></li>
+          </ul>
+        </nav>                   
+      </div>
+      <!-- menu end -->
+
+      <!-- content為一定要存在之內容區 -->
+      <div class="content">
+        <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
+        <!-- breadcrumb路徑 -->
+        <div class="breadcrumb">
+          <ul>
+            <li><a href="#">首頁</a></li>
+            <li><a href="#">個人專區</a></li>
+            <li><a href="#">圖書推薦</a></li>
+            <li>推薦書總覽</li>
+          </ul>
+        </div>
+        <!-- h2節點 -->
+        <!--字體放大縮小 Start-->
+        <div class="user">
+          <noscript><center>您的電腦不支援Script,可能會影響使用的順暢度,建議您開啟Script</center></noscript>
+          <ul> 
+            <li><a href="color.htm" title="顏色調配"><img src="images/color.gif" title="顏色調配" alt="顏色調配"></a></li>
+
+
+            <li><a href="#" title="字體放大" onfocus="document.captic101.src='images/large01.gif'" onblur="document.captic101.src='images/large.gif'" onmouseover="document.captic101.src='images/large01.gif'" onmouseout="document.captic101.src='images/large.gif'" onkeypress="fontZoomB()"><img src="images/large.gif" onclick="fontZoomB()" onkeypress="fontZoomB()" alt="字體放大" name="captic101"></a></li>
+            <li><a href="#" title="字體縮小" onfocus="document.captic100.src='images/small01.gif'" onblur="document.captic100.src='images/small.gif'" onmouseover="document.captic100.src='images/small01.gif'" onmouseout="document.captic100.src='images/small.gif'" onkeypress="fontZoomA()"><img src="images/small.gif" onclick="fontZoomA()" onkeypress="fontZoomA()" alt="字體縮小" name="captic100"></a></li></ul>
+            <noscript><div style="font-size:0.75em ;text-align:right"> 
+              當Script無法使用時，
+              請使用瀏覽器之字型縮放功能來縮放字型<br/>(IE6請利用鍵盤按住ALT鍵 + V → X → (G)最大(L)較大(M)中(S)較小(A)小，<br/>來選擇適合您的文字大小，而IE7以上或Firefox瀏覽器則可利用鍵盤<br/> Ctrl + (+)放大 (-)縮小 來改變字型大小。)， <br/>
+              或用以下連結內
+              <a href="sp.asp?xdurl=mp1ap/color_NS.asp&mp=1&ctNode=869" title="字體放大縮小">
+              字體放大縮小</a> </div>
+            </noscript>
+          </div>
+          <!--字體放大縮小 end-->
+
+          <!-- conbox Start -->
+          <h2 class="title">推薦書總覽</h2>
+          <!-- recommendList star -->
+          <div class="recommendList">
+            <form action="">
+              <!-- form_grp star -->
+              <div class="form_grp">
+                <!-- col40 star -->
+                <div class="col40">
+                  <label for="htx_select0"></label>
+                  <select name="htx_select0" id="htx_select0" size="1" title="查詢條件">
+                    <option value="0" selected="">書名</option>
+                    <option value="1">作者</option>
+                    <option value="2">出版社</option>
+                    <option value="3">推薦日期</option>
+                  </select>
+                </div>
+                <!-- col40 end -->
+                <!-- col80 star -->
+                <div class="col80">
+                  <input name="" type="text" placeholder="請輸入關鍵字"> 
+                </div>
+                <!-- col80 end -->                           
+              </div>
+              <!-- form_grp end -->
+              <!-- form_grp star -->
+              <div class="form_grp">
+                <!-- col20 star -->
+                <div class="col20">
+                  <select name="htx_opt1" id="htx_opt1" size="1" title="">
+                    <option value="AND" selected="">and</option>
+                    <option value="or">or</option>
+                    <option value="not">not</option>
+                  </select>
+                </div>
+                <!-- col20 end -->
+                <!-- col20 star -->
+                <div class="col20">
+                  <label for="htx_select1"></label>
+                  <select name="htx_select1" id="htx_select1" size="1" title="查詢條件">
+                    <option value="0">書名</option>
+                    <option value="1" selected="">作者</option>
+                    <option value="2">出版社</option>
+                    <option value="3">推薦日期</option>
+                  </select>
+                </div>
+                <!-- col20 end -->
+                <!-- col80 star -->
+                <div class="col80">
+                  <input name="" type="text" placeholder="請輸入關鍵字"> 
+                </div>
+                <!-- col80 end -->                           
+              </div>
+              <!-- form_grp end -->
+              <!-- form_grp star -->
+              <div class="form_grp">
+                <!-- col20 star -->
+                <div class="col20">
+                  <select name="htx_opt1" id="htx_opt1" size="1" title="">
+                    <option value="AND" selected="">and</option>
+                    <option value="or">or</option>
+                    <option value="not">not</option>
+                  </select>
+                </div>
+                <!-- col20 end -->
+                <!-- col20 star -->
+                <div class="col20">
+                  <label for="htx_select1"></label>
+                  <select name="htx_select1" id="htx_select1" size="1" title="查詢條件">
+                    <option value="0">書名</option>
+                    <option value="1" selected="">作者</option>
+                    <option value="2">出版社</option>
+                    <option value="3">推薦日期</option>
+                  </select>
+                </div>
+                <!-- col20 end -->
+                <!-- col80 star -->
+                <div class="col80">
+                  <input name="" type="text" placeholder="請輸入關鍵字"> 
+                </div>
+                <!-- col80 end -->                           
+              </div>
+              <!-- form_grp end -->
+
+              <!-- form_grp star -->
+              <div class="form_grp">
+                <!-- col20 star -->
+                <div class="col20">
+                  <select name="htx_opt1" id="htx_opt1" size="1" title="">
+                    <option value="AND" selected="">and</option>
+                    <option value="or">or</option>
+                    <option value="not">not</option>
+                  </select>
+                </div>
+                <!-- col20 end -->
+                <!-- col20 star -->
+                <div class="col20">
+                  <label for="htx_select1"></label>
+                  <select name="htx_select1" id="htx_select1" size="1" title="查詢條件">
+                    <option value="0">書名</option>
+                    <option value="1" selected="">作者</option>
+                    <option value="2">出版社</option>
+                    <option value="3">推薦日期</option>
+                  </select>
+                </div>
+                <!-- col20 end -->
+                <!-- col80 star -->
+                <div class="col80">
+                  <input name="" type="text" placeholder="請輸入關鍵字"> 
+                </div>
+                <!-- col80 end -->                           
+              </div>
+              <!-- form_grp end -->
+
+
+              <!-- btn_grp star -->
+              <div class="btn_grp">
+                <input name="" type="submit" value="搜尋" />
+                <input name="" type="reset" value="清除" />
+              </div>
+              <!-- btn_grp end -->
+            </form>
+          </div>
+          <!-- recommendList end -->
+          <!-- LP Start -->
+          <section class="lp">
+            <!-- 表格列表 -->
+            <div class="table_list">
+              <table summary="">
+                <caption>推薦書總覽列表</caption>
+                <thead>
+                  <tr>
+                    <th>序號</th>
+                    <th>書名</th>
+                    <th>作者</th>
+                    <th>出版社</th>
+                    <th>推薦時間</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td data-title="序號" class="num">1</td>
+                    <td data-title="書名" width="40%">豬神權杖</td>
+                    <td data-title="作者">築夢興</td>
+                    <td data-title="出版社">白像文化事業有限公司</td>
+                    <td data-title="推薦時間" class="date">2019/9/26 下午 04:33:00</td>
+                  </tr>
+                  <tr>
+                    <td data-title="序號" class="num">2</td>
+                    <td data-title="書名" width="40%">豬神權杖</td>
+                    <td data-title="作者">築夢興</td>
+                    <td data-title="出版社">白像文化事業有限公司</td>
+                    <td data-title="推薦時間" class="date">2019/9/26 下午 04:33:00</td>
+                  </tr>
+                  <tr>
+                    <td data-title="序號" class="num">3</td>
+                    <td data-title="書名" width="40%">豬神權杖</td>
+                    <td data-title="作者">築夢興</td>
+                    <td data-title="出版社">白像文化事業有限公司</td>
+                    <td data-title="推薦時間" class="date">2019/9/26 下午 04:33:00</td>
+                  </tr>
+                  <tr>
+                    <td data-title="序號" class="num">4</td>
+                    <td data-title="書名" width="40%">豬神權杖</td>
+                    <td data-title="作者">築夢興</td>
+                    <td data-title="出版社">白像文化事業有限公司</td>
+                    <td data-title="推薦時間" class="date">2019/9/26 下午 04:33:00</td>
+                  </tr>
+                  <tr>
+                    <td data-title="序號" class="num">5</td>
+                    <td data-title="書名" width="40%">豬神權杖</td>
+                    <td data-title="作者">築夢興</td>
+                    <td data-title="出版社">白像文化事業有限公司</td>
+                    <td data-title="推薦時間" class="date">2019/9/26 下午 04:33:00</td>
+                  </tr>
+
+                  <tr>
+                    <td data-title="序號" class="num">6</td>
+                    <td data-title="書名" width="40%">海棠依舊知否知否應是綠肥紅瘦-共七集</td>
+                    <td data-title="作者">關心則亂</td>
+                    <td data-title="出版社">知翎文化</td>
+                    <td data-title="推薦時間" class="date">2019/7/30 下午 04:33:00</td>
+                  </tr>
+                  <tr>
+                    <td data-title="序號" class="num">7</td>
+                    <td data-title="書名" width="40%">不要畫筆的繪畫教室：認識藝術的本質，你最需要的一堂課 絵筆のいらない絵画教室</td>
+                    <td data-title="作者">布施英利</td>
+                    <td data-title="出版社">如果出版社</td>
+                    <td data-title="推薦時間" class="date">2019/02/02 上午 11:21:00</td>
+                  </tr>
+                  <tr>
+                    <td data-title="序號" class="num">8</td>
+                    <td data-title="書名" width="40%">中國古代音樂史稿</td>
+                    <td data-title="作者">楊, 蔭瀏 著</td>
+                    <td data-title="出版社">丹青出版</td>
+                    <td data-title="推薦時間" class="date">2017/10/26 下午 10:04:00</td>
+                  </tr>
+                  <tr>
+                    <td data-title="序號" class="num">9</td>
+                    <td data-title="書名" width="40%">「小的」臺灣史</td>
+                    <td data-title="作者">蔡承豪等撰文</td>
+                    <td data-title="出版社">玉山社</td>
+                    <td data-title="推薦時間" class="date">2017/10/23 下午 06:31:00</td>
+                  </tr>
+                  <tr>
+                    <td data-title="序號" class="num">10</td>
+                    <td data-title="書名" width="40%">中國音樂史</td>
+                    <td data-title="作者"></td>
+                    <td data-title="出版社"></td>
+                    <td data-title="推薦時間" class="date">2017/10/08 上午 08:41:00</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+          <!-- LP End -->
+          <!-- Pagination -->
+          <div class="pagination">
+            <form action="" class="form_inline">
+              <div class="total"> 共<span>308</span>筆資料，第<span>1/18</span>頁，每頁顯示 <select name="" id="">
+                <option value="">10</option>
+                <option value="">20</option>
+                <option value="">30</option>
+                <option value="">40</option>
+              </select> 筆， <input type="button" class="btn" value="確定">
+            </div>
+          </form>
+        </div>
+
+        <!-- function功能區塊 -->
+        <div class="function">
+          <ul>
+            <li><a href="#">回上一頁</a></li>
+          </ul>
+        </div>
+
+        <!-- conbox End -->
+      </div>
+    </div>
+  </div>
+  <!-- fatfooter Start -->
+  <section class="fatfooter">
+    <div class="container">
+      <button type="button" name="收合" class="btn btn-fatfooter">收合</button>
+      <nav>
+        <ul>
+          <li><a href="http://www.google.com" target="_blank">最新消息</a></li>
+          <li><a href="#">圖書資訊</a></li>
+          <li><a href="#">圖書精選</a></li>
+          <li><a href="#">資源教室</a></li>
+          <li><a href="#">資源網站</a></li>
+          <li><a href="#">常見問題</a></li>
+          <li><a href="#">聯絡我們</a></li>
+          <li><a href="#">網站統計</a></li>
+          <li><a href="#">相關下載</a>
+            <ul>
+              <li><a target="_blank" title="IOS APP,另外新視窗" href="https://itunes.apple.com/tw/app/id934249135?mt=8">IOS APP</a></li>
+              <li><a target="_blank" title="Android APP,另外新視窗" href="https://play.google.com/store/apps/details?id=tw.edu.ntl.viis.ntl_vilib">Android APP</a></li>
+              <li><a title="電子書閱讀器下載" target="_blank" href="http://viis.ntl.edu.tw/reader/VNTLReaderSetup.exe">電子書閱讀器下載</a></li>
+            </ul>
+          </li>
+          <li><a href="#">問卷調查</a></li>
+        </ul>
+      </nav>
+    </div>
+  </section>
+  <!-- footer -->
+  <footer>
+    <div class="container">
+      <a class="accesskey" href="#aF" id="aF" accesskey="F" title="頁尾區">:::</a>
+      <div class="footer_icon">
+        <a target="_blank" href="#" title="">
+          <img src="images/basic/aaa.jpg" alt="">
+        </a>
+        <div class="counter">瀏覽人次:<em>46476653</em></div>
+      </div>
+      <div class="footer_info">
+        <ul class="footer_link">
+          <li><a href="http://www.ntl.edu.tw/ct.asp?xItem=1102&amp;ctNode=1869&amp;mp=1" target="_blank" title="隱私權保護政策">隱私權保護政策</a></li>
+          <li><a href="http://www.ntl.edu.tw/ct.asp?xItem=59993&amp;ctNode=1783&amp;mp=1" target="_blank" title="資訊安全政策">資訊安全政策</a></li>
+          <li><a href="ct.asp?xItem=145981&amp;ctNode=708&amp;mp=1" title="APP隱私權保護政策">APP隱私權保護政策</a></li>
+        </ul>
+        <p class="copyright">館址：23574 <a href="https://maps.google.com.tw/maps?q=%E5%9C%8B%E7%AB%8B%E5%8F%B0%E7%81%A3%E5%9C%96%E6%9B%B8%E9%A4%A8&amp;hl=zh-TW&amp;ie=UTF8&amp;ll=25.003367,121.512222&amp;spn=0.008187,0.015278&amp;cid=854761177722451895&amp;gl=TW&amp;t=m&amp;z=16&amp;iwloc=A&amp;brcurrent=3,0x3442a9c2a0f41215:0xb2aee41d223e5dca,0,0x345d5538b0b6645f:0x5aa90dfa6620edc0&amp;output=classic&amp;dg=brw" class="Map_link" title="Google Map(另開新視窗)" target="_blank">
+        新北市中和區中安街八十五號</a> 電話：（02）2926-6888 視障資料中心服務專線（02）2926-1470 傳真 （02） 2926-3253 <br>No.85 Zhong-an St., Zhonghe District, New Taipei City 23574, Taiwan (R.O.C) 
+        TEL：（+886）2-2926-6888  FAX：（+886）2-2926-3253  <br>
+      系統操作諮詢電話 :(02)2926-1470 E-Mail:viic@mail.ntl.edu.tw 服務時間:週一到週五 09:00-17:00</p>
+    </div>
+
+  </div>
+</footer>
+</div>
+<a href="javascript:;" class="scrollToTop">回頁首</a>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="vendor/jquery.easing.min.js"></script>
+<!-- lazyload -->
+<script src="vendor/lazyload/lazyload.min.js"></script>
+<!-- slick js -->
+<script src="vendor/slick/slick.min.js "></script>
+<script src="vendor/slick/slick-lightbox.js "></script>
+<!-- hyUI -->
+<script src="js/hyui.js"></script>
+<!-- 客製js -->
+<script src="js/customize.js"></script>
+</body>
+
+</html>

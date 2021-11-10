@@ -1,0 +1,951 @@
+<!doctype html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>國立臺灣圖書館視障電子資源整合查詢系統</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+<![endif]-->
+<!-- slick css-->
+<link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
+<link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+<!-- hyUI css -->
+<link rel="stylesheet" href="css/hyui.css">
+<link rel="stylesheet" type="text/css" href="css/design.css">
+</link>
+<link rel="alternate stylesheet" type="text/css" title="color1" cat="color" href="css/design1.css">
+</link>
+<link rel="alternate stylesheet" type="text/css" title="color2" cat="color" href="css/design2.css">
+</link>
+<link rel="alternate stylesheet" type="text/css" title="color3" cat="color" href="css/design3.css">
+</link>
+<link rel="alternate stylesheet" type="text/css" title="color4" cat="color" href="css/design4.css">
+</link>
+<link rel="alternate stylesheet" type="text/css" title="small" cat="font" href="css/fontS.css">
+</link>
+<link rel="alternate stylesheet" type="text/css" title="medium" cat="font" href="css/fontM.css">
+</link>
+<link rel="alternate stylesheet" type="text/css" title="large" cat="font" href="css/fontL.css">
+</link>
+<link rel="alternate stylesheet" type="text/css" title="other" cat="font" href="css/fontO.css">
+</link>
+<link rel="alternate stylesheet" type="text/css" title="bold01" cat="bold" href="css/otherO1.css">
+</link>
+<link rel="alternate stylesheet" type="text/css" title="bold02" cat="bold" href="css/otherO2.css">
+</link>
+<link rel="alternate stylesheet" type="text/css" title="bold03" cat="bold" href="css/otherO3.css">
+</link>
+<styleSwitcher cat="color"/>
+<styleSwitcher cat="font"/>
+<styleSwitcher cat="bold"/>
+<script src="js/cookies.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/Zoom.js"></script>
+<script type="text/javascript" src="js/styleswitcher.js"></script>
+<link href="js/dialog.css" rel="stylesheet"></link>
+<script src="js/dialog.js" type="text/javascript"></script>
+<!-- Accessibility-->
+<link rel="stylesheet" href="css/radio.css">
+<link rel="stylesheet" href="css/checkbox.css">
+<script src="js/radioGroup.js" type="text/javascript"></script>
+<script src="js/radioButton.js" type="text/javascript"></script>
+<script src="js/checkbox.js" type="text/javascript"></script>
+</head>
+
+<body id="aaa" onload="getFontSize('fontsize');">
+    <!-- 直接跳主內容區 -->
+    <a class="goCenter" href="#aC" tabindex="0">按 Enter 到主內容區</a>
+    <!-- applink star -->
+    <div class="applink">
+        <span class="close-icon"><a href="#"><img src="images/close-icon.png" alt="關閉"></a></span>
+        <span class="applogo">
+            <img src="images/690x0w.png" alt="">
+            <p>下載國立臺灣圖書館視障隨身聽APP，輕鬆地享受閱讀的樂趣。</p>
+        </span>
+        <span class="goapp-btn"><a href="#">立即體驗</a></span>
+    </div>
+    <!-- applink end -->
+
+    <!-- wrapper 最大寬度 -->
+    <div class="wrapper">
+        <!-- sidebar star -->
+        <aside class="sidebar">
+            <div class="m_area">
+                <nav class="navigation">
+                    <!-- 一組ul預設靠右 可同時存在2組-->
+                    <ul>
+                        <li><a href="#">網站說明</a></li>
+                        <li><a href="#">登入</a></li>
+                        <li><a href="#">註冊</a></li>
+                        <li><a href="#">回首頁</a></li>
+                        <li><a href="#">回圖書館首頁</a></li>
+                    </ul>
+                </nav>
+                <nav class="menu">
+                    <ul>
+                        <li><a href="http://www.google.com" target="_blank">最新消息</a></li>
+                        <li><a href="#">圖書資訊</a></li>
+                        <li><a href="#">圖書精選</a></li>
+                        <li><a href="#">資源教室</a></li>
+                        <li><a href="#">資源網站</a></li>
+                        <li><a href="#">常見問題</a></li>
+                        <li><a href="#">聯絡我們</a></li>
+                        <li><a href="#">網站統計</a></li>
+                        <li class="hasChild"><a href="#">相關下載</a>
+                            <ul style="display: none;">
+                                <li><a target="_blank" title="IOS APP,另外新視窗" href="https://itunes.apple.com/tw/app/id934249135?mt=8">IOS APP</a></li>
+                                <li><a target="_blank" title="Android APP,另外新視窗" href="https://play.google.com/store/apps/details?id=tw.edu.ntl.viis.ntl_vilib">Android APP</a></li>
+                                <li><a title="電子書閱讀器下載" target="_blank" href="http://viis.ntl.edu.tw/reader/VNTLReaderSetup.exe">電子書閱讀器下載</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">問卷調查</a></li>
+                    </ul>
+                </nav>
+
+                <button type="button" class="sidebarClose">關閉</button>
+            </div>
+            <div class="menu_overlay"></div>
+        </aside>
+        <!-- sidebar end -->
+
+        <!-- header Start -->
+        <header class="header">
+            <div class="container">
+                <!-- sidebarCtrl star -->
+                <button type="button" class="sidebarCtrl">側欄選單<span></span><span></span><span></span></button>
+                <!-- sidebarCtrl end -->
+                
+                <!-- navigation Start -->
+                <nav class="navigation">
+
+                    <!-- 一組ul預設靠右 可同時存在2組-->
+                    <ul>
+                        <li><a class="accesskey" href="#aU" id="aU" accesskey="U" title="上方連結區">:::</a></li>
+                        <li><a href="#">網站說明</a></li>
+                        <li><a href="#">登入</a></li>
+                        <li><a href="#">註冊</a></li>
+                        <li><a href="#">回首頁</a></li>
+                        <li><a href="#">回圖書館首頁</a></li>
+                    </ul>
+                </nav>
+                <h1>
+                    <a href="../index.htm"><img src="images/logo.png" alt="網站標題"/></a>
+                </h1>
+                <div class="update">
+                    <ul>
+                        <li>您好，歡迎光臨本網站！</li> 
+                        <li>現在時間：<em>2019/6/12 下午 03:03:27</em></li>
+                    </ul>
+                </div>
+
+                <!-- noscript -->
+                <noscript> 您的瀏覽器不支援JavaScript語法，JavaScript語法並不影響內容的陳述。您可使用按鍵盤上的Ctrl鍵+ (+)鍵放大/(-)鍵縮小來改變字型大小；回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←) 快速鍵功能；列印可使用瀏覽器提供的(Ctrl+P)功能。您的瀏覽器，不支援script語法，若您的瀏覽器無法支援請點選此超連結 <a href="#">網站導覽</a>
+                </noscript>
+
+            </div>
+        </header>
+        <!-- header End -->
+        <!-- main Start -->
+        <div id="center" class="main innerpage">
+            <div class="container">
+                <a class="accesskey" href="#aL" id="aL" accesskey="L" title="左欄選單區">:::</a>
+                <!-- menu Start -->
+                <div class="main_menu">
+                    <nav class="menu">
+                        <ul>
+                            <li><a href="http://www.google.com" target="_blank">最新消息</a></li>
+                            <li><a href="#">圖書資訊</a></li>
+                            <li><a href="#">圖書精選</a></li>
+                            <li><a href="#">資源教室</a></li>
+                            <li><a href="#">資源網站</a></li>
+                            <li><a href="#">常見問題</a></li>
+                            <li><a href="#">聯絡我們</a></li>
+                            <li><a href="#">網站統計</a></li>
+                            <li><a href="#">相關下載</a>
+                                <ul>
+                                    <li><a target="_blank" title="IOS APP,另外新視窗" href="https://itunes.apple.com/tw/app/id934249135?mt=8">IOS APP</a></li>
+                                    <li><a target="_blank" title="Android APP,另外新視窗" href="https://play.google.com/store/apps/details?id=tw.edu.ntl.viis.ntl_vilib">Android APP</a></li>
+                                    <li><a title="電子書閱讀器下載" target="_blank" href="http://viis.ntl.edu.tw/reader/VNTLReaderSetup.exe">電子書閱讀器下載</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">問卷調查</a></li>
+                        </ul>
+                    </nav>                   
+                </div>
+                <!-- menu end -->
+
+                <!-- content為一定要存在之內容區 -->
+                <div class="content">
+                    <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
+
+                    <!--字體放大縮小 Start-->
+                    <div class="user">
+                        <noscript><center>您的電腦不支援Script,可能會影響使用的順暢度,建議您開啟Script</center></noscript>
+                        <ul> 
+                            <li><a href="color.htm" title="顏色調配"><img src="images/color.gif" title="顏色調配" alt="顏色調配"></a></li>
+
+
+                            <li><a href="#" title="字體放大" onfocus="document.captic101.src='images/large01.gif'" onblur="document.captic101.src='images/large.gif'" onmouseover="document.captic101.src='images/large01.gif'" onmouseout="document.captic101.src='images/large.gif'" onkeypress="fontZoomB()"><img src="images/large.gif" onclick="fontZoomB()" onkeypress="fontZoomB()" alt="字體放大" name="captic101"></a></li>
+                            <li><a href="#" title="字體縮小" onfocus="document.captic100.src='images/small01.gif'" onblur="document.captic100.src='images/small.gif'" onmouseover="document.captic100.src='images/small01.gif'" onmouseout="document.captic100.src='images/small.gif'" onkeypress="fontZoomA()"><img src="images/small.gif" onclick="fontZoomA()" onkeypress="fontZoomA()" alt="字體縮小" name="captic100"></a></li></ul>
+                            <noscript><div style="font-size:0.75em ;text-align:right"> 
+                                當Script無法使用時，
+                                請使用瀏覽器之字型縮放功能來縮放字型<br/>(IE6請利用鍵盤按住ALT鍵 + V → X → (G)最大(L)較大(M)中(S)較小(A)小，<br/>來選擇適合您的文字大小，而IE7以上或Firefox瀏覽器則可利用鍵盤<br/> Ctrl + (+)放大 (-)縮小 來改變字型大小。)， <br/>
+                                或用以下連結內
+                                <a href="sp.asp?xdurl=mp1ap/color_NS.asp&mp=1&ctNode=869" title="字體放大縮小">
+                                字體放大縮小</a> </div>
+                            </noscript>
+                        </div>
+                        <!--字體放大縮小 end-->
+                        <!-- webimg star -->
+                        <div class="webimg">
+                            <a href="#" id="SearchHelp" tabindex="0" class="mlLink">
+                                <img src="images/web.png" alt="操作說明，另開懸浮視窗" title="操作說明，另開懸浮視窗"> </a>
+                                <!-- <a href="#" alt="搜尋最新消息，另開懸浮視窗" title="搜尋最新消息，另開懸浮視窗" id="btn_news">搜尋最新消息</a> -->
+                            </div>
+                            <!-- webimg end -->
+                            <!-- conbox Start -->
+                            <h2 class="title">書目查詢</h2>
+                            <div class="conbox">
+                                <!-- 書目查詢 star -->
+                                <form action="" class="s-inquiry">
+                                    <!-- redio Accessibility -->
+                                    <div role="radiogroup"
+                                    aria-labelledby="group_label_1"
+                                    id="rg1">
+                                    <label id="group_label_1">
+                                        輸入方式：
+                                    </label>
+                                    <div role="radio"
+                                    aria-checked="false"
+                                    tabindex="0">
+                                    國字輸入
+                                </div>
+                                <div role="radio"
+                                aria-checked="false"
+                                tabindex="-1">
+                                點字輸入
+                            </div>
+                        </div>
+
+                        <script type="text/javascript">
+                          var rg1 = new RadioGroup(document.getElementById('rg1'));
+                          rg1.init();
+                      </script>
+                      <!-- redio Accessibility end -->
+
+                      <div class="form_grp form_inline">
+                        <select>
+                            <option value="TI">題名</option>
+                            <option value="PN">作者</option>
+                            <option value="ISBN">ISBN</option>
+                            <option value="ACN">條碼號</option>
+                            <option value="CNO">索書號</option>
+                            <option value="FullText">關鍵字</option>
+                        </select>
+                        <input type="text" placeholder="請輸入查詢詞" class="keyboardInput" value="">
+                        <div class="recent_searches" style="display: block; position: absolute; width: auto; background-color: white; border: 1px solid rgb(238, 238, 238); box-shadow: rgb(153, 153, 153) 0px 2px 2px; padding: .5em 1em 1em; box-sizing: border-box; z-index: 9; cursor: pointer; max-height:8em;max-width: 22em; overflow-y: auto;"><ul class="promptword"><li tabindex="0">我和我的孩子</li><li tabindex="0">我們現代人</li><li tabindex="0">我的第一步</li><li tabindex="0">我殺的人與殺我的人</li><li tabindex="0">我的小馬桶—男生</li><li tabindex="0">我家有個花‧果‧菜‧園</li><li tabindex="0">我想要朋友</li><li tabindex="0">我為什麼快樂？</li><li tabindex="0">我看見一隻鳥</li><li tabindex="0">我家有個</li><li tabindex="0">我和我的</li><li tabindex="0">我長大了</li><li tabindex="0">我家有個花果菜園</li><li tabindex="0">我的衣裳</li><li tabindex="0">我絕對絕對不吃番茄</li><li tabindex="0">我討厭女生</li><li tabindex="0">我討厭男生</li><li tabindex="0">我做得到</li><li tabindex="0">我家有個遊樂園</li><li tabindex="0">我會這樣做</li><li tabindex="0">我的小馬桶</li><li tabindex="0">我用菜市場理財法, 從月光族變富媽媽:運用菜市場大媽都懂的常識法則, 掌握投資竅門, 國文老師身家暴漲五千萬!</li><li tabindex="0">我好喜歡爸爸</li><li tabindex="0">我的冤家</li><li tabindex="0">我的野蠻</li><li tabindex="0">我的親親壞姊姊</li><li tabindex="0">我家有個烏龜園</li><li tabindex="0">我被霸凌了</li><li tabindex="0">我媽的異國婚姻</li><li tabindex="0">我想養寵物</li></ul></div>
+                        <span><a><img src="images/plus1.png" tabindex="0" alt="增加搜尋框" name="add_field_button"></a></span>
+
+                    </div>
+
+                                    <!-- <div class="form_grp form_inline">
+                                        <label>
+                                            <input name="bookname" type="text" placeholder="書名">
+                                            <input name="bookname" type="text" placeholder="請輸入查詢詞">
+                                            <div class="recent_searches" style="display: block; position: absolute; width: auto; background-color: white; border: 1px solid rgb(238, 238, 238); box-shadow: rgb(153, 153, 153) 0px 2px 2px; padding: 20px; box-sizing: border-box; z-index: 99; cursor: pointer;"><ul class="promptword"><li tabindex="0">我和我的孩子</li><li tabindex="0">我們現代人</li><li tabindex="0">我的第一步</li><li tabindex="0">我殺的人與殺我的人</li><li tabindex="0">我的小馬桶—男生</li><li tabindex="0">我家有個花‧果‧菜‧園</li><li tabindex="0">我想要朋友</li><li tabindex="0">我為什麼快樂？</li><li tabindex="0">我看見一隻鳥</li><li tabindex="0">我家有個</li><li tabindex="0">我和我的</li><li tabindex="0">我長大了</li><li tabindex="0">我家有個花果菜園</li><li tabindex="0">我的衣裳</li><li tabindex="0">我絕對絕對不吃番茄</li><li tabindex="0">我討厭女生</li><li tabindex="0">我討厭男生</li><li tabindex="0">我做得到</li><li tabindex="0">我家有個遊樂園</li><li tabindex="0">我會這樣做</li><li tabindex="0">我的小馬桶</li><li tabindex="0">我用菜市場理財法, 從月光族變富媽媽:運用菜市場大媽都懂的常識法則, 掌握投資竅門, 國文老師身家暴漲五千萬!</li><li tabindex="0">我好喜歡爸爸</li><li tabindex="0">我的冤家</li><li tabindex="0">我的野蠻</li><li tabindex="0">我的親親壞姊姊</li><li tabindex="0">我家有個烏龜園</li><li tabindex="0">我被霸凌了</li><li tabindex="0">我媽的異國婚姻</li><li tabindex="0">我想養寵物</li></ul></div>
+                                            <span>
+                                                <a href="#"><img src="images/plus1.png" tabindex="0" alt="增加搜尋框" name="add_field_button" id="add_field_button"></a>
+                                            </span>
+                                        </label>
+                                    </div> -->
+                                    <div class="searchMore">
+                                        <input name="" type="submit" value="更多搜尋選項" />
+                                    </div>  
+                                    <div class="btn_grp">
+                                        <input name="" type="submit" value="查詢" />
+                                        <input name="" type="reset" value="清除輸入" />
+                                        <input name="" type="submit" value="查詢紀錄" />
+
+                                    </div>
+                                </form>
+                                <!-- 書目查詢 end -->
+                                <!-- 圖書瀏覽 star -->
+                                <h2>圖書瀏覽</h2>
+                                <div class="book-browse">
+                                    <ul>
+                                        <li>
+                                            <a href="#"><img src="images/201921312418.png" alt="分類瀏覽圖示"><h3>分類瀏覽</h3></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="images/201921312427.png" alt="適用年齡圖示"><h3>適用年齡</h3></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="images/201921312436.png" alt="資料類型瀏覽圖示"><h3>資料類型瀏覽</h3></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="images/201921312444.png" alt="主題瀏覽圖示"><h3>主題瀏覽</h3></a>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                                <!-- 圖書瀏覽 end -->
+                                <!-- 新進圖書 star -->
+                                <h2>新進圖書(共82筆)</h2>
+                                <div class="mpbook">
+                                 <ul>
+                                    <li>
+                                        <a href="#" title="三國到底怎麼回事?(開啟懸浮視窗)">
+                                            <span class="mlImg"> 
+                                                <img src="images/getImage1.jpg" alt="三國到底怎麼回事?" title="三國到底怎麼回事?">
+                                            </span> 
+                                            <span class="mlTitle">三國到底怎麼回事?</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="三國到底怎麼回事?(開啟懸浮視窗)">
+                                            <span class="mlImg"> 
+                                                <img src="images/getImage1.jpg" alt="三國到底怎麼回事?" title="三國到底怎麼回事?">
+                                            </span> 
+                                            <span class="mlTitle">三國到底怎麼回事?</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="聽不見的聲音(開啟懸浮視窗)">
+                                            <span class="mlImg"> 
+                                                <img src="images/getImage1.jpg" alt="聽不見的聲音" title="聽不見的聲音">
+                                            </span> 
+                                            <span class="mlTitle">三國到底怎麼回事?</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="走音天后(開啟懸浮視窗)">
+                                            <span class="mlImg"> 
+                                                <img src="images/getImage1.jpg" alt="走音天后" title="走音天后">
+                                            </span> 
+                                            <span class="mlTitle">走音天后</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="相信自己,你最棒!(開啟懸浮視窗)">
+                                            <span class="mlImg"> 
+                                                <img src="images/getImage1.jpg" alt="相信自己,你最棒!" title="相信自己,你最棒!">
+                                            </span> 
+                                            <span class="mlTitle">相信自己,你最棒!</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="more"><a href="#" title="更多新進圖書">更多新進圖書</a></div>
+                            </div>
+                            <!-- 新進圖書 end -->
+                            <!-- 圖書製作預告 star -->
+                            <h2>圖書製作預告列表(共199筆)</h2>
+                            <div class="mpbook">
+                             <ul>
+                                <li>
+                                    <a href="#" title="三國到底怎麼回事?(開啟懸浮視窗)">
+                                        <span class="mlImg"> 
+                                            <img src="images/getImage1.jpg" alt="三國到底怎麼回事?" title="三國到底怎麼回事?">
+                                        </span> 
+                                        <span class="mlTitle">三國到底怎麼回事?</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" title="三國到底怎麼回事?(開啟懸浮視窗)">
+                                        <span class="mlImg"> 
+                                            <img src="images/getImage1.jpg" alt="三國到底怎麼回事?" title="三國到底怎麼回事?">
+                                        </span> 
+                                        <span class="mlTitle">三國到底怎麼回事?</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" title="聽不見的聲音(開啟懸浮視窗)">
+                                        <span class="mlImg"> 
+                                            <img src="images/getImage1.jpg" alt="聽不見的聲音" title="聽不見的聲音">
+                                        </span> 
+                                        <span class="mlTitle">三國到底怎麼回事?</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" title="走音天后(開啟懸浮視窗)">
+                                        <span class="mlImg"> 
+                                            <img src="images/getImage1.jpg" alt="走音天后" title="走音天后">
+                                        </span> 
+                                        <span class="mlTitle">走音天后</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="more"><a href="#" title="更多圖書製作預告">更多圖書製作預告</a></div>
+                        </div>
+                        <!-- 圖書製作預告 end -->
+                        <!-- 搶鮮試閱 star -->
+                        <h2>搶鮮試閱(共82筆)</h2>
+                        <div class="mpbook">
+                         <ul>
+                            <li>
+                                <a href="#" title="三國到底怎麼回事?(開啟懸浮視窗)">
+                                    <span class="mlImg"> 
+                                        <img src="images/getImage1.jpg" alt="三國到底怎麼回事?" title="三國到底怎麼回事?">
+                                    </span> 
+                                    <span class="mlTitle">三國到底怎麼回事?</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" title="三國到底怎麼回事?(開啟懸浮視窗)">
+                                    <span class="mlImg"> 
+                                        <img src="images/getImage1.jpg" alt="三國到底怎麼回事?" title="三國到底怎麼回事?">
+                                    </span> 
+                                    <span class="mlTitle">三國到底怎麼回事?</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                        <div class="more"><a href="#" title="更多搶鮮試閱">更多搶鮮試閱</a></div>
+                    </div>
+                    <!-- 搶鮮試閱 end -->
+                </div>
+
+                <!-- conbox End -->
+
+                <!-- dialog star 1090708-->
+                <div class="dialog-backdrop active">
+                   <div role="dialog" id="react-aria-modal-dialog" class="default_dialog" aria-label="modal">
+                       <div class="mp">
+                           <h2 tabindex="0">書目查詢</h2>
+                           <form>
+                               <div class="page">
+
+                                <!-- redio Accessibility -->
+                                <div role="radiogroup"
+                                aria-labelledby="group_label_2"
+                                id="rg2">
+                                <label id="group_label_2">
+                                    輸入方式：
+                                </label>
+                                <div role="radio"
+                                aria-checked="false"
+                                tabindex="0">
+                                國字輸入
+                            </div>
+                            <div role="radio"
+                            aria-checked="false"
+                            tabindex="-1">
+                            點字輸入
+                        </div>
+                    </div>
+
+                    <script type="text/javascript">
+                      var rg1 = new RadioGroup(document.getElementById('rg1'));
+                      rg1.init();
+                      var rg2 = new RadioGroup(document.getElementById('rg2'));
+                      rg2.init();
+                  </script>
+                  <!-- redio Accessibility end -->
+                  <div class="buttonDiv">
+                   <ul id="buttonDiv">
+                       <li><select name="searchField">
+                           <option value="TI">題名</option>
+                           <option value="PN">作者</option>
+                           <option value="ISBN">ISBN</option>
+                           <option value="ACN">條碼號</option>
+                           <option value="CNO">索書號</option>
+                           <option value="FullText">關鍵字</option>
+                       </select><input name="searchInput" type="text" placeholder="請輸入查詢詞" value=""><span><a><img src="images/plus1.png" tabindex="0" alt="增加搜尋框" name="add_field_button"></a></span></li>
+                       <li><select name="op">
+                           <option value="and">AND</option>
+                           <option value="or">OR</option>
+                           <option value="not">NOT</option>
+                       </select><select name="searchField">
+                           <option value="TI">題名</option>
+                           <option value="PN">作者</option>
+                           <option value="ISBN">ISBN</option>
+                           <option value="ACN">條碼號</option>
+                           <option value="CNO">索書號</option>
+                           <option value="FullText">關鍵字</option>
+                       </select><input name="searchInput" type="text" placeholder="請輸入查詢詞" value=""><span><a><img src="images/less1.png" tabindex="0" alt="減少搜尋框" name="add_field_button"></a></span></li>
+                   </ul>
+               </div>
+               <div class="formbox2" id="searchMoreList">
+
+                <!-- checkbox star 1090708 -->
+                <h3 id="id-group-label-1">
+                    分散查詢資料庫
+                </h3>
+                <div role="group" aria-labelledby="id-group-label-1">
+                    <ul class="checkboxes">
+                        <li>
+                            <div role="checkbox" aria-checked="false" tabindex="0">
+                                台灣雲端書庫
+                            </div>
+                        </li>
+                        <li>
+                            <div role="checkbox" aria-checked="false" tabindex="0">
+                                華文視障電子圖書館
+                            </div>
+                        </li>
+                        <li>
+                            <div role="checkbox" aria-checked="false" tabindex="0">
+                              愛盲基金會有聲書平台
+                          </div>
+                      </li>
+                  </ul>
+              </div>
+
+              <h3 id="id-group-label-2">
+                  一般圖書資料
+              </h3>
+              <div role="group" aria-labelledby="id-group-label-2">
+                <ul class="checkboxes">
+                    <li>
+                        <div role="checkbox" aria-checked="false" tabindex="0">
+                            臺灣博碩士論文知識加值系統
+                        </div>
+                    </li>
+                    <li>
+                        <div role="checkbox" aria-checked="false" tabindex="0">
+                            臺灣期刊論文索引系統
+                        </div>
+                    </li>
+                    <li>
+                        <div role="checkbox" aria-checked="false" tabindex="0">
+                          全國圖書書目資訊網
+                      </div>
+                  </li>
+              </ul>
+          </div>
+
+          <h3 id="id-group-label-2">
+              語言
+          </h3>
+          <div role="group" aria-labelledby="id-group-label-3">
+            <ul class="checkboxes">
+                <li>
+                    <div role="checkbox" aria-checked="false" tabindex="0">
+                        中文
+                    </div>
+                </li>
+                <li>
+                    <div role="checkbox" aria-checked="false" tabindex="0">
+                        外文
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <h3 id="id-group-label-4">
+            典藏地
+        </h3>
+        <div role="group" aria-labelledby="id-group-label-4">
+            <ul class="checkboxes">
+                <li>
+                    <div role="checkbox" aria-checked="false" tabindex="0">
+                        國立臺灣圖書館
+                    </div>
+                </li>
+                <li>
+                    <div role="checkbox" aria-checked="false" tabindex="0">
+                        國立公共資訊圖書館
+                    </div>
+                </li>
+                <li>
+                    <div role="checkbox" aria-checked="false" tabindex="0">
+                        彰化師大圖書館
+                    </div>
+                </li>
+                <li>
+                    <div role="checkbox" aria-checked="false" tabindex="0">
+                        臺北市立圖書館
+                    </div>
+                </li>
+                <li>
+                    <div role="checkbox" aria-checked="false" tabindex="0">
+                        高雄市立圖書館(新興)
+                    </div>
+                </li>
+                <li>
+                    <div role="checkbox" aria-checked="false" tabindex="0">
+                        高雄市立圖書館總館
+                    </div>
+                </li>
+                <li>
+                    <div role="checkbox" aria-checked="false" tabindex="0">
+                        國立清華大學
+                    </div>
+                </li>
+                <li>
+                    <div role="checkbox" aria-checked="false" tabindex="0">
+                        新北市立圖書館
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <h3 id="id-group-label-5">
+            主題類別
+        </h3>
+        <div role="group" aria-labelledby="id-group-label-5">
+            <ul class="checkboxes">
+                <li>
+                    <div role="checkbox" aria-checked="false" tabindex="0">
+                        史地
+                    </div>
+                </li>
+                <li>
+                    <div role="checkbox" aria-checked="false" tabindex="0">
+                        生活休閒
+                    </div>
+                </li>
+                <li>
+                    <div role="checkbox" aria-checked="false" tabindex="0">
+                        宗教類
+                    </div>
+                </li>
+                <li>
+                    <div role="checkbox" aria-checked="false" tabindex="0">
+                        社會
+                    </div>
+                </li>
+                <li>
+                    <div role="checkbox" aria-checked="false" tabindex="0">
+                        科學類
+                    </div>
+                </li>
+                <li>
+                    <div role="checkbox" aria-checked="false" tabindex="0">
+                        哲學類
+                    </div>
+                </li>
+                <li>
+                    <div role="checkbox" aria-checked="false" tabindex="0">
+                        家庭親子
+                    </div>
+                </li>
+                <li>
+                    <div role="checkbox" aria-checked="false" tabindex="0">
+                        財經企管
+                    </div>
+                </li>
+                <li>
+                    <div role="checkbox" aria-checked="false" tabindex="0">
+                        教科書
+                    </div>
+                </li>
+                <li>
+                    <div role="checkbox" aria-checked="false" tabindex="0">
+                        電腦
+                    </div>
+                </li>
+                <li>
+                    <div role="checkbox" aria-checked="false" tabindex="0">
+                        語言文學
+                    </div>
+                </li>
+                <li>
+                    <div role="checkbox" aria-checked="false" tabindex="0">
+                        醫療健康
+                    </div>
+                </li>
+                <li>
+                    <div role="checkbox" aria-checked="false" tabindex="0">
+                        雜誌類
+                    </div>
+                </li>
+                <li>
+                    <div role="checkbox" aria-checked="false" tabindex="0">
+                        藝術類
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <h3 id="id-group-label-6">
+          資料類型
+      </h3>
+      <div role="group" aria-labelledby="id-group-label-6">
+        <ul class="checkboxes">
+            <li>
+                <div role="checkbox" aria-checked="false" tabindex="0">
+                    大字書
+                </div>
+            </li>
+            <li>
+                <div role="checkbox" aria-checked="false" tabindex="0">
+                    手語書 
+                </div>
+            </li>
+            <li>
+                <div role="checkbox" aria-checked="false" tabindex="0">
+                    有聲書(CD) 
+                </div>
+            </li>
+            <li>
+                <div role="checkbox" aria-checked="false" tabindex="0">
+                    有聲書(DAISY) 
+                </div>
+            </li>
+            <li>
+                <div role="checkbox" aria-checked="false" tabindex="0">
+                    有聲書(MP3)
+                </div>
+            </li>
+            <li>
+                <div role="checkbox" aria-checked="false" tabindex="0">
+                    有聲書(錄音帶)
+                </div>
+            </li>
+            <li>
+                <div role="checkbox" aria-checked="false" tabindex="0">
+                    紙本圖書
+                </div>
+            </li>
+            <li>
+                <div role="checkbox" aria-checked="false" tabindex="0">
+                    紙本點字書
+                </div>
+            </li>
+            <li>
+                <div role="checkbox" aria-checked="false" tabindex="0">
+                    視聽資料 
+                </div>
+            </li>
+            <li>
+                <div role="checkbox" aria-checked="false" tabindex="0">
+                    資源教室
+                </div>
+            </li>
+            <li>
+                <div role="checkbox" aria-checked="false" tabindex="0">
+                    電子書(epub)
+                </div>
+            </li>
+            <li>
+                <div role="checkbox" aria-checked="false" tabindex="0">
+                    電子書(pdf)
+                </div>
+            </li>
+            <li>
+                <div role="checkbox" aria-checked="false" tabindex="0">
+                    電子點字書
+                </div>
+            </li>
+            <li>
+                <div role="checkbox" aria-checked="false" tabindex="0">
+                    雙視圖書
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <h3 id="id-group-label-7">
+      適用年齡
+  </h3>
+  <div role="group" aria-labelledby="id-group-label-7">
+    <ul class="checkboxes">
+        <li>
+            <div role="checkbox" aria-checked="false" tabindex="0">
+                成人（一般）
+            </div>
+        </li>
+        <li>
+            <div role="checkbox" aria-checked="false" tabindex="0">
+                成人（學術）
+            </div>
+        </li>
+        <li>
+            <div role="checkbox" aria-checked="false" tabindex="0">
+                兒童青少年（0~17歲）
+            </div>
+        </li>
+        <li>
+            <div role="checkbox" aria-checked="false" tabindex="0">
+                青少年（14~17歲）
+            </div>
+        </li>
+        <li>
+            <div role="checkbox" aria-checked="false" tabindex="0">
+                限閱圖書（限18歲以上閱讀）
+            </div>
+        </li>
+        <li>
+            <div role="checkbox" aria-checked="false" tabindex="0">
+                樂齡（60歲以上）
+            </div>
+        </li>
+        <li>
+            <div role="checkbox" aria-checked="false" tabindex="0">
+                學前兒童（0~5歲）
+            </div>
+        </li>
+        <li>
+            <div role="checkbox" aria-checked="false" tabindex="0">
+                學齡兒童（6~8歲）
+            </div>
+        </li>
+        <li>
+            <div role="checkbox" aria-checked="false" tabindex="0">
+                學齡兒童（9~13歲）
+            </div>
+        </li>
+    </ul>
+</div>
+
+<h3 id="id-group-label-8">
+  分類類別
+</h3>
+<div role="group" aria-labelledby="id-group-label-8">
+    <ul class="checkboxes">
+        <li>
+            <div role="checkbox" aria-checked="false" tabindex="0">
+                總論
+            </div>
+        </li>
+        <li>
+            <div role="checkbox" aria-checked="false" tabindex="0">
+                哲學類
+            </div>
+        </li>
+        <li>
+            <div role="checkbox" aria-checked="false" tabindex="0">
+                宗教類
+            </div>
+        </li>
+        <li>
+            <div role="checkbox" aria-checked="false" tabindex="0">
+                科學類
+            </div>
+        </li>
+        <li>
+            <div role="checkbox" aria-checked="false" tabindex="0">
+                應用科學類
+            </div>
+        </li>
+        <li>
+            <div role="checkbox" aria-checked="false" tabindex="0">
+                社會科學類
+            </div>
+        </li>
+        <li>
+            <div role="checkbox" aria-checked="false" tabindex="0">
+                史地類
+            </div>
+        </li>
+        <li>
+            <div role="checkbox" aria-checked="false" tabindex="0">
+                世界史地
+            </div>
+        </li>
+        <li>
+            <div role="checkbox" aria-checked="false" tabindex="0">
+                語言文學類
+            </div>
+        </li>
+        <li>
+            <div role="checkbox" aria-checked="false" tabindex="0">
+                藝術類
+            </div>
+        </li>
+    </ul>
+</div>
+
+
+
+<script type="text/javascript">
+  window.onload = function () {
+
+    var checkboxes = document.querySelectorAll('[role="checkbox"]');
+
+    for (var i = 0; i < checkboxes.length; i++) {
+      var cb = new Checkbox(checkboxes[i]);
+      cb.init();
+  }
+
+};
+</script>
+
+
+<!-- checkbox end -->
+
+</div>
+</div>
+<div class="buttonDiv"><input name="Search" type="submit" title="查詢" log-clicktext="進階查詢" value="查詢"><input name="" type="reset" title="清除輸入" value="清除輸入"></div>
+</form>
+</div>
+<div tabindex="0"></div>
+<div id="modalDiv" tabindex="0"></div>
+<div class="btnbox"><button tabindex="0" id="btn_close">關閉</button></div>
+</div>
+</div>
+<!-- dialog end -->
+
+
+</div>
+</div>
+</div>
+<!-- fatfooter Start -->
+<section class="fatfooter">
+    <div class="container">
+        <button type="button" name="收合" class="btn btn-fatfooter">收合</button>
+        <nav>
+            <ul>
+                <li><a href="http://www.google.com" target="_blank">最新消息</a></li>
+                <li><a href="#">圖書資訊</a></li>
+                <li><a href="#">圖書精選</a></li>
+                <li><a href="#">資源教室</a></li>
+                <li><a href="#">資源網站</a></li>
+                <li><a href="#">常見問題</a></li>
+                <li><a href="#">聯絡我們</a></li>
+                <li><a href="#">網站統計</a></li>
+                <li><a href="#">相關下載</a>
+                    <ul>
+                        <li><a target="_blank" title="IOS APP,另外新視窗" href="https://itunes.apple.com/tw/app/id934249135?mt=8">IOS APP</a></li>
+                        <li><a target="_blank" title="Android APP,另外新視窗" href="https://play.google.com/store/apps/details?id=tw.edu.ntl.viis.ntl_vilib">Android APP</a></li>
+                        <li><a title="電子書閱讀器下載" target="_blank" href="http://viis.ntl.edu.tw/reader/VNTLReaderSetup.exe">電子書閱讀器下載</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">問卷調查</a></li>
+            </ul>
+        </nav>
+    </div>
+</section>
+<!-- footer -->
+<footer>
+    <div class="container">
+        <a class="accesskey" href="#aF" id="aF" accesskey="F" title="頁尾區">:::</a>
+        <div class="footer_icon">
+            <a target="_blank" href="#" title="">
+                <img src="images/basic/aaa.jpg" alt="">
+            </a>
+            <div class="counter">瀏覽人次:<em>46476653</em></div>
+        </div>
+        <div class="footer_info">
+            <ul class="footer_link">
+                <li><a href="http://www.ntl.edu.tw/ct.asp?xItem=1102&amp;ctNode=1869&amp;mp=1" target="_blank" title="隱私權保護政策">隱私權保護政策</a></li>
+                <li><a href="http://www.ntl.edu.tw/ct.asp?xItem=59993&amp;ctNode=1783&amp;mp=1" target="_blank" title="資訊安全政策">資訊安全政策</a></li>
+                <li><a href="ct.asp?xItem=145981&amp;ctNode=708&amp;mp=1" title="APP隱私權保護政策">APP隱私權保護政策</a></li>
+            </ul>
+            <p class="copyright">館址：23574 <a href="https://maps.google.com.tw/maps?q=%E5%9C%8B%E7%AB%8B%E5%8F%B0%E7%81%A3%E5%9C%96%E6%9B%B8%E9%A4%A8&amp;hl=zh-TW&amp;ie=UTF8&amp;ll=25.003367,121.512222&amp;spn=0.008187,0.015278&amp;cid=854761177722451895&amp;gl=TW&amp;t=m&amp;z=16&amp;iwloc=A&amp;brcurrent=3,0x3442a9c2a0f41215:0xb2aee41d223e5dca,0,0x345d5538b0b6645f:0x5aa90dfa6620edc0&amp;output=classic&amp;dg=brw" class="Map_link" title="Google Map(另開新視窗)" target="_blank">
+            新北市中和區中安街八十五號</a> 電話：（02）2926-6888 視障資料中心服務專線（02）2926-1470 傳真 （02） 2926-3253 <br>No.85 Zhong-an St., Zhonghe District, New Taipei City 23574, Taiwan (R.O.C) 
+            TEL：（+886）2-2926-6888  FAX：（+886）2-2926-3253  <br>
+        系統操作諮詢電話 :(02)2926-1470 E-Mail:viic@mail.ntl.edu.tw 服務時間:週一到週五 09:00-17:00</p>
+    </div>
+
+</div>
+</footer>
+</div>
+<a href="javascript:;" class="scrollToTop">回頁首</a>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="vendor/jquery.easing.min.js"></script>
+<!-- lazyload -->
+<script src="vendor/lazyload/lazyload.min.js"></script>
+<!-- slick js -->
+<script src="vendor/slick/slick.min.js "></script>
+<script src="vendor/slick/slick-lightbox.js "></script>
+<!-- hyUI -->
+<script src="js/hyui.js"></script>
+<!-- 客製js -->
+<script src="js/customize.js"></script>
+</body>
+
+</html>

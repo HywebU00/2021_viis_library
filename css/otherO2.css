@@ -1,0 +1,72 @@
+﻿@charset "utf-8";
+/* CSS Document */
+/*\\10.10.5.89\e$\GIP1.5\HyGIP\LayoutDesign\xconfig\template\style\webpac\css*/
+/*----------------------------------------------------------------header start (A)*/
+
+/*---footer start (A)*/
+/*.footer p { color: #ffff00; font-weight: normal; }
+.footer .update { background: url(none); }
+.footer .update em { font-style: normal; color: #ffff00; }
+.footer .visitor { color: #ffff00; background: url(none); }
+.footer .visitor em { color: #ffff00; }
+.footer p .email { color: #ffff00; }
+.footer p a:hover.email{ color: #F60; }
+.copyright a { color: #ffff00; }
+.copyright a:hover { color: #FFF; background-color: #000; padding: 2px; }
+
+/*---search---*/
+/*.header .search label { color: #ffff00; }
+.header .search .inputgray {color:#ffff00;}
+.header .search .btn { background: url(none); color: #ffff00; }
+
+/*--path--*/
+/*.function a.forward { background: url(none); color: #ffff00; }
+.function a.print {background: url(none); color: #ffff00;}
+.function a.back, .quickLink a.back {background: url(none); color: #ffff00;}
+.function a.gotop, .quickLink a.gotop {background: url(none); color: #ffff00;}
+.function a.post { background: url(none); color: #ffff00;}
+.function li a:hover, .quickLink li a:hover { color: #F60; text-decoration:none; }
+.path { color: #ffff00; background: url(none); }
+.path .before {color: #ffff00; }
+.friendly .path a { color: #ffff00; }
+.friendly .path a:hover { color: #FFF; background-image: none; background-color: #000; padding: 5px; }
+.function li a, .quickLink li a { color: #ffff00; text-decoration: none; padding: 7px 10px 6px 30px; min-width: 50px; _width:50px; }
+.cp .quickLink li a {color: #ffff00;}
+.function li a:hover, .quickLink li a:hover { color: #FFF; background-color: #000; }
+
+#toggleFont {color:#ffff00;}
+#toggleColor {color:#ffff00;}
+
+.footer p { font-weight: bold; }
+.footer .update { background: url(none); }
+.footer .update em { font-style: normal; font-weight: bold; }
+.footer .visitor { background: url(none); font-weight: bold; }
+.footer .visitor em { font-weight: bold; }
+.footer p .email { font-weight: bold; }
+.footer p a:hover.email{ font-weight: bold; }
+.copyright a { font-weight: bold; }
+.copyright a:hover { color: #FFF; background-color: #000; padding: 2px; font-weight: bold; }
+
+
+/*---search---*/
+.header .search label { font-weight: normal; }
+.header .search .inputgray { font-weight: normal; }
+.header .search .btn { background: url(none); font-weight: normal; }
+
+/*--path--*/
+.function a.forward { background: url(none); font-weight: normal; }
+.function a.print { background: url(none); font-weight: normal; }
+.function a.back, .quickLink a.back { background: url(none); font-weight: normal;}
+.function a.gotop, .quickLink a.gotop { background: url(none); font-weight: normal; }
+.function a.post { /*分享轉貼*/ background: url(none); font-weight: normal; }
+.function li a:hover, .quickLink li a:hover { text-decoration:none; font-weight: normal; }
+.path { background: url(none);font-weight: normal; }
+.path .before { font-weight: normal; }
+.friendly .path a { font-weight: normal; }
+.friendly .path a:hover { background-image: none; padding: 5px; font-weight: normal; }
+.function li a, .quickLink li a { text-decoration: none; padding: 7px 10px 6px 30px; min-width: 50px; _width:50px; font-weight: normal; }
+.cp .quickLink li a { font-weight: bold; }
+.function li a:hover, .quickLink li a:hover { background-color: #000; font-weight: normal; }
+
+#toggleFont { font-weight: normal; }
+#toggleColor { font-weight: normal; }

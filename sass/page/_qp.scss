@@ -1,0 +1,148 @@
+.qp{
+	margin: 0 auto 1em;
+	@include box-sizing;
+	padding:.5em;
+	@include screen('mobile') {
+		padding:0;	
+	}
+	.form_inline{
+		input[type="text"] {
+			width: 100%;
+		}
+	}
+	.form_grid {
+		padding: 0;
+		.form_grp{
+			padding: .2em 0 .3em 0;
+		}
+
+	}
+	p{
+		margin: .5em 1em;
+	}
+	ol{
+		margin-left:2em;
+		li{
+
+		}
+	}
+	a{
+		display: inline-block!important;
+		color:#0068b7;
+		&:hover{
+			color:$aHover;
+		}
+	}
+	.int{
+		margin-left: 7em;
+		@include screen('mobile') {
+			margin-left: 0em;
+		}
+	}
+	.next-int{
+		margin-left: 8em;
+		@include screen('mobile') {
+			margin-left: 0em;
+		}
+	}
+
+
+}
+.q_title{
+	background:$primaryColor;
+	color:#FFF;
+	@include border-radius(6px);
+	padding:1em;
+	font-size:1em;
+	color:#FFF;
+	margin:.5em 0;
+}
+.q_content{
+	background:#FAFAFA;
+	padding:1em;
+	margin:.5em 0;
+	@include border-radius(6px);
+	table{
+		background:#FFF;
+	}
+	h3,h4{
+		color:$color-blue;
+	}
+}
+.next-level{
+	background: url('../images/plus.png')no-repeat .5em center;
+	padding-left: 2em;
+}
+.other-login{
+	h3{
+		margin: .5em 1em;
+		padding: 0 .5em;
+		border-left: solid 5px #f9c40e;
+	}
+	p{
+		margin: .5em 1.5em;
+	}
+	ul{
+		list-style: none;
+		margin: .5em 1em;
+		li{
+			display: inline-block;
+			@include make-xs-column(12);
+			@include make-sm-column(6);
+			@include make-md-column(4);
+			@include make-lg-column(3);
+			a{
+				display: block;
+				background: #339999;
+				color:#fff;
+				font-weight: bold;
+				padding:.5em .8em;
+				margin: 5px;
+				border-radius: 5px;
+				font-size: 1.05em;
+				&:hover, &:focus{
+					background: darken(#339999, 5);
+				}
+			}
+		}
+	}
+}
+
+
+//燈箱登入用
+.other-login2{
+	overflow: hidden;
+	h3{
+		margin: .5em;
+		padding: 0;
+	}
+	p{
+		margin: .5em 1.5em;
+		text-align: left;
+	}
+	ul{
+		list-style: none;
+		margin: .5em 0;
+		li{
+			display: inline-block;
+			@include make-xs-column(12);
+			@include make-sm-column(6);
+			@include make-md-column(6);
+			@include make-lg-column(4);
+			a{
+				display: block;
+				background: #339999;
+				color:#fff;
+				font-weight: bold;
+				padding:.5em .8em;
+				margin: 5px;
+				border-radius: 5px;
+				font-size: 1.05em;
+				&:hover, &:focus{
+					background: darken(#339999, 5);
+					color:#fff;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,38 @@
+﻿@charset "utf-8";
+/* CSS Document */
+/*\\10.10.5.89\e$\GIP1.5\HyGIP\LayoutDesign\xconfig\template\style\webpac\css*/
+/*----------------------------------------------------------------header start (A)*/
+
+/*---footer start (A)*/
+.footer p { font-weight: bold; }
+.footer .update { background: url(none); }
+.footer .update em { font-style: normal; font-weight: bold; }
+.footer .visitor { background: url(none); font-weight: bold; }
+.footer .visitor em { font-weight: bold; }
+.footer p .email { font-weight: bold; }
+.footer p a:hover.email{ font-weight: bold; }
+.copyright a { font-weight: bold; }
+.copyright a:hover { color: #FFF; background-color: #000; padding: 2px; font-weight: bold; }
+
+/*---search---*/
+.header .search label { font-weight: bold; }
+.header .search .inputgray { font-weight: bold; }
+.header .search .btn { background: url(none); font-weight: bold; }
+
+/*--path--*/
+.function a.forward { background: url(none); font-weight: bold; }
+.function a.print { background: url(none); font-weight: bold; }
+.function a.back, .quickLink a.back { background: url(none); font-weight: bold; }
+.function a.gotop, .quickLink a.gotop { background: url(none); font-weight: bold; }
+.function a.post { /*分享轉貼*/ background: url(none); font-weight: bold; }
+.function li a:hover, .quickLink li a:hover { text-decoration:none; font-weight: bold; }
+.path { background: url(none); font-weight: bold; }
+.path .before { font-weight: bold; }
+.friendly .path a { font-weight: bold; }
+.friendly .path a:hover { background-image: none; padding: 5px; font-weight: bold; }
+.function li a, .quickLink li a { text-decoration: none; padding: 7px 10px 6px 30px; min-width: 50px; _width:50px; font-weight: bold; }
+.cp .quickLink li a { font-weight: bold; }
+.function li a:hover, .quickLink li a:hover { background-color: #000; font-weight: bold; }
+
+#toggleFont { font-weight: bold; }
+#toggleColor { font-weight: bold; }

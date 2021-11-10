@@ -1,0 +1,20 @@
+.fp{
+	margin: 0em auto 1em;
+	@include box-sizing;
+	padding:.5em;
+	@include screen('mobile') {
+		padding:0;	
+	}
+	.form_content{
+		a{
+			display: inline-block;
+			color:$primaryColor;
+			&:hover{
+				color: $aHover;
+			}
+		}
+	}
+	p{
+		margin: .5em 1em;
+	}
+}
