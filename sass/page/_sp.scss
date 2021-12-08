@@ -165,20 +165,20 @@
         @include gutter();
     }
     .col40{
-     @include make-xs-column(12);
-     @include make-sm-column(6);
-     @include make-md-column(4);
-     @include make-lg-column(4);
-     @include gutter();
- }
- .col60{
-     @include make-xs-column(12);
-     @include make-sm-column(6);
-     @include make-md-column(8);
-     @include make-lg-column(8);
-     @include gutter();
- }
- .col80{
+       @include make-xs-column(12);
+       @include make-sm-column(6);
+       @include make-md-column(4);
+       @include make-lg-column(4);
+       @include gutter();
+   }
+   .col60{
+       @include make-xs-column(12);
+       @include make-sm-column(6);
+       @include make-md-column(8);
+       @include make-lg-column(8);
+       @include gutter();
+   }
+   .col80{
     @include make-xs-column(12);
     @include make-sm-column(6);
     @include make-md-column(8);
@@ -442,4 +442,6 @@ label{
     }
 }
 
+
+//
 

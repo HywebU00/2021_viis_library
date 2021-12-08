@@ -1,0 +1,316 @@
+////////// 音檔播放 //////////
+// 快速鍵說明
+.playGuide{
+ // @extend %mainSection;
+
+ display: none;
+
+ @media screen and (min-width: $wwNormal){
+  display: block;
+  margin: .3em auto 0; 
+  padding: 10px 15px;
+  background: #555; border-radius: 7px;
+
+  .label{float: left;height: 2.8em; line-height: 2.8em;color: #fff;font-size: .875em;}
+
+  dl{
+    padding: 0; margin: 0; line-height: 1.1; overflow: hidden;
+    font-size: .875em;
+    &>div{
+      float: left; overflow: hidden;
+      margin:3px 5px 3px 0; padding: 2px; overflow: hidden;
+      background: #fff;border-radius: 5px;
+    }
+  }
+  dt{
+    float: left;
+    border-radius: 3px;
+    height: 2em; line-height: 2em; padding: 0 .7em; margin: 0;
+    color: #fff; background:lighten(#555, 10%); 
+  }
+  dd{
+    float: left; height: 2em; line-height: 2em;
+    padding: 0 .5em 0 .7em; margin: 0;
+  }
+}
+}
+
+
+// 放播放器
+.playArea{
+  margin-bottom: 20px;overflow: hidden;border-radius: 6px;
+  box-shadow: #ccc 0 0 0 1px;
+
+  img{display: block; width: 100%;}
+}
+
+
+
+// 控制開合的button
+.slideCtrl{
+  position: absolute;
+  width: 40px; height: 40px; border-radius: 50%;
+  border: none; outline: none;
+  background-color: transparent;
+
+  &::before{content: '';
+    position: absolute; left: 50%; top: 50%; margin: -8px 0 0 -6px;
+    width: 10px; height: 10px;border-radius: 0 0 2px 0;
+    transform: rotate(45deg); transition:transform .3s;
+    border: 3px solid $primaryColor; 
+    border-left: none; border-top: none;
+  }
+  &:hover {background-color:#ccc; box-shadow: #ccc 0 0 0 2px;}
+  &:focus{
+    background-color: transparent;
+    box-shadow: $primaryColor 0 0 0 2px;
+  }
+
+  &.closeIt{
+    &::before{content: '';transform: rotate(225deg);margin-top: -4px;}
+  }
+
+}
+
+// 正在播放的檔案內容
+.playInfo{
+  position: relative;border-radius: 6px;padding: 20px; 
+  box-shadow: #ccc 0 0 0 1px;
+
+  .slideCtrl{
+    position: absolute; right: 8px;top: 8px;
+  }
+
+  ul.info{
+    list-style: none; margin:0; padding: 0 0 2px; line-height: 1.5;
+    overflow: hidden;
+    li{
+      margin:0; padding: 0;
+      em{
+        display: inline-block; font-weight: bold; font-style: normal; 
+        color: #000;
+      }
+      &.title{
+        font-size: 1.35em; min-height: 44px; 
+        padding: 5px 0;margin:0 56px 5px 0;
+      }
+      &.clickCount{
+        float: left; margin-right: 1em;
+        height: 2.4em; line-height:2.4em; 
+      }
+      &.icon_download{ float: left; margin-top: -.2em; 
+        &>a{
+          position: relative; display: block;transition: .1s;
+          height: 44px;  line-height:44px; 
+          text-decoration: none; outline: none;
+          padding: 0 16px 0 50px; border-radius: 2em;
+          color: #000;box-shadow: #ccc 0 0 0 1px;
+
+          &::before{
+            content: ''; position: absolute; left: 2px; top: 2px;
+            width: 40px; height: 40px; border-radius: 50%;
+            transition: .2s;
+            background: url(../images/icons.png) center -300px no-repeat;
+            background-size: 44px;
+            background-color:$primaryColor;
+          }
+          &:hover{ box-shadow: $primaryColor 0 0 0 1px; }
+          &:focus{ box-shadow: $primaryColor 0 0 0 2px;}
+        }
+      }
+    }
+  }
+
+  dl.info{
+    line-height: 1.5; margin: 16px auto 0; padding: 30px 0;
+    border-top: 1px solid #ccc;
+    &>div{
+      overflow: hidden;
+      &+div{margin-top: .5em;}
+    }
+    dt, dd{float: left; margin: 0;}
+    dt{
+      &::after{content: '：';}
+    }
+  }
+
+  .description{
+    line-height: 1.8;
+    .label{display: block;}
+  }
+
+  // 隱藏區
+  .toggleArea{display: none;}
+
+  @media screen and (min-width: $wwMedium){
+    .toggleArea{display: block !important;}
+    .slideCtrl{display: none;}
+    ul.info{
+      li.title{ margin-right: 0;}
+      li.icon_download{float: right; margin-right: 3px;}
+    } 
+
+  }
+
+}
+
+// 待播清單
+.playList{ 
+  position: relative;
+  padding: 20px 6px;margin-top: 20px;border-radius: 8px;
+  background-color:#ececec;
+  box-shadow: #ececec 0 0 0 1px;
+
+  a{color: #000; text-decoration: none; outline: none;}
+
+  &>h3{
+    font-size: 1.2rem; font-weight: normal;
+    margin: 0 50px 20px 8px!important; padding: 0;
+  }
+
+  &>ol, &>ul{
+    list-style: none; margin: 0!important; padding: 0!important; line-height: 1.5;
+    &>li{
+      position: relative;
+      margin:11px 3px;padding: 0;
+      &>a{
+        display: block;position: relative;
+        padding:8px 10px 8px 28px;border-radius: 3px; 
+        transition: .2s;
+
+        &:hover, &:focus{
+          transition: background-color .15s,  box-shadow .3s;
+          background: transparency(#fff, .5); box-shadow: #fff 0 0 0 2px;
+        }
+        &:focus{outline: none;}
+        &::before{
+          content: ''; position: absolute; left: 9px; top: 14px;
+          width: 8px; height: 8px; background: $primaryColor;
+          border-radius: 50%;
+        }
+        &::after{
+          position: absolute; left: 11px; top: 13px;
+          // width: 0; height: 0; box-sizing: content-box;
+          width: 0; height: 0;
+          border-style: solid;
+          border-width: 5px 0 5px 7px;
+          border-color: transparent transparent transparent #fff;
+        }
+      }
+
+      &.playing{
+        &>a{
+          box-shadow: #fff 0 0 0 2px; background: #fff;
+          &::before{transform: scale(2.8);}
+          &::after{content: '';}
+          &:hover, &:focus{box-shadow: #fff 0 0 0 2px,  $primaryColor 0 0 0 3px; }
+        }
+      }
+
+      .title{
+        margin-right: 6em;
+        display: -webkit-box;
+        line-clamp: 2;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical; 
+        overflow: hidden;
+      }
+      .author{
+        display: block; font-size: .9em;
+        margin-top: .5em;
+      }
+      time{
+        position: absolute; right: 12px; top: 10px; width: 5em;
+        text-align: right; font-size: .9em
+      }
+    }
+  }
+
+  @media screen and (min-width: $wwMedium){
+    margin-top: 0;
+  }
+}
+
+
+// 左右雙欄排版
+.audioPlay{
+  // @extend %mainSection;
+  padding: 0;
+  flex-wrap: wrap;
+  .playContent{
+    flex: 1 1 100%;
+    margin: 0 0 20px 0;
+  }
+  .playList{
+    flex: 1 1 100%;
+  }
+
+  @media screen and (min-width: $wwMedium){
+    display: flex;justify-content: space-between;
+
+    // .playContent{
+    //   flex: 1 1 calc(40% - 20px);
+    //   margin: 0 20px 0 0;
+    // }
+    // .playList{
+    //   flex: 0 0 30%;
+    //   min-width: 15em; max-width: 32em;
+    // }
+  }
+  @media screen and (min-width: $wwNormal){
+    margin-top: 20px;
+
+    .playContent{
+      flex: 1 1 calc(40% - 20px);
+      margin: 0 20px 0 0;
+    }
+    .playList{
+      flex: 0 0 30%;
+      min-width: 15em; max-width: 32em;
+    }
+  }
+}
+
+// on off 開關  
+.switchOnOff {
+  position: absolute; right: 12px;top: 20px;
+  margin: 0; padding: 0; background: none; border: none; outline: none;
+  font-size: .88em; line-height: 11px; width: 52px; height: 26px;
+  text-indent: calc(-100% - 1em); text-align: left; color:#333;
+  text-indent: -7em; border-radius: 15px; 
+  background: #333!important; box-shadow: #333 0 0 0 2px;
+  min-width: auto;
+  color:#333!important;
+  // border: solid 1px #333!important;
+  &::before {
+    content: "";
+    position: absolute;left: 0;top: 0;
+    width: 24px;height: 24px; border-radius: 50%; z-index: 2;
+    transition: left 0.12s linear, box-shadow .2s; outline: none;
+    background: #888; box-shadow:#fff 0 0 0 6px inset;
+  }
+  &:hover, &:focus{
+    background: #333; box-shadow:#333 0 0 0 2px;
+    border: none!important; 
+    color: #333;
+    &::before{ box-shadow:#fff 0 0 0 4px inset;}
+    outline: none!important;
+    height: 24px;
+  }
+  // &:focus{
+  //   background: #000; 
+  //   box-shadow: #000 0 0 0 4px;
+  // }
+
+  &::after {
+    content: "關"; text-indent: 0;position: absolute;right: 9px;
+    color:#fff; 
+  }
+
+  &.on {
+    &::before {left: calc(100% - 24px);
+      background: #87da00;
+    }
+    &::after {content: "開";left: 8px;right: auto; }
+  }
+}

@@ -1388,8 +1388,8 @@ $(function() {
         }]
     });
       //不同語系
-    var weblang = $('html').attr('lang');
-    if (weblang.substring(0, 2) == 'zh') {
+      var weblang = $('html').attr('lang');
+      if (weblang.substring(0, 2) == 'zh') {
         // console.log("中文");
         $('.slick-prev').attr('title', '上一筆');
         $('.slick-next').attr('title', '下一筆');
@@ -1427,3 +1427,26 @@ $(function() {
         $('.slick-next').attr('title', 'next');
     }
 });
+
+  // on/off 開關
+  var _switchOnOff = $('.switchOnOff');
+  const textOn = '已啟用自動播放功能';
+  const texOff = '已關閉自動播放功能';
+  _switchOnOff.click(function () {
+    let _this = $(this);
+    if(_this.hasClass('on')){
+      _this.removeClass('on').attr('aria-checked', 'false').attr('aria-label' , texOff);
+  } else {
+      _this.addClass('on').attr('aria-checked', 'true').attr('aria-label' , textOn);
+  }
+});
+
+  // 待播清單
+  var _playList = $('.playList');
+  _playList.each(function(){
+    let _playItem = $(this).find('li>a');
+    _playItem.click(function(){
+      _playItem.attr('aria-selected','false').parent().removeClass('playing');
+      $(this).attr('aria-selected','true').parent().addClass('playing');
+  })
+})
