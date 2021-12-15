@@ -11,7 +11,12 @@
   padding: 10px 15px;
   background: #555; border-radius: 7px;
 
-  .label{float: left;height: 2.8em; line-height: 2.8em;color: #fff;font-size: .875em;}
+  .label{
+    float: left;height: 2.8em; line-height: 2.8em;color: #fff;font-size: .875em;
+    &:focus{
+      outline: solid 3px #c00;
+    }
+  }
 
   dl{
     padding: 0; margin: 0; line-height: 1.1; overflow: hidden;
@@ -20,7 +25,11 @@
       float: left; overflow: hidden;
       margin:3px 5px 3px 0; padding: 2px; overflow: hidden;
       background: #fff;border-radius: 5px;
+      &:focus{
+        outline: solid 3px #c00;
+      }
     }
+
   }
   dt{
     float: left;
@@ -33,6 +42,7 @@
     padding: 0 .5em 0 .7em; margin: 0;
   }
 }
+
 }
 
 
@@ -115,7 +125,7 @@
             background-color:$primaryColor;
           }
           &:hover{ box-shadow: $primaryColor 0 0 0 1px; }
-          &:focus{ box-shadow: $primaryColor 0 0 0 2px;}
+          &:focus{ box-shadow: #c00 0 0 0 2px;}
         }
       }
     }
@@ -178,10 +188,11 @@
         padding:8px 10px 8px 28px;border-radius: 3px; 
         transition: .2s;
 
-        &:hover, &:focus{
+        &:hover{
           transition: background-color .15s,  box-shadow .3s;
           background: transparency(#fff, .5); box-shadow: #fff 0 0 0 2px;
         }
+        &:focus{box-shadow: #fff 0 0 0 2px,  #c00 0 0 0 4px; }
         &:focus{outline: none;}
         &::before{
           content: ''; position: absolute; left: 9px; top: 14px;
@@ -203,7 +214,8 @@
           box-shadow: #fff 0 0 0 2px; background: #fff;
           &::before{transform: scale(2.8);}
           &::after{content: '';}
-          &:hover, &:focus{box-shadow: #fff 0 0 0 2px,  $primaryColor 0 0 0 3px; }
+          &:hover{box-shadow: #fff 0 0 0 2px,  $primaryColor 0 0 0 3px; }
+          &:focus{box-shadow: #fff 0 0 0 2px,  #c00 0 0 0 4px; }
         }
       }
 
@@ -297,10 +309,10 @@
     outline: none!important;
     height: 24px;
   }
-  // &:focus{
-  //   background: #000; 
-  //   box-shadow: #000 0 0 0 4px;
-  // }
+  &:focus{
+    box-shadow:#c00 0 0 0 2px
+  }
+
 
   &::after {
     content: "關"; text-indent: 0;position: absolute;right: 9px;
@@ -314,3 +326,20 @@
     &::after {content: "開";left: 8px;right: auto; }
   }
 }
+
+//video
+.jwplayer{
+  width: 100%!important;
+  height: 240px!important;
+}
+.jw-svg-icon{
+  pointer-events: visiblePainted!important;
+}
+.jw-button-color{
+  &:focus{
+    box-shadow: 0 0 1px 2px #c00 inset;
+  }
+}
+
+
+

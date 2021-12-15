@@ -208,6 +208,12 @@ body:not(.toc-inline) #main_content main, body:not(.toc-inline) #main_content na
   border: none;
   margin: 0 auto;
 }
+.default_dialog button#btn_close:hover{
+  background: #1e7373;
+}
+.default_dialog button#btn_close:focus{
+  box-shadow: 0 0 0 2px #c00;
+}
 .default_dialog .btnbox{
   text-align: center;
   padding: .5em;
