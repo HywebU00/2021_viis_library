@@ -179,7 +179,7 @@ a.more {
     opacity: .8;
     text-align: center;
     color: #FFF;
-    line-height: 50px;
+    line-height: 100%;
     text-decoration: none;
     position: fixed;
     bottom: 10px;
@@ -217,7 +217,7 @@ img.img-responsive {
         padding: 10px;
         width: 100px;
         height: 20px;
-        line-height: 20px;
+        line-height: 100%;
         vertical-align: baseline;
     }
     p>em {
