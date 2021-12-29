@@ -17,7 +17,7 @@
 	overflow: hidden;
 	padding: 0;
 	position: absolute;
-	width: 1px;
+	width: .1em;
 }
 .ui-helper-reset {
 	margin: 0;
@@ -875,7 +875,7 @@ button.ui-button::-moz-focus-inner {
 	padding: 8px;
 	position: absolute;
 	z-index: 9999;
-	max-width: 300px;
+	max-width: 15em;
 }
 body .ui-tooltip {
 	border-width: 2px;
