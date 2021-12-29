@@ -61,6 +61,7 @@ $(function() {
             'margin-left': 0
         }, 400, 'easeOutQuint');
         _body.addClass('noscroll');
+        $('.m_area .navigation li:first-child>a').focus();
         _overlay.fadeIn();
         $('.m_search').hide();
         search_mode = false;
@@ -83,6 +84,11 @@ $(function() {
     // 關閉動作
     _overlay.add(_sidebarClose).off().click(function() {
         hideSidebar();
+    });
+    //手機版menu離開最後一個選項後關閉
+    _mArea.find('.sidebarClose').focusout(function() {
+        hideSidebar();
+        $('h1>a').focus();
     });
     _overlay.off("mouseenter");
     // 無障礙tab設定
