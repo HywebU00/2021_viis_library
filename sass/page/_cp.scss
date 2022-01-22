@@ -53,7 +53,7 @@
                 float: left;
                 max-width: 40%;
                 margin: 0px 1em 1em 0;
-                min-width: 240px;
+                min-width: 15em;
                 @include screen('mobile') {
                     float: none;
                     width: 100%;

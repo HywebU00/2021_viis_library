@@ -65,11 +65,11 @@ $vr-box-sizing: border-box !default;
 $vr-breakpoints: (
     60em: ( // 960px
         font-size: 16px
-    ),
+        ),
     90em: ( // 1440px
         font-size: 18px
-    )
-) !default;
+        )
+    ) !default;
 
 /// A map used to generate vertical rhythm helper CSS rules and classes.
 ///
@@ -199,56 +199,56 @@ $vr-helpers: (
     font-size: (
         count : 5,
         prefix: "vr-font-size-"
-    ),
+        ),
     line-height: (
         count : 10,
         prefix: "vr-line-height-"
-    ),
+        ),
     height: (
         count : 10,
         prefix: "vr-height-"
-    ),
+        ),
     width: (
         count : 10,
         prefix: "vr-width-"
-    ),
+        ),
     margin: (
         count : 5,
         prefix: "vr-margin-"
-    ),
+        ),
     margin-top: (
         count : 5,
         prefix: "vr-margin-top-"
-    ),
+        ),
     margin-bottom: (
         count : 5,
         prefix: "vr-margin-bottom-"
-    ),
+        ),
     padding: (
         count : 5,
         prefix: "vr-padding-"
-    ),
+        ),
     padding-top: (
         count : 5,
         prefix: "vr-padding-top-"
-    ),
+        ),
     padding-bottom: (
         count : 5,
         prefix: "vr-padding-bottom-"
-    ),
+        ),
     offset: (
         count : 5,
         prefix: "vr-offset-"
-    ),
+        ),
     offset-top: (
         count : 5,
         prefix: "vr-offset-top-"
-    ),
+        ),
     offset-bottom: (
         count : 5,
         prefix: "vr-offset-bottom-"
-    )
-) !default;
+        )
+    ) !default;
 
 /// Default root element font size.
 ///
@@ -310,7 +310,7 @@ $vr-modular-scale-map: (
     minor-seventh   : 1.778, // Ratio = 9:16
     major-seventh   : 1.875, // Ratio = 8:15
     octave          : 2      // Ratio = 1:2
-) !default;
+    ) !default;
 
 
 // Variables - Private
@@ -353,8 +353,8 @@ $_vr-border-color: #808080;
             line-height  : _to-rem($vr-line-height, $vr-font-size),
             modular-scale: $vr-modular-scale,
             grid-color   : $vr-grid-color
-        )
-    );
+            )
+        );
 
     // Merge settings map with breakpoints map
     $settings-map: if(type-of($vr-breakpoints) == 'map', map-merge($settings-map, $vr-breakpoints), $settings-map);
@@ -656,458 +656,458 @@ $_vr-border-color: #808080;
 /// @example scss SCSS
 ///   // Example of setting vertical rhythm properties
 ///   div {
-///     @include vr(
-///       $font-size     : 1,
-///       $height        : 2,
-///       $margin-top    : 1,
-///       $margin-bottom : 1,
-///       $padding-top   : 1,
-///       $padding-bottom: 1,
-///       $offset-top    : 3px,
-///       $offset-bottom : 3px
-///     );
-///
-///     border: 3px solid red;
-///   }
-///
-///   // Equivalent example using shorthand arguments
-///   div {
-///     @include vr(
-///       $font-size: 1,
-///       $height   : 2,
-///       $margin   : 1 0, // top|bottom: 1, right|left: 0
-///       $padding  : 1 0, // top|bottom: 1, right|left: 0
-///       $offset   : 3    // top|bottom: 3px
-///     );
-///
-///     border: 3px solid red;
-///   }
-@mixin vr(
-    $font-size     : null,
-    $line-height   : null,
-    $height        : null,
-    $width         : null,
-    $margin        : null,
-    $margin-top    : null,
-    $margin-bottom : null,
-    $margin-right  : null,
-    $margin-left   : null,
-    $padding       : null,
-    $padding-top   : null,
-    $padding-bottom: null,
-    $padding-right : null,
-    $padding-left  : null,
-    $offset        : null,
-    $offset-top    : null,
-    $offset-bottom : null,
-    $is-breakpoint : false,
-    $settings      : _get-root()) {
-    // Root settings
-    $root-font-size  : _to-root-px(map-get($settings, font-size));
-    $root-line-height: _to-rem(map-get($settings, line-height), $root-font-size);
-    $modular-scale   : map-get($settings, modular-scale);
+    ///     @include vr(
+    ///       $font-size     : 1,
+    ///       $height        : 2,
+    ///       $margin-top    : 1,
+    ///       $margin-bottom : 1,
+    ///       $padding-top   : 1,
+    ///       $padding-bottom: 1,
+    ///       $offset-top    : 3px,
+    ///       $offset-bottom : 3px
+    ///     );
+    ///
+    ///     border: 3px solid red;
+    ///   }
+    ///
+    ///   // Equivalent example using shorthand arguments
+    ///   div {
+        ///     @include vr(
+        ///       $font-size: 1,
+        ///       $height   : 2,
+        ///       $margin   : 1 0, // top|bottom: 1, right|left: 0
+        ///       $padding  : 1 0, // top|bottom: 1, right|left: 0
+        ///       $offset   : 3    // top|bottom: 3px
+        ///     );
+        ///
+        ///     border: 3px solid red;
+        ///   }
+        @mixin vr(
+        $font-size     : null,
+        $line-height   : null,
+        $height        : null,
+        $width         : null,
+        $margin        : null,
+        $margin-top    : null,
+        $margin-bottom : null,
+        $margin-right  : null,
+        $margin-left   : null,
+        $padding       : null,
+        $padding-top   : null,
+        $padding-bottom: null,
+        $padding-right : null,
+        $padding-left  : null,
+        $offset        : null,
+        $offset-top    : null,
+        $offset-bottom : null,
+        $is-breakpoint : false,
+        $settings      : _get-root()) {
+            // Root settings
+            $root-font-size  : _to-root-px(map-get($settings, font-size));
+            $root-line-height: _to-rem(map-get($settings, line-height), $root-font-size);
+            $modular-scale   : map-get($settings, modular-scale);
 
-    // Convert margin shorthand to explicit values.
-    // Explicit values (top|bottom|left|right) override shorthand if specified.
-    @if type-of($margin) == 'list' {
-        $margin-top  : if(not $margin-top, nth($margin, 1), $margin-top);
-        $margin-right: if(not $margin-right, nth($margin, 2), $margin-right);
+            // Convert margin shorthand to explicit values.
+            // Explicit values (top|bottom|left|right) override shorthand if specified.
+            @if type-of($margin) == 'list' {
+                $margin-top  : if(not $margin-top, nth($margin, 1), $margin-top);
+                $margin-right: if(not $margin-right, nth($margin, 2), $margin-right);
 
-        @if length($margin) == 2 {
-            $margin-bottom: if(not $margin-bottom, nth($margin, 1), $margin-bottom);
-            $margin-left  : if(not $margin-left, nth($margin, 2), $margin-left);
-        }
-        @if length($margin) == 3 {
-            $margin-bottom: if(not $margin-bottom, nth($margin, 3), $margin-bottom);
-            $margin-left  : if(not $margin-left, nth($margin, 2), $margin-left);
-        }
-        @if length($margin) == 4 {
-            $margin-bottom: if(not $margin-bottom, nth($margin, 3), $margin-bottom);
-            $margin-left  : if(not $margin-left, nth($margin, 4), $margin-left);
-        }
-    }
-    @else if type-of($margin) == 'number' {
-        $margin-top   : $margin;
-        $margin-bottom: $margin;
-        $margin-right : $margin;
-        $margin-left  : $margin;
-    }
-
-    // Convert padding shorthand to explicit values.
-    // Explicit values (top|bottom|left|right) override shorthand if specified.
-    @if type-of($padding) == 'list' {
-        $padding-top  : if(not $padding-top, nth($padding, 1), $padding-top);
-        $padding-right: if(not $padding-right, nth($padding, 2), $padding-right);
-
-        @if length($padding) == 2 {
-            $padding-bottom: if(not $padding-bottom, nth($padding, 1), $padding-bottom);
-            $padding-left  : if(not $padding-left, nth($padding, 2), $padding-left);
-        }
-        @if length($padding) == 3 {
-            $padding-bottom: if(not $padding-bottom, nth($padding, 3), $padding-bottom);
-            $padding-left  : if(not $padding-left, nth($padding, 2), $padding-left);
-        }
-        @if length($padding) == 4 {
-            $padding-bottom: if(not $padding-bottom, nth($padding, 3), $padding-bottom);
-            $padding-left  : if(not $padding-left, nth($padding, 4), $padding-left);
-        }
-    }
-    @else if type-of($padding) == 'number' {
-        $padding-top   : $padding;
-        $padding-bottom: $padding;
-        $padding-right : $padding;
-        $padding-left  : $padding;
-    }
-
-    // Convert offset shorthand to explicit values.
-    $offset-top   : if(not $offset-top and $offset and type-of($offset) == 'number', $offset, $offset-top);
-    $offset-top   : if(not $offset-top and $offset and type-of($offset) == 'list' and nth($offset, 1), nth($offset, 1), $offset-top);
-    $offset-bottom: if(not $offset-bottom and $offset and type-of($offset) == 'number', $offset, $offset-bottom);
-    $offset-bottom: if(not $offset-bottom and $offset and type-of($offset) == 'list' and nth($offset, 2), nth($offset, 2), $offset-bottom);
-
-    // Null zero and non-pixel offset values / Convert unitless values to px
-    $offset       : if(type-of($offset) == 'number' and _strip-unit($offset) != 0 and (unitless($offset) or unit($offset) == 'px'), _strip-unit($offset) * 1px, null);
-    $offset-top   : if(type-of($offset-top) == 'number' and _strip-unit($offset-top) != 0 and (unitless($offset-top) or unit($offset-top) == 'px'), _strip-unit($offset-top) * 1px, null);
-    $offset-bottom: if(type-of($offset-bottom) == 'number' and _strip-unit($offset-bottom) != 0 and (unitless($offset-bottom) or unit($offset-bottom) == 'px'), _strip-unit($offset-bottom) * 1px, null);
-
-    // Calculate total offset value
-    $offset-total: if($offset-top and $offset-bottom, $offset-top + $offset-bottom, null);
-    $offset-total: if(not $offset-total and $offset-top, $offset-top, $offset-total);
-    $offset-total: if(not $offset-total and $offset-bottom, $offset-bottom, $offset-total);
-
-    // Prepare margin and padding values if they are to be processed
-    $vr-margin-top    : if(type-of($margin-top) == 'number' and _strip-unit($margin-top) != 0 and unitless($margin-top), $margin-top * $root-line-height, $margin-top);
-    $vr-margin-bottom : if(type-of($margin-bottom) == 'number' and _strip-unit($margin-bottom) != 0 and unitless($margin-bottom), $margin-bottom * $root-line-height, $margin-bottom);
-    $vr-margin-right  : if(type-of($margin-right) == 'number' and _strip-unit($margin-right) != 0 and unitless($margin-right), $margin-right * $root-line-height, $margin-right);
-    $vr-margin-left   : if(type-of($margin-left) == 'number' and _strip-unit($margin-left) != 0 and unitless($margin-left), $margin-left * $root-line-height, $margin-left);
-    $vr-padding-top   : if(type-of($padding-top) == 'number' and _strip-unit($padding-top) != 0 and unitless($padding-top), $padding-top * $root-line-height, $padding-top);
-    $vr-padding-bottom: if(type-of($padding-bottom) == 'number' and _strip-unit($padding-bottom) != 0 and unitless($padding-bottom), $padding-bottom * $root-line-height, $padding-bottom);
-    $vr-padding-right : if(type-of($padding-right) == 'number' and _strip-unit($padding-right) != 0 and unitless($padding-right), $padding-right * $root-line-height, $padding-right);
-    $vr-padding-left  : if(type-of($padding-left) == 'number' and _strip-unit($padding-left) != 0 and unitless($padding-left), $padding-left * $root-line-height, $padding-left);
-
-    // Prevent zero value (breaks calc functions)
-    $vr-margin-top    : if(type-of($vr-margin-top) == 'number' and _strip-unit($vr-margin-top) == 0, _strip-unit($vr-margin-top) * 1px, $vr-margin-top);
-    $vr-margin-bottom : if(type-of($vr-margin-bottom) == 'number' and _strip-unit($vr-margin-bottom) == 0, _strip-unit($vr-margin-bottom) * 1px, $vr-margin-bottom);
-    $vr-padding-top   : if(type-of($vr-padding-top) == 'number' and _strip-unit($vr-padding-top) == 0, _strip-unit($vr-padding-top) * 1px, $vr-padding-top);
-    $vr-padding-bottom: if(type-of($vr-padding-bottom) == 'number' and _strip-unit($vr-padding-bottom) == 0, _strip-unit($vr-padding-bottom) * 1px, $vr-padding-bottom);
-
-    // Create accessible height multiplier variable for breakpoint check
-    $fixed-multiplier: null;
-
-    // Checks
-    $is-vr-margin : if($vr-margin-top or $vr-margin-bottom, true, false);
-    $is-vr-padding: if($vr-padding-top or $vr-padding-bottom, true, false);
-    $is-vr-offset : if($offset-total, true, false);
-
-    // Font Size
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    @if $font-size {
-        $vr-font-size  : if(unitless($font-size), _modular-scale($font-size, $modular-scale), _to-rem($font-size, $root-font-size));
-        $multiplier    : ceil($vr-font-size / $root-line-height);
-        $vr-line-height: _to-rem($root-line-height * $multiplier, $root-font-size);
-
-        font-size: $vr-font-size;
-        line-height: if(type-of($vr-line-height) == 'string', calc(#{$vr-line-height}), $vr-line-height);
-    }
-
-    // Line Height
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    @if $line-height {
-        line-height: if(type-of($line-height) == 'number' and unitless($line-height), $line-height * $root-line-height, $line-height);
-    }
-
-    // Height
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    @if $height {
-        $vr-height: $height;
-
-        // Pixels
-        @if unit($height) == 'px' {
-            $fixed-multiplier: ceil(_to-rem($height, $root-font-size) / $root-line-height);
-
-            // Add offset to height if box sizing is border-box
-            $vr-height       : if($is-vr-offset and $vr-box-sizing == border-box, $height + $offset-total, $height);
-            $remainder       : "(#{$root-line-height * $fixed-multiplier} - #{$vr-height})";
-            $vr-margin-top   : if($vr-margin-top, "#{$vr-margin-top} + (#{$remainder} / 2)", "#{$remainder} / 2");
-            $vr-margin-bottom: if($vr-margin-bottom, "#{$vr-margin-bottom} + (#{$remainder} / 2)", "#{$remainder} / 2");
-        }
-        // Other Units
-        @else {
-            $vr-height: if(unitless($height), $height * $root-line-height, _to-rem($height, $root-font-size));
-
-            @if $is-vr-margin {
-                $multiplier      : ceil($vr-height / $root-line-height);
-                // Force zero remainder for unitless values. This is a fix for
-                // compounded rounding error adjustment in _to-rem mixin.
-                $remainder       : if(unitless($vr-height), 0, ($root-line-height * $multiplier) - $vr-height);
-                $vr-margin-top   : if($vr-margin-top, $vr-margin-top + ($remainder / 2), $vr-margin-top);
-                $vr-margin-bottom: if($vr-margin-bottom, $vr-margin-bottom + ($remainder / 2), $vr-margin-bottom);
-            }
-
-            // Add offset to height if box sizing is border-box
-            $vr-height: if($is-vr-offset and $vr-box-sizing == border-box, "#{$vr-height} + #{$offset-total}", $vr-height);
-        }
-
-        // Fixed-height rules do not need to be recalcaulated for media queries
-        @if unit($height) != 'px' or not $is-breakpoint {
-            height: if(type-of($vr-height) == 'string', calc(#{$vr-height}), $vr-height);
-        }
-    }
-
-    // Width
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    @if $width {
-        width: if(type-of($width) == 'number' and unitless($width), $width * $root-line-height, $width);
-    }
-
-    // Margins & Padding
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    // Offset
-    @if $is-vr-offset {
-        $transform-value: if($offset-top, translateY(-#{$offset-top}), null);
-        // Shift the element up for the top offset
-        -webkit-transform: $transform-value;
-            -ms-transform: $transform-value;
-                transform: $transform-value;
-
-        @if $vr-margin-bottom {
-            // Adjacent elements with an offset and a bottom margin break
-            // the vertical rhythm due to margin collapse behavior on block
-            // level elements. Unfortunately, the only way to get around this
-            // is to change the display type of all elemnts that have both a
-            // bottom margin and an offset defined. The downside is that
-            // changing the display type prevents the standard margin collapse
-            // behavior which may be expected.
-            display: inline-block;
-
-            // DISABLED:
-            // Setting the display to inline-block also prevents the standard
-            // "fill the horizontal space" behavior of block-level elements.
-            // The rule below is an attempt to address the issue by setting
-            // the width to 100% if no horizontal margins have been defined.
-            // This allows multi-line content to force the element to fill the
-            // horizontal space.
-            // width: if(not $vr-margin-right and not $vr-margin-left, 100%, null);
-
-            // Set the top margin to zero if a top margin is not defined to
-            // avoid double margins. This allows offsets to function without
-            // additional rules when only a bottom margin is defined. The
-            // downside is that setting the top margin to zero may override an
-            // exisitng setting from another rule. In this case, the top margin
-            // will need to be redefined in the same mixin call as the offset.
-            $vr-margin-top: if($vr-margin-top, $vr-margin-top, 0);
-
-            // Subtract the total offset from the bottom margin
-            $vr-margin-bottom: calc((#{$vr-margin-bottom}) - #{$offset-total});
-        }
-        @else {
-            // Subtract the total offset from the bottom margin
-            $vr-margin-bottom: -#{$offset-total};
-        }
-    }
-    @else {
-        $vr-margin-top   : if(type-of($vr-margin-top) == 'string', calc(#{$vr-margin-top}), $vr-margin-top);
-        $vr-margin-bottom: if(type-of($vr-margin-bottom) == 'string', calc(#{$vr-margin-bottom}), $vr-margin-bottom);
-    }
-
-    // Convert margin values to shorthand if possible
-    @if $vr-margin-top and $vr-margin-bottom and $vr-margin-left and $vr-margin-right {
-        @if $vr-margin-left == $vr-margin-right {
-            @if $vr-margin-top == $vr-margin-bottom {
-                @if $vr-margin-top == $vr-margin-left {
-                    margin: $vr-margin-top;
+                @if length($margin) == 2 {
+                    $margin-bottom: if(not $margin-bottom, nth($margin, 1), $margin-bottom);
+                    $margin-left  : if(not $margin-left, nth($margin, 2), $margin-left);
                 }
-                @else {
-                    margin: $vr-margin-top $vr-margin-left;
+                @if length($margin) == 3 {
+                    $margin-bottom: if(not $margin-bottom, nth($margin, 3), $margin-bottom);
+                    $margin-left  : if(not $margin-left, nth($margin, 2), $margin-left);
+                }
+                @if length($margin) == 4 {
+                    $margin-bottom: if(not $margin-bottom, nth($margin, 3), $margin-bottom);
+                    $margin-left  : if(not $margin-left, nth($margin, 4), $margin-left);
                 }
             }
-            @else {
-                margin: $vr-margin-top $vr-margin-left $vr-margin-bottom;
+            @else if type-of($margin) == 'number' {
+                $margin-top   : $margin;
+                $margin-bottom: $margin;
+                $margin-right : $margin;
+                $margin-left  : $margin;
             }
-        }
-        @else {
-            margin: $vr-margin-top $vr-margin-right $vr-margin-bottom $vr-margin-left;
-        }
-    }
-    @else {
-        margin-top   : $vr-margin-top;
-        margin-bottom: $vr-margin-bottom;
-        margin-right : $vr-margin-right;
-        margin-left  : $vr-margin-left;
-    }
 
-    // Convert margin values to shorthand if possible
-    @if $vr-padding-top and $vr-padding-bottom and $vr-padding-left and $vr-padding-right {
-        @if $vr-padding-left == $vr-padding-right {
-            @if $vr-padding-top == $vr-padding-bottom {
-                @if $vr-padding-top == $vr-padding-left {
-                    padding: $vr-padding-top;
+            // Convert padding shorthand to explicit values.
+            // Explicit values (top|bottom|left|right) override shorthand if specified.
+            @if type-of($padding) == 'list' {
+                $padding-top  : if(not $padding-top, nth($padding, 1), $padding-top);
+                $padding-right: if(not $padding-right, nth($padding, 2), $padding-right);
+
+                @if length($padding) == 2 {
+                    $padding-bottom: if(not $padding-bottom, nth($padding, 1), $padding-bottom);
+                    $padding-left  : if(not $padding-left, nth($padding, 2), $padding-left);
                 }
-                @else {
-                    padding: $vr-padding-top $vr-padding-left;
+                @if length($padding) == 3 {
+                    $padding-bottom: if(not $padding-bottom, nth($padding, 3), $padding-bottom);
+                    $padding-left  : if(not $padding-left, nth($padding, 2), $padding-left);
+                }
+                @if length($padding) == 4 {
+                    $padding-bottom: if(not $padding-bottom, nth($padding, 3), $padding-bottom);
+                    $padding-left  : if(not $padding-left, nth($padding, 4), $padding-left);
                 }
             }
-            @else {
-                padding: $vr-padding-top $vr-padding-left $vr-padding-bottom;
+            @else if type-of($padding) == 'number' {
+                $padding-top   : $padding;
+                $padding-bottom: $padding;
+                $padding-right : $padding;
+                $padding-left  : $padding;
             }
-        }
-        @else {
-            padding: $vr-padding-top $vr-padding-right $vr-padding-bottom $vr-padding-left;
-        }
-    }
-    @else {
-        padding-top   : $vr-padding-top;
-        padding-bottom: $vr-padding-bottom;
-        padding-right : $vr-padding-right;
-        padding-left  : $vr-padding-left;
-    }
 
-    // Media Queries
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    $selector   : &;
-    $is-rendered: if(index($_vr-rendered, $selector), true, false);
+            // Convert offset shorthand to explicit values.
+            $offset-top   : if(not $offset-top and $offset and type-of($offset) == 'number', $offset, $offset-top);
+            $offset-top   : if(not $offset-top and $offset and type-of($offset) == 'list' and nth($offset, 1), nth($offset, 1), $offset-top);
+            $offset-bottom: if(not $offset-bottom and $offset and type-of($offset) == 'number', $offset, $offset-bottom);
+            $offset-bottom: if(not $offset-bottom and $offset and type-of($offset) == 'list' and nth($offset, 2), nth($offset, 2), $offset-bottom);
 
-    @if not $is-breakpoint and not $is-rendered {
-        // Store settings
-        $prev-root-font-size  : $root-font-size;
-        $prev-line-height     : $root-line-height;
-        $prev-modular-scale   : $modular-scale;
-        $prev-fixed-multiplier: $fixed-multiplier;
+            // Null zero and non-pixel offset values / Convert unitless values to px
+            $offset       : if(type-of($offset) == 'number' and _strip-unit($offset) != 0 and (unitless($offset) or unit($offset) == 'px'), _strip-unit($offset) * 1px, null);
+            $offset-top   : if(type-of($offset-top) == 'number' and _strip-unit($offset-top) != 0 and (unitless($offset-top) or unit($offset-top) == 'px'), _strip-unit($offset-top) * 1px, null);
+            $offset-bottom: if(type-of($offset-bottom) == 'number' and _strip-unit($offset-bottom) != 0 and (unitless($offset-bottom) or unit($offset-bottom) == 'px'), _strip-unit($offset-bottom) * 1px, null);
 
-        // Repeat for each breakpoint
-        @each $breakpoint, $settings in _get-settings() {
-            // Settings
-            $root-font-size  : if(map-has-key($settings, font-size), _to-root-px(map-get($settings, font-size)), _to-root-px($prev-root-font-size));
-            $root-line-height: if(map-has-key($settings, line-height), _to-rem(map-get($settings, line-height), $root-font-size), _to-rem($prev-line-height, $root-font-size));
-            $modular-scale   : if(map-has-key($settings, modular-scale), map-get($settings, modular-scale), $prev-modular-scale);
-            $fixed-multiplier: if($prev-fixed-multiplier, ceil(_to-rem($height, $root-font-size) / $root-line-height), $prev-fixed-multiplier);
+            // Calculate total offset value
+            $offset-total: if($offset-top and $offset-bottom, $offset-top + $offset-bottom, null);
+            $offset-total: if(not $offset-total and $offset-top, $offset-top, $offset-total);
+            $offset-total: if(not $offset-total and $offset-bottom, $offset-bottom, $offset-total);
 
-            // Setting map
-            $settings: (
-                font-size    : $root-font-size,
-                line-height  : $root-line-height,
-                modular-scale: $modular-scale
-            );
+            // Prepare margin and padding values if they are to be processed
+            $vr-margin-top    : if(type-of($margin-top) == 'number' and _strip-unit($margin-top) != 0 and unitless($margin-top), $margin-top * $root-line-height, $margin-top);
+            $vr-margin-bottom : if(type-of($margin-bottom) == 'number' and _strip-unit($margin-bottom) != 0 and unitless($margin-bottom), $margin-bottom * $root-line-height, $margin-bottom);
+            $vr-margin-right  : if(type-of($margin-right) == 'number' and _strip-unit($margin-right) != 0 and unitless($margin-right), $margin-right * $root-line-height, $margin-right);
+            $vr-margin-left   : if(type-of($margin-left) == 'number' and _strip-unit($margin-left) != 0 and unitless($margin-left), $margin-left * $root-line-height, $margin-left);
+            $vr-padding-top   : if(type-of($padding-top) == 'number' and _strip-unit($padding-top) != 0 and unitless($padding-top), $padding-top * $root-line-height, $padding-top);
+            $vr-padding-bottom: if(type-of($padding-bottom) == 'number' and _strip-unit($padding-bottom) != 0 and unitless($padding-bottom), $padding-bottom * $root-line-height, $padding-bottom);
+            $vr-padding-right : if(type-of($padding-right) == 'number' and _strip-unit($padding-right) != 0 and unitless($padding-right), $padding-right * $root-line-height, $padding-right);
+            $vr-padding-left  : if(type-of($padding-left) == 'number' and _strip-unit($padding-left) != 0 and unitless($padding-left), $padding-left * $root-line-height, $padding-left);
+
+            // Prevent zero value (breaks calc functions)
+            $vr-margin-top    : if(type-of($vr-margin-top) == 'number' and _strip-unit($vr-margin-top) == 0, _strip-unit($vr-margin-top) * 1px, $vr-margin-top);
+            $vr-margin-bottom : if(type-of($vr-margin-bottom) == 'number' and _strip-unit($vr-margin-bottom) == 0, _strip-unit($vr-margin-bottom) * 1px, $vr-margin-bottom);
+            $vr-padding-top   : if(type-of($vr-padding-top) == 'number' and _strip-unit($vr-padding-top) == 0, _strip-unit($vr-padding-top) * 1px, $vr-padding-top);
+            $vr-padding-bottom: if(type-of($vr-padding-bottom) == 'number' and _strip-unit($vr-padding-bottom) == 0, _strip-unit($vr-padding-bottom) * 1px, $vr-padding-bottom);
+
+            // Create accessible height multiplier variable for breakpoint check
+            $fixed-multiplier: null;
 
             // Checks
-            $is-root             : if($breakpoint == root, true, false);
-            $is-new-line-height  : if($root-line-height != $prev-line-height, true, false);
-            $is-new-modular-scale: if($modular-scale != $prev-modular-scale, true, false);
-            $is-new-multiplier   : if($fixed-multiplier and $fixed-multiplier != $prev-fixed-multiplier, true, false);
+            $is-vr-margin : if($vr-margin-top or $vr-margin-bottom, true, false);
+            $is-vr-padding: if($vr-padding-top or $vr-padding-bottom, true, false);
+            $is-vr-offset : if($offset-total, true, false);
 
-            // Generate recalculated rules
-            @if not $is-root and ($is-new-multiplier or $is-new-line-height or $is-new-modular-scale) {
-                @media (min-width: #{$breakpoint}) {
-                    @include vr(
-                        $font-size,
-                        $line-height,
-                        $height,
-                        $width,
-                        $margin,
-                        $margin-top,
-                        $margin-bottom,
-                        $margin-right,
-                        $margin-left,
-                        $padding,
-                        $padding-top,
-                        $padding-bottom,
-                        $padding-right,
-                        $padding-left,
-                        $offset,
-                        $offset-top,
-                        $offset-bottom,
-                        $is-breakpoint: true,
-                        $settings: $settings
-                    );
+            // Font Size
+            // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+            @if $font-size {
+                $vr-font-size  : if(unitless($font-size), _modular-scale($font-size, $modular-scale), _to-rem($font-size, $root-font-size));
+                $multiplier    : ceil($vr-font-size / $root-line-height);
+                $vr-line-height: _to-rem($root-line-height * $multiplier, $root-font-size);
+
+                font-size: $vr-font-size;
+                line-height: if(type-of($vr-line-height) == 'string', calc(#{$vr-line-height}), $vr-line-height);
+            }
+
+            // Line Height
+            // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+            @if $line-height {
+                line-height: if(type-of($line-height) == 'number' and unitless($line-height), $line-height * $root-line-height, $line-height);
+            }
+
+            // Height
+            // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+            @if $height {
+                $vr-height: $height;
+
+                // Pixels
+                @if unit($height) == 'px' {
+                    $fixed-multiplier: ceil(_to-rem($height, $root-font-size) / $root-line-height);
+
+                    // Add offset to height if box sizing is border-box
+                    $vr-height       : if($is-vr-offset and $vr-box-sizing == border-box, $height + $offset-total, $height);
+                    $remainder       : "(#{$root-line-height * $fixed-multiplier} - #{$vr-height})";
+                    $vr-margin-top   : if($vr-margin-top, "#{$vr-margin-top} + (#{$remainder} / 2)", "#{$remainder} / 2");
+                    $vr-margin-bottom: if($vr-margin-bottom, "#{$vr-margin-bottom} + (#{$remainder} / 2)", "#{$remainder} / 2");
+                }
+                // Other Units
+                @else {
+                    $vr-height: if(unitless($height), $height * $root-line-height, _to-rem($height, $root-font-size));
+
+                    @if $is-vr-margin {
+                        $multiplier      : ceil($vr-height / $root-line-height);
+                        // Force zero remainder for unitless values. This is a fix for
+                        // compounded rounding error adjustment in _to-rem mixin.
+                        $remainder       : if(unitless($vr-height), 0, ($root-line-height * $multiplier) - $vr-height);
+                        $vr-margin-top   : if($vr-margin-top, $vr-margin-top + ($remainder / 2), $vr-margin-top);
+                        $vr-margin-bottom: if($vr-margin-bottom, $vr-margin-bottom + ($remainder / 2), $vr-margin-bottom);
+                    }
+
+                    // Add offset to height if box sizing is border-box
+                    $vr-height: if($is-vr-offset and $vr-box-sizing == border-box, "#{$vr-height} + #{$offset-total}", $vr-height);
+                }
+
+                // Fixed-height rules do not need to be recalcaulated for media queries
+                @if unit($height) != 'px' or not $is-breakpoint {
+                    height: if(type-of($vr-height) == 'string', calc(#{$vr-height}), $vr-height);
                 }
             }
 
-            // Store settings
-            $prev-root-font-size  : $root-font-size;
-            $prev-line-height     : $root-line-height;
-            $prev-modular-scale   : $modular-scale;
-            $prev-fixed-multiplier: $fixed-multiplier;
+            // Width
+            // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+            @if $width {
+                width: if(type-of($width) == 'number' and unitless($width), $width * $root-line-height, $width);
+            }
+
+            // Margins & Padding
+            // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+            // Offset
+            @if $is-vr-offset {
+                $transform-value: if($offset-top, translateY(-#{$offset-top}), null);
+                // Shift the element up for the top offset
+                -webkit-transform: $transform-value;
+                -ms-transform: $transform-value;
+                transform: $transform-value;
+
+                @if $vr-margin-bottom {
+                    // Adjacent elements with an offset and a bottom margin break
+                    // the vertical rhythm due to margin collapse behavior on block
+                    // level elements. Unfortunately, the only way to get around this
+                    // is to change the display type of all elemnts that have both a
+                    // bottom margin and an offset defined. The downside is that
+                    // changing the display type prevents the standard margin collapse
+                    // behavior which may be expected.
+                    display: inline-block;
+
+                    // DISABLED:
+                    // Setting the display to inline-block also prevents the standard
+                    // "fill the horizontal space" behavior of block-level elements.
+                    // The rule below is an attempt to address the issue by setting
+                    // the width to 100% if no horizontal margins have been defined.
+                    // This allows multi-line content to force the element to fill the
+                    // horizontal space.
+                    // width: if(not $vr-margin-right and not $vr-margin-left, 100%, null);
+
+                    // Set the top margin to zero if a top margin is not defined to
+                    // avoid double margins. This allows offsets to function without
+                    // additional rules when only a bottom margin is defined. The
+                    // downside is that setting the top margin to zero may override an
+                    // exisitng setting from another rule. In this case, the top margin
+                    // will need to be redefined in the same mixin call as the offset.
+                    $vr-margin-top: if($vr-margin-top, $vr-margin-top, 0);
+
+                    // Subtract the total offset from the bottom margin
+                    $vr-margin-bottom: calc((#{$vr-margin-bottom}) - #{$offset-total});
+                }
+                @else {
+                    // Subtract the total offset from the bottom margin
+                    $vr-margin-bottom: -#{$offset-total};
+                }
+            }
+            @else {
+                $vr-margin-top   : if(type-of($vr-margin-top) == 'string', calc(#{$vr-margin-top}), $vr-margin-top);
+                $vr-margin-bottom: if(type-of($vr-margin-bottom) == 'string', calc(#{$vr-margin-bottom}), $vr-margin-bottom);
+            }
+
+            // Convert margin values to shorthand if possible
+            @if $vr-margin-top and $vr-margin-bottom and $vr-margin-left and $vr-margin-right {
+                @if $vr-margin-left == $vr-margin-right {
+                    @if $vr-margin-top == $vr-margin-bottom {
+                        @if $vr-margin-top == $vr-margin-left {
+                            margin: $vr-margin-top;
+                        }
+                        @else {
+                            margin: $vr-margin-top $vr-margin-left;
+                        }
+                    }
+                    @else {
+                        margin: $vr-margin-top $vr-margin-left $vr-margin-bottom;
+                    }
+                }
+                @else {
+                    margin: $vr-margin-top $vr-margin-right $vr-margin-bottom $vr-margin-left;
+                }
+            }
+            @else {
+                margin-top   : $vr-margin-top;
+                margin-bottom: $vr-margin-bottom;
+                margin-right : $vr-margin-right;
+                margin-left  : $vr-margin-left;
+            }
+
+            // Convert margin values to shorthand if possible
+            @if $vr-padding-top and $vr-padding-bottom and $vr-padding-left and $vr-padding-right {
+                @if $vr-padding-left == $vr-padding-right {
+                    @if $vr-padding-top == $vr-padding-bottom {
+                        @if $vr-padding-top == $vr-padding-left {
+                            padding: $vr-padding-top;
+                        }
+                        @else {
+                            padding: $vr-padding-top $vr-padding-left;
+                        }
+                    }
+                    @else {
+                        padding: $vr-padding-top $vr-padding-left $vr-padding-bottom;
+                    }
+                }
+                @else {
+                    padding: $vr-padding-top $vr-padding-right $vr-padding-bottom $vr-padding-left;
+                }
+            }
+            @else {
+                padding-top   : $vr-padding-top;
+                padding-bottom: $vr-padding-bottom;
+                padding-right : $vr-padding-right;
+                padding-left  : $vr-padding-left;
+            }
+
+            // Media Queries
+            // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+            $selector   : &;
+            $is-rendered: if(index($_vr-rendered, $selector), true, false);
+
+            @if not $is-breakpoint and not $is-rendered {
+                // Store settings
+                $prev-root-font-size  : $root-font-size;
+                $prev-line-height     : $root-line-height;
+                $prev-modular-scale   : $modular-scale;
+                $prev-fixed-multiplier: $fixed-multiplier;
+
+                // Repeat for each breakpoint
+                @each $breakpoint, $settings in _get-settings() {
+                    // Settings
+                    $root-font-size  : if(map-has-key($settings, font-size), _to-root-px(map-get($settings, font-size)), _to-root-px($prev-root-font-size));
+                    $root-line-height: if(map-has-key($settings, line-height), _to-rem(map-get($settings, line-height), $root-font-size), _to-rem($prev-line-height, $root-font-size));
+                    $modular-scale   : if(map-has-key($settings, modular-scale), map-get($settings, modular-scale), $prev-modular-scale);
+                    $fixed-multiplier: if($prev-fixed-multiplier, ceil(_to-rem($height, $root-font-size) / $root-line-height), $prev-fixed-multiplier);
+
+                    // Setting map
+                    $settings: (
+                    font-size    : $root-font-size,
+                    line-height  : $root-line-height,
+                    modular-scale: $modular-scale
+                    );
+
+                    // Checks
+                    $is-root             : if($breakpoint == root, true, false);
+                    $is-new-line-height  : if($root-line-height != $prev-line-height, true, false);
+                    $is-new-modular-scale: if($modular-scale != $prev-modular-scale, true, false);
+                    $is-new-multiplier   : if($fixed-multiplier and $fixed-multiplier != $prev-fixed-multiplier, true, false);
+
+                    // Generate recalculated rules
+                    @if not $is-root and ($is-new-multiplier or $is-new-line-height or $is-new-modular-scale) {
+                        @media (min-width: #{$breakpoint}) {
+                            @include vr(
+                            $font-size,
+                            $line-height,
+                            $height,
+                            $width,
+                            $margin,
+                            $margin-top,
+                            $margin-bottom,
+                            $margin-right,
+                            $margin-left,
+                            $padding,
+                            $padding-top,
+                            $padding-bottom,
+                            $padding-right,
+                            $padding-left,
+                            $offset,
+                            $offset-top,
+                            $offset-bottom,
+                            $is-breakpoint: true,
+                            $settings: $settings
+                            );
+                        }
+                    }
+
+                    // Store settings
+                    $prev-root-font-size  : $root-font-size;
+                    $prev-line-height     : $root-line-height;
+                    $prev-modular-scale   : $modular-scale;
+                    $prev-fixed-multiplier: $fixed-multiplier;
+                }
+
+                // Add selector to rendered list
+                $_vr-rendered: append($_vr-rendered, $selector) !global;
+            }
         }
 
-        // Add selector to rendered list
-        $_vr-rendered: append($_vr-rendered, $selector) !global;
-    }
-}
+        /// Renders the vertical rhythm grid lines as a background image and applies
+        /// the highlight color as a semi-transparent background to all child elements.
+        ///
+        /// @param {Color} $color [null] - Grid line and element highlight color
+        /// @param {Boolean} $lines [true] - Displays vertical rhythm grid lines
+        /// @param {Boolean} $highlight [true] - Sets the background color of all
+        ///   elements to a semi-transparent variation of the grid color specified to
+        ///   help verify alignment with the vertical rhythm grid.
+        /// @param {Boolean} $detail [true] - Displays a floating panel with the active
+        ///   breakpoint width, font-size, line-height and modular scale. This is rendered
+        ///   as psuedo content (`:before`) on the `<body>` element.
+        ///
+        /// @example scss SCSS
+        ///   // Call the vertical rhythm reset mixin at root
+        ///   @include vr-reset();
+        ///
+        ///   // Call the grid mixin
+        ///   body {
+            ///     @include @vr-grid();
+            ///   }
+            @mixin vr-grid($color: null, $lines: true, $highlight: true, $detail: true) {
+                // Placeholder for breakpoint settings
+                $prev-font-size    : _get-root(font-size);
+                $prev-line-height  : _get-root(line-height);
+                $prev-grid-color   : if($color, $color, _get-root(grid-color));
+                $prev-modular-scale: _get-root(modular-scale);
 
-/// Renders the vertical rhythm grid lines as a background image and applies
-/// the highlight color as a semi-transparent background to all child elements.
-///
-/// @param {Color} $color [null] - Grid line and element highlight color
-/// @param {Boolean} $lines [true] - Displays vertical rhythm grid lines
-/// @param {Boolean} $highlight [true] - Sets the background color of all
-///   elements to a semi-transparent variation of the grid color specified to
-///   help verify alignment with the vertical rhythm grid.
-/// @param {Boolean} $detail [true] - Displays a floating panel with the active
-///   breakpoint width, font-size, line-height and modular scale. This is rendered
-///   as psuedo content (`:before`) on the `<body>` element.
-///
-/// @example scss SCSS
-///   // Call the vertical rhythm reset mixin at root
-///   @include vr-reset();
-///
-///   // Call the grid mixin
-///   body {
-///     @include @vr-grid();
-///   }
-@mixin vr-grid($color: null, $lines: true, $highlight: true, $detail: true) {
-    // Placeholder for breakpoint settings
-    $prev-font-size    : _get-root(font-size);
-    $prev-line-height  : _get-root(line-height);
-    $prev-grid-color   : if($color, $color, _get-root(grid-color));
-    $prev-modular-scale: _get-root(modular-scale);
+                @each $breakpoint, $settings in _get-settings() {
+                    // Variables
+                    $font-size    : if(map-has-key($settings, font-size), _to-root-px(map-get($settings, font-size)), _to-root-px($prev-font-size));
+                    $line-height  : if(map-has-key($settings, line-height), _to-rem(map-get($settings, line-height), $font-size), _to-rem($prev-line-height, $font-size));
+                    $modular-scale: if(map-has-key($settings, modular-scale), map-get($settings, modular-scale), $prev-modular-scale);
+                    $grid-color   : if(not $color and map-has-key($settings, grid-color), map-get($settings, grid-color), $prev-grid-color);
+                    $media-query  : if($breakpoint != root, "(min-width: #{$breakpoint})", false);
 
-    @each $breakpoint, $settings in _get-settings() {
-        // Variables
-        $font-size    : if(map-has-key($settings, font-size), _to-root-px(map-get($settings, font-size)), _to-root-px($prev-font-size));
-        $line-height  : if(map-has-key($settings, line-height), _to-rem(map-get($settings, line-height), $font-size), _to-rem($prev-line-height, $font-size));
-        $modular-scale: if(map-has-key($settings, modular-scale), map-get($settings, modular-scale), $prev-modular-scale);
-        $grid-color   : if(not $color and map-has-key($settings, grid-color), map-get($settings, grid-color), $prev-grid-color);
-        $media-query  : if($breakpoint != root, "(min-width: #{$breakpoint})", false);
+                    // Checks
+                    $is-new-grid-color: if($breakpoint == root or $grid-color != $prev-grid-color, true, false);
 
-        // Checks
-        $is-new-grid-color: if($breakpoint == root or $grid-color != $prev-grid-color, true, false);
+                    // Generate grid settings
+                    @include _maybe-query($media-query) {
+                        $grid-size           : round(_strip-unit($line-height) * _strip-unit($font-size));
+                        $grid-line-color     : transparentize($grid-color, 0.5);
+                        $grid-highlight-color: transparentize($grid-color, 0.9);
+                        $grid-text-color     : if(lightness($grid-color) > 52, #000, #fff);
 
-        // Generate grid settings
-        @include _maybe-query($media-query) {
-            $grid-size           : round(_strip-unit($line-height) * _strip-unit($font-size));
-            $grid-line-color     : transparentize($grid-color, 0.5);
-            $grid-highlight-color: transparentize($grid-color, 0.9);
-            $grid-text-color     : if(lightness($grid-color) > 52, #000, #fff);
+                        // Display detail as pseudo content
+                        @if $detail {
+                            &:before {
+                                /* Vertical Rhythm Reset: Grid Detail */
+                                content: "Vertical Rhythm Reset\A\
+                                --------------------------\A\
+                                breakpoint   : #{$breakpoint}\A\
+                                font-size    : #{$font-size}\A\
+                                line-height  : #{round($font-size * _strip-unit($line-height))}\A\
+                                modular-scale: #{$modular-scale}" !important;
+                                display: table !important; // Fix for flexbox
+                                position: fixed !important;
+                                z-index: 2147483647 !important;
+                                bottom: 1vh !important;
+                                right: 1vh !important;
+                                padding: 10px 20px !important;
+                                background: transparentize($grid-color, 0.2) !important;
+                                border-radius: 4px !important;
+                                color: $grid-text-color !important;
+                                font-family: "Lucida Console", "Consolas", Monaco, monospace !important;
+                                font-size: 12px !important;
+                                line-height: 20px !important;
+                                white-space: pre !important;
+                            }
+                        }
 
-            // Display detail as pseudo content
-            @if $detail {
-                &:before {
-                    /* Vertical Rhythm Reset: Grid Detail */
-                    content: "Vertical Rhythm Reset\A\
- --------------------------\A\
- breakpoint   : #{$breakpoint}\A\
- font-size    : #{$font-size}\A\
- line-height  : #{round($font-size * _strip-unit($line-height))}\A\
- modular-scale: #{$modular-scale}" !important;
-                    display: table !important; // Fix for flexbox
-                    position: fixed !important;
-                    z-index: 2147483647 !important;
-                    bottom: 1vh !important;
-                    right: 1vh !important;
-                    padding: 10px 20px !important;
-                    background: transparentize($grid-color, 0.2) !important;
-                    border-radius: 4px !important;
-                    color: $grid-text-color !important;
-                    font-family: "Lucida Console", "Consolas", Monaco, monospace !important;
-                    font-size: 12px !important;
-                    line-height: 20px !important;
-                    white-space: pre !important;
-                }
-            }
-
-            // Grid lines
-            @if $lines {
-                $grid-svg: "data:image/svg+xml;charset=utf8,\
+                        // Grid lines
+                        @if $lines {
+                            $grid-svg: "data:image/svg+xml;charset=utf8,\
 %3Csvg width='#{$grid-size}px' height='#{$grid-size}px' viewBox='0 0 #{$grid-size} #{$grid-size}' xmlns='http://www.w3.org/2000/svg'%3E\
 %3Cdefs%3E\
 %3Cpattern id='grid' height='#{$grid-size}' width='1000' patternUnits='userSpaceOnUse'%3E\
@@ -1117,35 +1117,35 @@ $_vr-border-color: #808080;
 %3Crect width='#{$grid-size}px' height='#{$grid-size}px' fill='url(%23grid)' /%3E\
 %3C/svg%3E";
 
-                /* Vertical Rhythm Reset: Grid Lines */
-                background-image: url($grid-svg) !important;
-                background-color: transparent !important;
-            }
+/* Vertical Rhythm Reset: Grid Lines */
+background-image: url($grid-svg) !important;
+background-color: transparent !important;
+}
 
-            // Grid highlight
-            @if $highlight {
-                @if $is-new-grid-color {
-                    *:not(hr) {
-                        /* Vertical Rhythm Reset: Grid Highlight */
-                        background-color: $grid-highlight-color !important;
-                    }
-                }
-            }
-            // Hide the background so the grid lines will be visible
-            @else if $lines {
-                *:not(hr) {
-                    /* Vertical Rhythm Reset: Grid Highlight */
-                    background: transparent !important;
-                }
-            }
+// Grid highlight
+@if $highlight {
+    @if $is-new-grid-color {
+        *:not(hr) {
+            /* Vertical Rhythm Reset: Grid Highlight */
+            background-color: $grid-highlight-color !important;
         }
-
-        // Store settings for comparison during next iteration
-        $prev-font-size    : $font-size;
-        $prev-line-height  : $line-height;
-        $prev-grid-color   : $grid-color;
-        $prev-modular-scale: $modular-scale;
     }
+}
+// Hide the background so the grid lines will be visible
+@else if $lines {
+    *:not(hr) {
+        /* Vertical Rhythm Reset: Grid Highlight */
+        background: transparent !important;
+    }
+}
+}
+
+// Store settings for comparison during next iteration
+$prev-font-size    : $font-size;
+$prev-line-height  : $line-height;
+$prev-grid-color   : $grid-color;
+$prev-modular-scale: $modular-scale;
+}
 }
 
 /// Generates the CSS reset/normalization, vertical rhythm grid and CSS helper
@@ -1200,13 +1200,13 @@ $_vr-border-color: #808080;
 ///     $helpers      : (...)
 ///   );
 @mixin vr-reset(
-    $box-sizing        : $vr-box-sizing,
-    $font-size         : $vr-font-size,
-    $line-height       : $vr-line-height,
-    $modular-scale     : $vr-modular-scale,
-    $grid-color        : $vr-grid-color,
-    $breakpoints       : $vr-breakpoints,
-    $helpers           : $vr-helpers) {
+$box-sizing        : $vr-box-sizing,
+$font-size         : $vr-font-size,
+$line-height       : $vr-line-height,
+$modular-scale     : $vr-modular-scale,
+$grid-color        : $vr-grid-color,
+$breakpoints       : $vr-breakpoints,
+$helpers           : $vr-helpers) {
     // Update globals
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     $vr-box-sizing   : $box-sizing    !global;
@@ -1247,8 +1247,8 @@ $_vr-border-color: #808080;
 
             // Prevent font-size adjustments on orientation change
             -webkit-text-size-adjust: 100%;
-               -moz-text-size-adjust: 100%;
-                -ms-text-size-adjust: 100%;
+            -moz-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
         }
 
         body {
@@ -1543,9 +1543,9 @@ $_vr-border-color: #808080;
 
         // Store settings as map to pass to mixins below
         $settings: (
-            font-size    : $font-size,
-            line-height  : $line-height,
-            modular-scale: $modular-scale
+        font-size    : $font-size,
+        line-height  : $line-height,
+        modular-scale: $modular-scale
         );
 
         @include _maybe-query($media-query, $media-comment) {
@@ -1770,7 +1770,7 @@ $_vr-border-color: #808080;
         $prev-modular-scale: $modular-scale;
     }
 
-    @media only screen and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+    @media only screen and (max-device-width: 64rem) and (-webkit-min-device-pixel-ratio: 2) {
         /* Vertical Rhythm Reset: Fix for mobile select[multiple] elements */
         select[multiple],
         select[multiple][size] {

@@ -329,8 +329,9 @@
 
 //video
 .jwplayer{
-  width: 100%!important;
-  height: 240px!important;
+  // width: 100%!important;
+  // height: 240px!important;
+  @include aspect-ratio(16, 9);
 }
 .jw-svg-icon{
   pointer-events: visiblePainted!important;

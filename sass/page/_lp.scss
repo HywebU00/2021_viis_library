@@ -39,7 +39,7 @@
                 white-space: nowrap;
             }
             a {
-                max-width: 450px;
+                max-width: 28.125rem;
                 color:#0068b7;
                 &:hover,
                 &:focus{
@@ -49,7 +49,7 @@
             &.date {
                 text-align: center;
                 color: #666;
-                min-width: 120px;
+                min-width: 7.5em;
                 white-space: nowrap;
                 @include screen('mobile') {
                     text-align: left;
@@ -161,7 +161,7 @@
                     @include screen("mobile") {
                         display: inline-block;
                         margin-bottom: .5em;
-                        max-width: 100px;
+                        max-width: 6.25rem;
                     }
                 }
                 time {
@@ -946,7 +946,7 @@ label{
                     padding: 0.3em 2em 0.3em 1em;
                     border-radius: 30px;
                     border: solid 1px #c5d7ff;
-                    min-width: 200px;
+                    min-width: 12.5em;
                     position: relative;
                     font-size: .813em;
                     margin: 0 auto;

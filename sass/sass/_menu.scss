@@ -21,7 +21,7 @@
             display: inline-block;
             vertical-align: top;
             min-width: 7em;
-            @media screen and (max-width: 1200px) {
+            @media screen and (max-width: 75rem) {
                 min-width: auto;
             }
             >a {

@@ -23,9 +23,9 @@ $tooltop-font-size:$font-size;
 [tooltip]::after {
     content: attr(tooltip);
     text-align: left;
-    min-width: 150px;
+    min-width: 9.375em;
     line-height:1.5em;
-    max-width: 300px;
+    max-width: 18.75em;
     font-size:.813em;
     max-height: (($tooltop-font-size*.813)*1.5)*4.25; // white-space: nowrap;
     overflow: hidden; // text-overflow: ellipsis;

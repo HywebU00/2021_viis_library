@@ -250,7 +250,7 @@ img.img-responsive {
         list-style-type: none;
         padding: 0;
         margin-left: 1em;
-        @media screen and (max-width: 767px) {
+        @media screen and (max-width: 48rem) {
             margin-left: 0;
         }
     }
@@ -264,7 +264,7 @@ img.img-responsive {
         .file_view {
             font-size: .813em;
             color: #666;
-            min-width: 100px;
+            min-width: 6.25rem;
             white-space: nowrap;
             float: left;
             margin-top: 5px;
@@ -272,7 +272,7 @@ img.img-responsive {
             background: #F1F1F1;
             padding: .2em 1em;
             margin-right: 1em;
-            @media screen and (max-width: 767px) {
+            @media screen and (max-width: 48rem) {
                 display: inline-block;
                 float: none;
                 width: auto;
@@ -285,7 +285,7 @@ img.img-responsive {
         .update {
             width: 150px;
             margin-left: 65px;
-            @media screen and (max-width: 767px) {
+            @media screen and (max-width: 48rem) {
                 margin-left: 5px;
             }
         }
@@ -387,7 +387,7 @@ img.img-responsive {
         list-style-type: none;
         padding: 0;
         margin-left: 1em;
-        @media screen and (max-width: 767px) {
+        @media screen and (max-width: 48rem) {
             margin-left: 0;
         }
     }

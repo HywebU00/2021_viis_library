@@ -268,7 +268,7 @@
     .controls{
         text-align: center;
         font-weight: bold;
-        max-width:100px;
+        max-width:6rem;
         color:#FFF;
         padding:.2em .5em;
         margin: 0px auto;
@@ -323,15 +323,15 @@
     }
     .Slider-for {
         width: 80%;
-        min-width: 260px;
-        max-width:800px;
+        min-width: 16rem;
+        max-width:50rem;
         margin: 1em auto;
         position: relative;
     }
     .Slider-nav {
         width: 80%;
-        min-width: 260px;
-        max-width:800px;
+        min-width: 16rem;
+        max-width:50rem;
         margin: 1em auto;
         position: relative;
         .img-container {

@@ -30,23 +30,13 @@
 %time {
     font-size: .9em;
     margin: .2em auto .2em 0;
-    // max-width: 100px;
-    // @include border-radius(10px);
     display: inline-block;
     overflow: hidden;
     color: #cc0000;
     padding: .1em .5em;
     vertical-align: middle;
-    // background: #F1F1F1;
     &:before {
-        // display: inline-block;
-        // content: "";
-        // width: 12px;
-        // height: 15px;
-        // margin-right: .5em;
-        // background: url(../images/icon/icon_clock.svg) no-repeat center bottom;
-        // background-size: 10px;
-        // opacity: .5;
+
     }
 }
 
@@ -116,8 +106,8 @@
 .conbox{
     margin: .5em 1em;
     @include screen('xs_mobile') {
-       margin: .5em .3em; 
-   }
+     margin: .5em .3em; 
+ }
 }
 .s-inquiry{
     margin: 1em 0;
@@ -205,11 +195,11 @@
                     width: 60%;
                     margin: .5em auto;
                     @include screen('mobile') {
-                       width: 80%; 
-                   }
-               }    
-           }
-           .mlTitle{
+                     width: 80%; 
+                 }
+             }    
+         }
+         .mlTitle{
             text-align: center;
             margin: 1em 0;
             display: block;

@@ -49,23 +49,23 @@ $font-size:					1em;
 // 格線系統
 $grid-columns:              12 !default;			   //格線欄位數
 $grid-gutter-width:         30px !default;			   //左右padding
-$container-max:             1200px !default;		   //container最大寬
+$container-max:             75rem !default;		   //container最大寬
 
 //mediaquery
-$screen-lg:        			1400px !default;  	       //電腦
-$screen-md:        			992px  !default;      	   //平板
-$screen-sm:        			768px  !default;     	   //手機
-$screen-xs:        			576px  !default;      	   //極小尺寸
+$screen-lg:        			80rem !default;  	       //電腦
+$screen-md:        			62rem  !default;      	   //平板
+$screen-sm:        			48rem  !default;     	   //手機
+$screen-xs:        			36rem  !default;      	   //極小尺寸
 
 //-------------------------------------------------------------客製化------//
 
 // 圖片
 $rounded-angle:             16px;					   //圖片導角
 
-$wwSlim: 500px;
-$wwMedium: 700px;
-$wwNormal: 1000px;
-$wwWide: 1200px;
+$wwSlim: 31.25rem;
+$wwMedium: 43.75rem;
+$wwNormal: 62.5rem;
+$wwWide: 75rem;
 
 
 

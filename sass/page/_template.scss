@@ -140,7 +140,7 @@ body {
                     transform: rotate(315deg);
                     content: "";
                 }
-                @media screen and (max-width: 1200px) {
+                @media screen and (max-width: 75rem) {
                     width: 120px!important;
                     &:hover,
                     &:focus {

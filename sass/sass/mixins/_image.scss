@@ -42,7 +42,7 @@
     width: $pic_W;
     overflow: hidden;
     @include box-sizing(border-box);
-    @media (max-width: 767px) {
+    @media (max-width: 48rem) {
         float:none;
         display: inline-block;
         $outer_W: 100%;
