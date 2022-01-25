@@ -62,7 +62,7 @@ body:not(.toc-inline) #main_content main, body:not(.toc-inline) #main_content na
   font-family: "微軟正黑體";
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 40rem) {
   [role="dialog"] {
     box-sizing: border-box;
     top: 0px;
@@ -429,16 +429,16 @@ ul.ul li a:hover {background-color: #035b7e; color: #fff;} */
 .plus a:hover{ background: #e64c3c; color: #fff;}
 .plus img { padding-right: 5px; }
 
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 80rem) {
   .formbox2 ul li {width: 46%;}
   .formbox2 label{display: inline-block!important;}
   .page label{display: inline-block!important;}
 
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 75rem) {
   .formbox2 ul li {width: 100%;}
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 47rem) {
  .lightbox ul.category li {width: 95%;float:none;} 
  .lightbox #playbtn{width: 46%;}
  .lightbox #stopbtn{width: 46%;}
