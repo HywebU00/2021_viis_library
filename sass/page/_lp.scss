@@ -270,15 +270,18 @@
                 padding: 0!important;
                 &:hover {
                     @include box-shadow(0px 0px  1px 2px RGBA(0, 0, 0, .2));
-                }
-                &:focus {
-                    @include box-shadow(0px 0px  1px 2px RGBA(225, 5, 5, .8));
-                }
+                    h3{
+                      color:#c00;
+                  }
+              }
+              &:focus {
+                @include box-shadow(0px 0px  1px 2px RGBA(225, 5, 5, .8));
             }
-            .imgOuter {
-                width: 35%;
-                float: left;
-                background: #fff!important;
+        }
+        .imgOuter {
+            width: 35%;
+            float: left;
+            background: #fff!important;
                 // @include aspect-ratio(3, 4);
                 vertical-align: top;
 
@@ -306,12 +309,16 @@
                height: auto; 
                margin-bottom: 1em;
            }
-           h4 {
+           h3, h4 {
             line-height: 1.4em;
             font-size: 1.125em;
             overflow: hidden;
             display: block;
+            padding-bottom: 0;
             margin: .5em 0 0 0;
+            color:#222;
+            border-bottom: 0px solid #f6b37f;
+
             @include screen('notebook') {
                 max-height: 3em;
                 overflow: hidden;
