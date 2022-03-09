@@ -106,8 +106,8 @@
 .conbox{
     margin: .5em 1em;
     @include screen('xs_mobile') {
-     margin: .5em .3em; 
- }
+       margin: .5em .3em; 
+   }
 }
 .s-inquiry{
     margin: 1em 0;
@@ -182,35 +182,45 @@
         padding: 0;
         list-style: none;
         overflow: hidden;
+        display: flex;
+        flex-flow:row wrap;
+        align-items: flex-start;
         li {
-            @include make-xs-column(6);
-            @include make-sm-column(6);
-            @include make-md-column(3);
-            @include make-lg-column(3);
+            // @include make-xs-column(6);
+            // @include make-sm-column(6);
+            // @include make-md-column(3);
+            // @include make-lg-column(3);
             text-align: center;
             margin: .5em 0;
-            
-            .mlImg{
-                img{
-                    width: 60%;
-                    margin: .5em auto;
-                    @include screen('mobile') {
-                     width: 80%; 
-                 }
-             }    
-         }
-         .mlTitle{
-            text-align: center;
-            margin: 1em 0;
-            display: block;
-            height: 3em;
-            overflow: hidden;
-            @include screen('mobile') {
-                margin: .5em 0 .5em 1em;
-                text-align: left; 
-            }
+            flex-basis: calc(100% / 4 - 5px);
+            max-width: calc(100% / 4 - 5px);
+            @media (max-width: 767px){
+              flex-basis: calc(100% / 2 - 5px);
+              max-width: calc(100% / 2 - 5px);  
+          }
+
+          .mlImg{
+            img{
+                width: 60%;
+                margin: .5em auto;
+                @include screen('mobile') {
+                   width: 80%; 
+               }
+           }    
+       }
+       .mlTitle{
+        text-align: center;
+        margin: 1em auto;
+        display: block;
+        height: 3em;
+        overflow: hidden;
+        max-width:80%;
+        @include screen('mobile') {
+            margin: .5em auto;
+            // text-align: left; 
         }
     }
+}
 }
 .more{
     clear: both;
