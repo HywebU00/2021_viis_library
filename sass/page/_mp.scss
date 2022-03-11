@@ -106,8 +106,8 @@
 .conbox{
     margin: .5em 1em;
     @include screen('xs_mobile') {
-       margin: .5em .3em; 
-   }
+     margin: .5em .3em; 
+ }
 }
 .s-inquiry{
     margin: 1em 0;
@@ -192,8 +192,8 @@
             // @include make-lg-column(3);
             text-align: center;
             margin: .5em 0;
-            flex-basis: calc(100% / 4 - 5px);
-            max-width: calc(100% / 4 - 5px);
+            flex-basis: calc(100% / 5 - 5px);
+            max-width: calc(100% / 5 - 5px);
             @media (max-width: 767px){
               flex-basis: calc(100% / 2 - 5px);
               max-width: calc(100% / 2 - 5px);  
@@ -204,11 +204,11 @@
                 width: 60%;
                 margin: .5em auto;
                 @include screen('mobile') {
-                   width: 80%; 
-               }
-           }    
-       }
-       .mlTitle{
+                 width: 80%; 
+             }
+         }    
+     }
+     .mlTitle{
         text-align: center;
         margin: 1em auto;
         display: block;
