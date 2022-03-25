@@ -289,6 +289,14 @@ body {
         position: relative;
         margin: .2em;
     }
+    h2.title, h3.title{
+        &:focus{
+            border: 3px dotted $form-focus!important;
+            box-shadow: none;
+            outline: 0;
+            background: $form-focusbg!important;
+        }
+    }
 }
 
 .inner_image {

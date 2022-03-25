@@ -70,7 +70,14 @@ a {
     &:hover {
         outline: 0;
     }
-    ;
+    &:focus{
+        background: $form-focusbg!important;
+        border: 3px dotted $form-focus!important;
+        box-shadow: none!important;
+        color: #000!important;
+
+
+    }
 }
 
 

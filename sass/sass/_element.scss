@@ -188,13 +188,13 @@ a.more {
     // display: none;
     z-index: 9999999999;
     text-indent: -999999px;
-    &:hover,&:focus{
+    &:hover{
         opacity: 1;
         background: url(../images/basic/top.png) no-repeat center top darken($gotoTop,10);
     }
     &:focus{
         opacity: 1;
-        background: url(../images/basic/top.png) no-repeat center top adjust_hue(saturate(lighten($gotoTop, 16), 40), -136);
+        background: url(../images/basic/top_focus.png) no-repeat center top adjust_hue(saturate(lighten($gotoTop, 16), 40), -136)!important;
     }
 }
 // img

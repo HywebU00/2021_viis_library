@@ -138,16 +138,24 @@ textarea {
         width: 100%;
     }
 }
-
+input[type="submit"]:focus,
 input[type="text"]:focus,
 input[type="reset"]:focus,
 input[type="file"]:focus,
 input[type="password"]:focus,
 textarea:focus,
 select:focus {
-    border: 1px solid lighten($form-focus, 20);
+    border: 3px dotted $form-focus!important;
     @include box-shadow(0px 0px 0px 2px lighten($form-focus, 20));
     outline: none;
+    box-shadow: none;
+    background: $form-focusbg!important;
+    color: #000!important;
+}
+select:focus{
+    background: $form-focusbg url(../images/basic/icon_select_arrow.svg) no-repeat right center!important;
+    background-size: auto;
+    background-size: 20px;
 }
 
 // 

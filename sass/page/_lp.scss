@@ -874,11 +874,16 @@ label{
     button{
         background: #0c7979;
         border: solid 1px #0c7979;
-        &:hover, &:focus{
+        &:hover{
          background: #086262;
          border: solid 1px #086262; 
      }
-     @include screen('mobile') {
+     &:focus{
+        border: dotted 3px $form-focus;
+        background: $form-focusbg!important;
+        color: #000!important;
+    }
+    @include screen('mobile') {
       width: 100%;  
   }
 }
