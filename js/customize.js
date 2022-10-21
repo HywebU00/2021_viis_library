@@ -1450,3 +1450,46 @@ $(function() {
       $(this).attr('aria-selected','true').parent().addClass('playing');
   })
 })
+
+
+ //navigation readset收合區塊
+ $('.navigation').find('li').has('.readset').addClass('hasChild');
+ var _navlistChild = $('.navigation').find('li.hasChild');
+ $('.navigation>ul>li>a').click(function() {
+    $(this).siblings('.readset').slideToggle();
+})
+ _navlistChild.children('a').keyup(function() {
+    $(this).siblings('.readset').fadeIn();
+});
+ _navlistChild.find('.text_contrast li:last>a').focusout(function() {
+    $(this).parents('.readset').hide();
+});
+
+// 點外面關閉share
+$(document).on('touchend click', function(e) {
+    var container = $('.header .navigation');
+    if (!container.is(e.target) && container.has(e.target).length === 0) {
+        $('.header .navigation .readset').hide();
+    }
+});
+
+//accordionqa
+$(".accordionqa .accordionblock").each(function () {
+  var _accordionItem = $(this).children(".question");
+  var _openclose_btn = _accordionItem.children(".openclose_btn");
+  var _answercontent = $(this).children(".answer");
+  if (_answercontent.length == 0) {
+    _openclose_btn.hide();
+} else {
+    function accordion3(e) {
+      if (_answercontent.is(":hidden")) {
+        _answercontent.slideDown();
+        _openclose_btn.text("縮合頁面工具").addClass("open");
+    } else {
+        _answercontent.slideUp();
+        _openclose_btn.text("縮合頁面工具").removeClass("open");
+    }
+}
+_accordionItem.click(accordion3);
+}
+});

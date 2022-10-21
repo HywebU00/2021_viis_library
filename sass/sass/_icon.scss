@@ -83,6 +83,9 @@
 .i_mail {
     @include hyui_icon('icon_mail');
 }
+.i_export {
+    @include hyui_icon('icon_export');
+}
 .i_rss {
     @include hyui_icon('icon_rss');
 }

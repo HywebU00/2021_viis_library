@@ -129,3 +129,32 @@ table {
 
     }
 }
+
+.recommend{
+    margin: .5em 1em;
+    table{
+        border-top: solid 1px #dcdcdc;
+        line-height: 1.6em;
+        caption{
+            padding: .6em .5em;
+            font-size: 1.125em;
+            color:$primaryColor;
+        }
+        tr{
+            border-bottom: solid 1px #dcdcdc;
+        }
+        th{
+            vertical-align: top;
+            width: 6em;
+            text-align: left;
+            padding: .6em .5em;
+        }
+        td{
+            vertical-align: top;
+            padding: .6em .5em;
+        }
+        p{
+            margin: 0 0 1em;
+        }
+    }
+}

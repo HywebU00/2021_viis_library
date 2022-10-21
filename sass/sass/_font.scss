@@ -24,6 +24,12 @@ body {
     @media print {
         font-size: .75em;
     }
+    &.small_size {
+        font-size: .938em;
+    }
+    &.large_size {
+        font-size: 1.125em;
+    }
 }
 
 a {
@@ -32,10 +38,12 @@ a {
 h3{
     font-size:1.25em;
 }
-.small-fontsize {
-    font-size: .938em;
-}
+// .small-fontsize {
+//     font-size: .938em;
+// }
 
-.large-fontsize {
-    font-size: 1.125em;
-}
+// .large-fontsize {
+//     font-size: 1.125em;
+// }
+
+

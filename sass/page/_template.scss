@@ -121,12 +121,13 @@ body {
                 transition: .3s ease-out;
                 margin-bottom: 0;
                 word-break: break-all;
-                width: 150px!important;
+                // width: 150px!important;
 
                 &:hover,
                 &:focus {
                     // background: RGBA(0, 0, 0, .4) !important;
-                    width: 150px;
+                    // width: 150px;
+                    // width: 100%;
                     color:#fff100;
                 }
                 &:before {

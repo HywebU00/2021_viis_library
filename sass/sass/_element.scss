@@ -236,28 +236,27 @@ img.img-responsive {
 }
 /*檔案下載*/
 .file_download {
-    width: 100%;
-    margin: 0 auto;
+    margin: 1em auto;
     @include clearfix();
     h3 {
-        font-size: 1.5em;
-        padding: 12px 0px 15px 0px;
-        margin: 0.5em 0px 0.2em;
+        font-size: 1.35em;
+        padding: .2em 0!important;
+        margin: 0 0 .2em;
         border-bottom: 1px solid $primaryColor;
     }
     ul {
         counter-reset: counter;
         list-style-type: none;
         padding: 0;
-        margin-left: 1em;
+        margin: 0;
         @media screen and (max-width: 48rem) {
             margin-left: 0;
         }
     }
     li {
         position: relative;
-        margin-bottom: 10px;
-        padding-bottom: .5em;
+        // margin-bottom: 10px;
+        // padding-bottom: .5em;
         border-bottom: 1px solid #DDD;
         overflow: hidden;
         .update,
@@ -290,22 +289,25 @@ img.img-responsive {
             }
         }
         a {
-            padding: .2em 0px .2em 65px;
+            padding: .6em 50px .6em 24px;
             position: relative;
             height: auto;
             line-height: 1.45em;
-            display: inline-block;
-            width: 100%;
-            color:#0068b7;
+            display: block;
+            color:$primaryColor;
             @include text-overflow;
             &:before {
                 position: absolute; // outline: 1px solid red;
-                top: 5px;
-                left: 0px;
+                top: .6em;
+                left: 0;
                 text-align: left;
-                width: 50px;
-                counter-increment: counter;
-                content: counters(counter, ".") " . ";
+                width: 1.5em;
+                height: 1.5em;
+                content:'';
+                background: url('../images/icon-dot.png')no-repeat center center;
+                background-size: 10px auto;
+                // counter-increment: counter;
+                // content: counters(counter, ".") " . ";
             }
             @include screen('mobile') {
                 margin-right: 0px; // display: block;
@@ -323,8 +325,8 @@ img.img-responsive {
                 width: 21px;
                 height: 24px;
                 position: absolute;
-                top: 2px;
-                left: 35px;
+                // top: 2px;
+                // right: 35px;
                 text-align: right;
             }
             &[href$="doc"]:after,&[href$="docx"]:after {
@@ -372,44 +374,52 @@ img.img-responsive {
 }
 // 外部連結
 .web_link {
-    width: 100%;
-    margin: 0 auto;
+    margin: 1em auto;
     @include clearfix();
     h3 {
-        font-size: 1.5em;
-        padding: 12px 0px 15px 0px;
-        margin: 0.5em 0px 0.2em;
+        font-size: 1.35em;
+        padding: .2em 0!important;
+        margin: 0 0 .2em;
         border-bottom: 1px solid $primaryColor;
     }
     ol,
     ul {
-        counter-reset: counter;
+        // counter-reset: counter;
         list-style-type: none;
-        padding: 0;
-        margin-left: 1em;
+        padding: 0!important;
+        margin: 0!important;
         @media screen and (max-width: 48rem) {
             margin-left: 0;
         }
     }
     li {
         position: relative;
-        margin-bottom: 10px;
+        // margin-bottom: 10px;
         border-bottom: 1px solid #EEE;
         a {
-            padding: .2em 0px .2em 35px;
+            padding: .6em 0px .6em 24px;
             position: relative;
             height: auto;
             line-height: 1.45em;
             display: block;
-            color:#0068b7;
+            color:$primaryColor;
             &:before {
-                position: absolute; // outline: 1px solid red;
-                top: 5px;
-                left: 0px;
-                text-align: right;
-                width: 30px;
-                counter-increment: counter;
-                content: counters(counter, ".") " . ";
+                // position: absolute; // outline: 1px solid red;
+                // top: 5px;
+                // left: 0px;
+                // text-align: right;
+                // width: 30px;
+                // counter-increment: counter;
+                // content: counters(counter, ".") " . ";
+                position: absolute;
+                top: .6em;
+                left: 0;
+                text-align: left;
+                width: 1.5em;
+                height: 1.5em;
+                content:'';
+                background: url('../images/icon-dot.png')no-repeat center center;
+                background-size: 10px auto;
             }
         }
     }

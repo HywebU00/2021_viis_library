@@ -196,6 +196,7 @@ body:not(.toc-inline) #main_content main, body:not(.toc-inline) #main_content na
   padding: 0;
   line-height: 1.5em;
 }
+
 .default_dialog button#btn_close{
   background: #339999;
   border: none;

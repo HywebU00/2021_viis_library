@@ -47,55 +47,106 @@
     h3{
         margin: 1.5em 0 0 0;
         color:#ff3300;
+        position: relative;
         a{
             color:#369;
             border-bottom: dotted 1px #999;
             padding: .5em;
         }
-    }
-    table{
+        &:after {
+          content: "";
+          border: 2px solid #666;
+          border-top: none;
+          border-left: none;
+          position: absolute;
+          top: 1em;
+          right:.5em;
+          // right: -20px;
+          width: 8px;
+          height: 8px;
+          transform: rotate(45deg);
+          transition: transform 0.5s;
+      }
+  }
+  table{
+    border: solid 1px #ccc;
+    margin: 1em 0;
+    th{
         border: solid 1px #ccc;
-        margin: 1em 0;
-        th{
-            border: solid 1px #ccc;
-            padding: .5em;
-            text-align: right;
-            width: 20%;
-            background: #eee;
-        }
-        td{
-            border: solid 1px #ccc;
-            padding: .5em;
-
-        }
+        padding: .5em;
+        text-align: right;
+        width: 20%;
+        background: #eee;
     }
-    .ebook-list{
-        list-style-type: none;
-        margin: 1em 0;
-        font-size: 1.05em;
-        overflow: hidden;
-        li{
-            @include make-xs-column(12);
-            @include make-sm-column(6);
-            @include make-md-column(4);
-            @include make-lg-column(4);
-            @include box-sizing(border-box);
-            position: relative;
+    td{
+        border: solid 1px #ccc;
+        padding: .5em;
+
+    }
+}
+.ebook-list{
+    list-style-type: none;
+    margin: 1em 0;
+    font-size: 1.05em;
+    overflow: hidden;
+    padding:0;
+    display: flex;
+    flex-wrap: wrap;
+    li{
+            // @include make-xs-column(12);
+            // @include make-sm-column(6);
+            // @include make-md-column(4);
+            // @include make-lg-column(4);
+            // @include box-sizing(border-box);
+            // position: relative;
+            background: #2B8282; display: block; max-width: 30%;  text-align:center; float:left;  margin: 5px;flex: 1 1 30%;padding: 1em .5em;border-radius: 5px;
+            &:hover{
+                background: #287777;
+            }
+            @include screen('mobile') {
+                max-width: 96%;
+                flex: 1 1 96%;  
+            }
+
             a{
-                display: block;
-                color:#fff;
-                padding: .8em;
-                margin: .2em;
-                border-radius: 8px;
-                border: solid 1px #ccc;
-                background: #339999;
+                color: #fff;
+                // display: block;
+                // color:#fff;
+                // padding: .8em;
+                // margin: .2em;
+                // border-radius: 8px;
+                // border: solid 1px #ccc;
+                // background: #339999;
                 &:hover{
-                  background: #069; 
-                  color:#fff; 
+                  // background: #069; 
+                  // color:#fff;
+                  color: #ffff41;
               }
 
           }
-          .date{
+          p{
+            margin: .5em 0;
+        }
+        .more{
+            text-align: right;padding: .5em 0 0;
+            a{
+                display: inline-block;
+                background: rgba(255,255, 255, .8);
+                color: #000!important;
+                font-size: .938em;
+                line-height: 1em;
+                padding: .4em .5em .3em;
+                margin-right: 1em;
+                border-radius: 3px;
+                &:hover{
+                    background: rgba(255,255, 255, 1);
+                    color: #000;
+                    text-decoration: none;
+                }
+
+            }
+        }
+        .date{
             font-size: .8em;
         }
     }
@@ -441,5 +492,18 @@ label{
         }
     }
 }
+
+.help{
+    display: inline-block;
+    margin: -.1em .3em 0 .3em;
+    vertical-align: top;
+    a{
+        display: block;
+        img{
+            width: 22px;
+            height: auto;
+        }    }
+
+    }
 
 

@@ -1,10 +1,10 @@
 //pagination
 
 .pagination {
-    margin: 10px auto 5px;
+    margin: 10px 1em 5px;
     padding: 0px;
     display: block;
-    text-align: center;
+    text-align: left;
     clear: both;
     font-size: .938em;
     @include clearfix();
@@ -64,6 +64,13 @@
         margin:0px .5em;
         @include screen('mobile') {
             margin:0px;
+        }
+    }
+    a{
+        display: inline-block;
+        color:$primaryColor;
+        &:hover{
+            color:$aHover;
         }
     }
 }
