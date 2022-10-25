@@ -314,11 +314,11 @@
                     width: 45%;
                 }
                 @include screen('mobile') {
-                   width: 100%;
-                   float: none; 
-               }
-           }
-           .caption {
+                 width: 100%;
+                 float: none; 
+             }
+         }
+         .caption {
             height: 15em;
             overflow: hidden;
             @include gutter;
@@ -326,9 +326,9 @@
                 // height: 12.5em; 
             }
             @include screen('tablet') {
-               height: auto; 
-               margin-bottom: 1em;
-           }
+             height: auto; 
+             margin-bottom: 1em;
+         }
         //    ul{
         //     display: block;
         // }
@@ -456,11 +456,11 @@
                     // width: 45%;
                 }
                 @include screen('mobile') {
-                   width: 100%;
-                   float: none; 
-               }
-           }
-           .caption {
+                 width: 100%;
+                 float: none; 
+             }
+         }
+         .caption {
             height: 8em;
             overflow: hidden;
             @include gutter;
@@ -468,9 +468,9 @@
                 // height: 12.5em; 
             }
             @include screen('tablet') {
-               height: auto; 
-               margin-bottom: 1em;
-           }
+             height: auto; 
+             margin-bottom: 1em;
+         }
         //    ul{
         //     display: block;
         // }
@@ -531,9 +531,9 @@
         @include text-line(1);
         color:#222;
         .count{
-         color:#0068b7; 
-     } 
- }
+           color:#0068b7; 
+       } 
+   }
 }
 }
 
@@ -598,8 +598,9 @@ label{
     padding: .1em 0 .1em;
     // background: #F6F6F6;
     @include border-radius(6px);
-    clear: both;
-    margin-bottom: 1.5em;
+    // clear: both;
+    margin-bottom: 0;
+    float: left;
     .sort {
         float: right;
         margin-right: $grid-gutter-width/2;
@@ -674,7 +675,7 @@ label{
     }
 }
 .q-sort{
-    margin: 0 10em .5em 1em;
+    margin: .5em 10em .1em 1em;
     display: inline-block;
     float: right;
 
@@ -686,7 +687,7 @@ label{
         background-size: 1em auto;
         border-radius: 5px;
         padding: .3em 1em .3em 2em;
-        margin: 0;
+        margin:  0;
         &:hover, &:focus{
             background:darken($secondaryColor, 10) url('../images/icon/icon_booksort2.svg')no-repeat left .5em center!important;
             background-size: 1em auto!important;
@@ -696,8 +697,8 @@ label{
             // background: darken($secondaryColor, 10);
         }
     }
-    @include screen('xs_mobile') {
-        float:none;
+    @include screen('mobile') {
+        float:left;
         margin: .5em 5px 1em 18px;
         text-align: center;
     }
@@ -1052,10 +1053,10 @@ label{
         background: #0c7979;
         border: solid 1px #0c7979;
         &:hover{
-         background: #086262;
-         border: solid 1px #086262; 
-     }
-     &:focus{
+           background: #086262;
+           border: solid 1px #086262; 
+       }
+       &:focus{
         border: dotted 3px $form-focus;
         background: $form-focusbg!important;
         color: #000!important;
@@ -1259,10 +1260,10 @@ label{
         padding: 2px 5px;
         font-size: .938em;
         &:hover, &:focus{
-         background: #086262;
-         border: solid 1px #086262; 
-     }
-     @include screen('xs_mobile') {
+           background: #086262;
+           border: solid 1px #086262; 
+       }
+       @include screen('xs_mobile') {
         width: 100%;
         height: 44px; 
     }
@@ -1383,6 +1384,9 @@ label{
         color:#222;
         position: relative;
         padding: 0 .5em;
+        @include screen('mobile') {
+            text-align: left;
+        }
 
     }
     .checkbox{
@@ -1469,6 +1473,9 @@ label{
     &:hover, &:focus{
         color:#c00;
     }
+    @include screen('mobile') {
+        text-align: left;
+    }
 }
 .icon-fa-iconmode{
     background: #fff;
@@ -1480,6 +1487,9 @@ label{
     background-size: 18px auto;
     &:hover, &:focus{
         color:#c00;
+    }
+    @include screen('mobile') {
+        text-align: left;
     }
 }
 

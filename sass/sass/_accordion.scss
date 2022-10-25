@@ -6,6 +6,7 @@
 
   .accordionblock {
     width: 100%;
+    padding-top: 0;
     button.question {
       padding: .5em .8em .5em 8em;
       border-radius: 5px;
@@ -13,7 +14,7 @@
       position: relative;
       display: block;
       text-align: left;
-      height: 2.1em;
+      height: 2.05em;
       // width: 100%;
       // border: 1px solid #ccc;
       border: none;
@@ -21,14 +22,19 @@
       // font-weight: bolder;
       // color: #444;
       box-sizing: border-box;
-      margin: 0;
+      margin: -2.2em 0 0 0;
       background: rgba(255, 255, 255, 0);
       vertical-align: middle;
-      position: absolute;
-      top:-2.6em;
-      right:0;
+      // position: absolute;
+      // top:-2.6em;
+      // right:0;
       background:darken($secondaryColor, 5);
       color:#fff;
+      float: right;
+      @include screen('mobile') {
+        float:none;
+        margin: .2em 0 0 0;
+      }
 
       &:hover,
       &:focus {

@@ -1,20 +1,20 @@
 
 // 黑底黃字
 .color-bBtY{
-    background: $color-black2;
-    color:$color-yellow2;
+    background: $color-black2!important;
+    color:$color-yellow2!important;
     a{
-        color:$color-yellow2;
+        color:$color-yellow2!important;
         &:focus{
-            background: none;
+            background: none!important;
         }
 
     }
-    .answer, .btn, footer{
+    .header, .menu, .answer, .btn, footer{
         background: none!important;
     }
 
-    h1, h2, h3, h4, h5, h6, caption, th, td, p, span, .kb, .more a, .usage, .count, .btn2, .icon-fa-graphicmode, .icon-fa-iconmode, .A, .Q, ._pup {
+    h1, h2, h3, h4, h5, h6, caption, th, td, p, span, em, .kb, .more a, .usage, .count, .btn2, .icon-fa-graphicmode, .icon-fa-iconmode, .A, .Q, ._pup, .update {
      color:$color-yellow2!important; 
  }
 
@@ -37,7 +37,7 @@ footer{
 
    }
    .info{
-    background: none;
+    background: none!important;
 }
 
 blockquote{
@@ -45,22 +45,22 @@ blockquote{
 }
 .itemlist{
     span{
-        color:$color-yellow2;
+        color:$color-yellow2!important;
     }
 }
 }
 [role="dialog"]{
-    background: $color-black2;
+    background: $color-black2!important;
 }
 .lightbox{
-   background: $color-black2; 
+   background: $color-black2!important; 
    button{
     background: #287777 url(../images/Search-16.png) no-repeat 10px center!important;
 }
 }
 .total{
     a{
-        text-decoration: underline;
+        text-decoration: underline!important;
     }
 }
 .font_size, .text_contrast{
@@ -77,20 +77,23 @@ blockquote{
 
 // 黃底黑字
 .color-bYtB{
-    background: $color-yellow2;
-    color:$color-black2;
+    background: $color-yellow2!important;
+    color:$color-black2!important;
     a{
-        color:$color-black2;
-        &:focus{
-            background: none;
+        color:$color-black2!important;
+        &:hover, &:focus{
+            background: none!important;
         }
 
     }
-    .answer, {
+    .header, .menu, .answer{
         background: none!important;
     }
+    .menu ul ul{
+       background: $color-yellow2!important; 
+   }
 
-    h1, h2, h3, h4, h5, h6, caption, th, td, p, span, .kb, .more a, .usage, .count, .btn2, .icon-fa-graphicmode, .icon-fa-iconmode, .A, .Q, ._pup, {
+   h1, h2, h3, h4, h5, h6, caption, th, td, p, span, em, .kb, .more a, .usage, .count, .btn2, .icon-fa-graphicmode, .icon-fa-iconmode, .A, .Q, ._pup, .update{
        color:$color-black2!important; 
    }
    table{
@@ -113,7 +116,7 @@ footer{
 
  }
  .info{
-    background: none;
+    background: none!important;
 }
 
 blockquote{
@@ -178,20 +181,20 @@ blockquote{
 
 // 黑底白字
 .color-bBtW{
-    background: $color-black2;
-    color:$color-white2;
+    background: $color-black2!important;
+    color:$color-white2!important;
     a{
-        color:$color-white2;
-        &:focus{
+        color:$color-white2!important;
+        &:hover, &:focus{
             background: none;
         }
 
     }
-    .answer, .btn, footer{
+    .header, .menu, .answer, .btn, footer{
         background: none!important;
     }
 
-    h1, h2, h3, h4, h5, h6, caption, th, td, p, span, .kb, .more a, .usage, .count, .btn2, .icon-fa-graphicmode, .icon-fa-iconmode, .A, .Q, ._pup {
+    h1, h2, h3, h4, h5, h6, caption, th, td, p, span, em, .kb, .more a, .usage, .count, .btn2, .icon-fa-graphicmode, .icon-fa-iconmode, .A, .Q, ._pup, .update {
        color:$color-white2!important; 
    }
    table{
@@ -253,20 +256,23 @@ blockquote{
 
 // 白底黑字
 .color-bWtB{
-    background: $color-white2;
-    color:$color-black2;
+    background: $color-white2!important;
+    color:$color-black2!important;
     a{
-        color:$color-black2;
-        &:focus{
-            background: none;
+        color:$color-black2!important;
+        &:hover, &:focus{
+            background: none!important;
         }
 
     }
-    .answer, {
+    .header, .menu, .answer {
         background: none!important;
     }
+    .menu ul ul{
+       background: $color-white2!important; 
+   }
 
-    h1, h2, h3, h4, h5, h6, caption, th, td, p, span, .kb, .more a, .usage, .count, .btn2, .icon-fa-graphicmode, .icon-fa-iconmode, .A, .Q, ._pup, {
+   h1, h2, h3, h4, h5, h6, caption, th, td, p, span, em, .kb, .more a, .usage, .count, .btn2, .icon-fa-graphicmode, .icon-fa-iconmode, .A, .Q, ._pup, .update{
        color:$color-black2!important; 
    }
    table{
