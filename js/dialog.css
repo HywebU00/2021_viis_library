@@ -401,7 +401,7 @@ ul.ul li a:hover {background-color: #035b7e; color: #fff;} */
 .buttonDiv #borrow_btn_send{padding: .5em!important;border: solid 1px #f60;}
 .buttonDiv #borrow_btn_close{background: #339999 url('../images/icon_close2.svg') no-repeat 10px center;padding: .5em .5em .5em 1.5em!important;border: solid 1px #339999;background-size: .8em auto;}
 .buttonDiv select, .buttonDiv input { width:auto;vertical-align: middle;}
-.buttonDiv span{ position:absolute; margin-left: 5px; margin-top: 5px;z-index:0;}
+.buttonDiv span{ /* position:absolute;  */margin-left: 5px; margin-top: 5px;z-index:0;}
 .lightbox label { font-weight:bold; min-width: 4em;}
 .lightbox select { width:auto;vertical-align: middle;}
 .lightbox .InputTXT { width:auto;}
