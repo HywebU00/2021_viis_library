@@ -6,12 +6,11 @@
     .sidebar{
         .m_area{
             background: $color-black2!important;
-            a{
-                background: rgba(255, 255, 255, 0)!important;
-            }
+
             .menu{
                 li>a{
                     border: solid 1px $color-yellow2;
+                    background: rgba(255, 255, 255, 0)!important;
                     li{
                         .hasChild>a:after{
                             border: 2px solid $color-yellow2!important;
@@ -34,28 +33,28 @@
     }
 
     h1, h2, h3, h4, h5, h6, caption, th, td, p, span, em, .kb, .more a, .usage, .count, .btn2, .icon-fa-graphicmode, .icon-fa-iconmode, .A, .Q, ._pup, .update {
-     color:$color-yellow2!important; 
- }
+       color:$color-yellow2!important; 
+   }
 
- table{
+   table{
     th, td{
         background: none!important;  
     }
 }
 footer{
- background: none!important;
- color:$color-yellow2!important;
- em, a{
+   background: none!important;
+   color:$color-yellow2!important;
+   em, a{
     color:$color-yellow2!important;
 }
 }
 .cp{
     a{
-       color:$color-yellow2!important;
-       text-decoration: underline;
+     color:$color-yellow2!important;
+     text-decoration: underline;
 
-   }
-   .info{
+ }
+ .info{
     background: none!important;
 }
 
@@ -72,8 +71,8 @@ blockquote{
     background: $color-black2!important;
 }
 .lightbox{
-   background: $color-black2!important; 
-   button{
+ background: $color-black2!important; 
+ button{
     background: #287777 url(../images/Search-16.png) no-repeat 10px center!important;
 }
 }
@@ -105,46 +104,61 @@ blockquote{
     }
     .sidebar{
         .m_area{
-            background: $color-yellow2!important;  
-        }
-    }
-    a{
-        color:$color-black2!important;
-        &:hover, &:focus{
-            background: none!important;
-        }
+            background: $color-yellow2!important;
+            .menu{
+                li>a{
+                    border: solid 1px $color-black2;
+                    background: rgba(255, 255, 255, 0)!important;
+                }
 
-    }
-    .header, .menu, .answer{
+                li li{
+                    .hasChild>a:after{
+                        border: 2px solid $color-black2!important;
+                    }
+                    a{
+                      background: #222!important;  
+                  }
+              }  
+          } 
+      }
+  }
+  a{
+    color:$color-black2!important;
+    &:hover, &:focus{
         background: none!important;
     }
-    .menu ul ul{
-       background: $color-yellow2!important; 
-   }
 
-   h1, h2, h3, h4, h5, h6, caption, th, td, p, span, em, .kb, .more a, .usage, .count, .btn2, .icon-fa-graphicmode, .icon-fa-iconmode, .A, .Q, ._pup, .update{
-       color:$color-black2!important; 
-   }
-   table{
+}
+.header, .menu, .answer{
+    background: none!important;
+}
+.menu ul ul{
+ background: $color-yellow2!important; 
+}
+
+h1, h2, h3, h4, h5, h6, caption, th, td, p, span, em, .kb, .more a, .usage, .count, .btn2, .icon-fa-graphicmode, .icon-fa-iconmode, .A, .Q, ._pup, .update{
+ color:$color-black2!important; 
+}
+table{
     th, td{
         background: none!important;  
     }
 }
 footer{
-   background: none!important;
-   color:$color-black2!important;
-   em, a{
+ background: none!important;
+ color:$color-black2!important;
+ em, a{
     color:$color-black2!important;
 } 
 }
 
 .cp{
     a{
-     color:$color-black2!important;
-     text-decoration: underline;
+       color:$color-black2!important;
+       text-decoration: underline;
 
- }
- .info{
+   }
+   .info{
     background: none!important;
 }
 
@@ -161,7 +175,7 @@ blockquote{
     background: $color-yellow2;
 }
 .lightbox{
-   background: $color-yellow2; 
+ background: $color-yellow2; 
 }
 .total{
     a{
@@ -195,9 +209,9 @@ blockquote{
 .lightbox{
     .category{
         p{
-           color:$color-white2!important;   
-       }
-   }
+         color:$color-white2!important;   
+     }
+ }
 } 
 .ebook-list{
     p{
@@ -215,12 +229,11 @@ blockquote{
     .sidebar{
         .m_area{
             background: $color-black2!important;
-            a{
-                background: rgba(255, 255, 255, 0)!important;
-            }
+
             .menu{
                 li>a{
                     border: solid 1px $color-white2;
+                    background: rgba(255, 255, 255, 0)!important;
                     li{
                         .hasChild>a:after{
                             border: 2px solid $color-white2!important;
@@ -244,27 +257,27 @@ blockquote{
     }
 
     h1, h2, h3, h4, h5, h6, caption, th, td, p, span, em, .kb, .more a, .usage, .count, .btn2, .icon-fa-graphicmode, .icon-fa-iconmode, .A, .Q, ._pup, .update {
-       color:$color-white2!important; 
-   }
-   table{
+     color:$color-white2!important; 
+ }
+ table{
     th, td{
         background: none!important;  
     }
 }
 footer{
-   background: none!important;
-   color:$color-white2!important;
-   em, a{
+ background: none!important;
+ color:$color-white2!important;
+ em, a{
     color:$color-white2!important;
 } 
 }
 .cp{
     a{
-     color:$color-white2!important;
-     text-decoration: underline;
+       color:$color-white2!important;
+       text-decoration: underline;
 
- }
- .info{
+   }
+   .info{
     background: none;
 }
 
@@ -281,8 +294,8 @@ blockquote{
     background: $color-black2;
 }
 .lightbox{
-   background: $color-black2; 
-   button{
+ background: $color-black2; 
+ button{
     background: #287777 url(../images/Search-16.png) no-repeat 10px center!important;
 }
 }
@@ -338,32 +351,32 @@ blockquote{
         background: none!important;
     }
     .menu ul ul{
-       background: $color-white2!important; 
-   }
+     background: $color-white2!important; 
+ }
 
-   h1, h2, h3, h4, h5, h6, caption, th, td, p, span, em, .kb, .more a, .usage, .count, .btn2, .icon-fa-graphicmode, .icon-fa-iconmode, .A, .Q, ._pup, .update{
-       color:$color-black2!important; 
-   }
-   table{
+ h1, h2, h3, h4, h5, h6, caption, th, td, p, span, em, .kb, .more a, .usage, .count, .btn2, .icon-fa-graphicmode, .icon-fa-iconmode, .A, .Q, ._pup, .update{
+     color:$color-black2!important; 
+ }
+ table{
     th, td{
         background: none!important;  
     }
 }
 footer{
-   background: none!important;
-   color:$color-black2!important;
-   em, a{
+ background: none!important;
+ color:$color-black2!important;
+ em, a{
     color:$color-black2!important;
 } 
 }
 
 .cp{
     a{
-     color:$color-black2!important;
-     text-decoration: underline;
+       color:$color-black2!important;
+       text-decoration: underline;
 
- }
- .info{
+   }
+   .info{
     background: none;
 }
 
@@ -380,7 +393,7 @@ blockquote{
     background: $color-white2;
 }
 .lightbox{
-   background: $color-white2; 
+ background: $color-white2; 
 }
 .total{
     a{
@@ -414,9 +427,9 @@ blockquote{
 .lightbox{
     .category{
         p{
-           color:$color-white2!important;   
-       }
-   }
+         color:$color-white2!important;   
+     }
+ }
 } 
 .ebook-list{
     p{
@@ -458,12 +471,12 @@ blockquote{
 
     }
     ul, ol {
-     @include li-reset;
-     text-align: left;
-     float: none!important;
-     background: #fff;
-     box-shadow: 0 0 0 2px #bbb;
-     display: inline-block;
+       @include li-reset;
+       text-align: left;
+       float: none!important;
+       background: #fff;
+       box-shadow: 0 0 0 2px #bbb;
+       display: inline-block;
        // padding: 6px;
        border-radius: 30px;
      // display: flex;
@@ -529,8 +542,8 @@ blockquote{
 
     }
     ul, ol {
-     @include li-reset;
-     float: none!important;
+       @include li-reset;
+       float: none!important;
 
      // display: flex;
      // justify-content:flex-start;
