@@ -3,6 +3,25 @@
 .color-bBtY{
     background: $color-black2!important;
     color:$color-yellow2!important;
+    .sidebar{
+        .m_area{
+            background: $color-black2!important;
+            a{
+                background: rgba(255, 255, 255, 0)!important;
+            }
+            .menu{
+                li>a{
+                    border: solid 1px $color-yellow2;
+                    li{
+                        .hasChild>a:after{
+                            border: 2px solid $color-yellow2!important;
+                        }
+                    }
+                }   
+            }
+
+        }
+    }
     a{
         color:$color-yellow2!important;
         &:focus{
@@ -63,11 +82,11 @@ blockquote{
         text-decoration: underline!important;
     }
 }
-.font_size, .text_contrast{
-    span{
-      color:$color-black2!important;  
-  }
-}
+// .font_size, .text_contrast{
+//     span{
+//       color:$color-black2!important;  
+//   }
+// }
 
 
 
@@ -79,6 +98,16 @@ blockquote{
 .color-bYtB{
     background: $color-yellow2!important;
     color:$color-black2!important;
+    .sidebarCtrl{
+        span{
+            background:$color-black2!important; 
+        }
+    }
+    .sidebar{
+        .m_area{
+            background: $color-yellow2!important;  
+        }
+    }
     a{
         color:$color-black2!important;
         &:hover, &:focus{
@@ -183,6 +212,26 @@ blockquote{
 .color-bBtW{
     background: $color-black2!important;
     color:$color-white2!important;
+    .sidebar{
+        .m_area{
+            background: $color-black2!important;
+            a{
+                background: rgba(255, 255, 255, 0)!important;
+            }
+            .menu{
+                li>a{
+                    border: solid 1px $color-white2;
+                    li{
+                        .hasChild>a:after{
+                            border: 2px solid $color-white2!important;
+                        }
+                    }
+                }   
+            }
+
+        }
+    }
+
     a{
         color:$color-white2!important;
         &:hover, &:focus{
@@ -242,11 +291,11 @@ blockquote{
         text-decoration: underline;
     }
 }
-.font_size, .text_contrast{
-    span{
-      color:$color-black2!important;  
-  }
-}
+// .font_size, .text_contrast{
+//     span{
+//       color:$color-black2!important;  
+//   }
+// }
 
 
 
@@ -258,6 +307,26 @@ blockquote{
 .color-bWtB{
     background: $color-white2!important;
     color:$color-black2!important;
+    .sidebarCtrl{
+        span{
+            background:$color-black2!important; 
+        }
+    }
+    .sidebar{
+        .m_area{
+            background: $color-white2!important;  
+        }
+        .menu{
+            li>a{
+                border: solid 1px $color-black2;
+                li{
+                    .hasChild>a:after{
+                        border: 2px solid $color-black2!important;
+                    }
+                }
+            }   
+        }
+    }
     a{
         color:$color-black2!important;
         &:hover, &:focus{
@@ -356,4 +425,221 @@ blockquote{
 }
 
 
+}
+
+//readset
+.readset{
+    position: absolute;
+    top:1.8em;
+    left:0;
+    width: 19em;
+    background: #fff;
+    padding: .2em 1em 1em;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, .2);
+    border-radius: 5px;
+    display: none;
+    z-index: 99999;
+    @include screen('mobile') {
+        position: relative;
+        width: auto;
+        top:0
+    }
+}
+
+// 字級
+.font_size {
+    padding: .3em;
+
+    span {
+        font-size: .875em;
+        padding-top: .3em;
+        display: block;
+        color: #222!important;
+
+    }
+    ul, ol {
+     @include li-reset;
+     text-align: left;
+     float: none!important;
+     background: #fff;
+     box-shadow: 0 0 0 2px #bbb;
+     display: inline-block;
+       // padding: 6px;
+       border-radius: 30px;
+     // display: flex;
+     // justify-content:flex-start;
+     // flex: 0 0 6em;
+     li {
+        font-size: 1em;
+        // flex:0 0 auto;
+        // margin: 5px;
+        position: static!important;
+        display: inline-block;
+        // align-items: left;
+        a {
+            display: block;
+            text-align: center;
+            line-height: 3.1em;
+            background: #fff;
+            border: solid 1px #666;
+            width: 3em;
+            height: 3em;
+            color: #333;
+            margin: 5px;
+            padding: 0!important;
+            border-radius: 30px;
+            box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, .2);
+            font-weight: bold;
+            color: #222!important;
+
+            &:hover, &:focus {
+                background: $color-black2!important;
+                color: #FFF!important;
+                border-radius: 30px!important;
+            }
+            &.active {
+                background: $color-black2!important;
+                color: #FFF!important;
+                &:hover, &:focus {
+                    background: $color-black2!important;
+                    color: #FFF!important;
+                }
+            }
+            &.small { font-size: 1em; }
+            &.large { font-size: 1em; }
+            &:after{display: none!important;}
+        }
+    }
+}
+@include screen('mobile') {
+    // display: none;
+}
+}
+
+// 對比
+.text_contrast {
+    clear: both;
+    padding: .3em;
+    span {
+        // font-size: .875em;
+        // color: #222;
+        // padding-top: .3em;
+        // display: block;
+        color: #222!important;
+
+    }
+    ul, ol {
+     @include li-reset;
+     float: none!important;
+
+     // display: flex;
+     // justify-content:flex-start;
+     // flex: 0 0 6em;
+     li{
+        font-size: 1em;
+        // flex:0 0 auto;
+        margin: 2px 2px 6px 2px!important;
+        // position: static!important;
+        padding: 3px 3px 3px 24px;
+        box-shadow: 0 0 0 1px #bbb;
+        border-radius: 6px;
+        background: #fff;
+        position: relative!important;
+        display: inline-block;
+        // align-items: left;
+        a {
+            display: block;
+            text-align: center;
+            line-height: 3.1em;
+            background: #fff;
+            border: solid 1px #666;
+            width: 3em;
+            height: 3em;
+            color: #222!important;
+            margin: .2em;
+            padding: 0!important;
+            border-radius: 6px;
+            box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, .2);
+            font-weight: bold;
+
+
+            &:hover, &:focus {
+                border-radius: 6px!important;
+                border: solid 1px #fff!important;
+                box-shadow: 0px 0px 0px 2px rgba(204, 0, 0, 1)!important;
+                color: #222!important;
+            }
+            &.active {
+                &:hover, &:focus {
+                    background: #009e95!important;
+                    color:#fff!important;
+                }
+                &:before{
+                    content: '';
+                    position: absolute;
+                    left: 6px;
+                    top: 23px;
+                    width: 10px;
+                    height: 6px;
+                    border: 3px solid #000;
+                    border-top: none;
+                    border-right: none;
+                    -webkit-transform: rotate(-45deg);
+                    transform: rotate(-45deg);
+                }
+            }
+            // &.small { font-size: .938em; }
+            // &.large { font-size: 1.125em; }
+            &:after{display: none!important;}
+
+        }
+        .bBtY{
+            background:$color-black2!important;
+            color:$color-yellow2!important;
+            &:hover, &:focus {
+                background:$color-black2!important;
+                color:$color-yellow2!important;
+            }
+            span{
+              color:$color-yellow2!important;  
+          }
+      }
+      .bYtB{
+        background:$color-yellow2;
+        color:$color-black2;
+        &:hover, &:focus {
+            background:$color-yellow2!important;
+            color:$color-black2!important;
+        }
+        span{
+            color:$color-black2!important;
+        }
+    }
+    .bBtW{
+        background:$color-black2;
+        color:$color-white2;
+        &:hover, &:focus {
+            background:$color-black2!important;
+            color:$color-white2!important;
+        }
+        span{
+            color:$color-white2!important;
+        }
+    }
+    .bWtB{
+        background:$color-white2;
+        color:$color-black2;
+        &:hover, &:focus {
+            background:$color-white2!important;
+            color:$color-black2!important;
+        }
+        span{
+            color:$color-black2!important;
+        }
+    }
+}
+}
+@include screen('mobile') {
+    // display: none;
+}
 }

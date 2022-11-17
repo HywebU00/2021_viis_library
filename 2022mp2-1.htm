@@ -68,39 +68,42 @@
             <!-- sidebar star -->
             <aside class="sidebar">
                 <div class="m_area">
-                    <ul>
-                        <li><a href="#">網站說明</a></li>
-                        <li class="ass-setting"><a href="#">輔助閱讀設定</a>
-                            <div class="readset">
-                                <!-- font_size -->
-                                <div class="font_size">
-                                    <span>字型大小</span>
-                                    <ol>
-                                        <li><a href="#" class="large">大</a></li>
-                                        <li><a href="#" class="medium active" aria-current="true">中</a></li>
-                                        <li><a href="#" class="small">小</a></li>
+                    <nav class="navigation">
+                        <!-- 一組ul預設靠右 可同時存在2組-->
+                        <ul>
+                            <li><a href="#">網站說明</a></li>
+                            <li class="ass-setting"><a href="#">輔助閱讀設定</a>
+                                <div class="readset">
+                                    <!-- font_size -->
+                                    <div class="font_size">
+                                        <span>字型大小</span>
+                                        <ol>
+                                            <li><a href="#" class="large">大</a></li>
+                                            <li><a href="#" class="medium active" aria-current="true">中</a></li>
+                                            <li><a href="#" class="small">小</a></li>
 
-                                    </ol>
+                                        </ol>
+                                    </div>
+                                    <!-- text_contrast -->
+                                    <div class="text_contrast">
+                                        <span id="text-contrast-label">文字對比</span>
+                                        <ol aria-labelledby="text-contrast-label">
+                                            <li><a href="#" class="preset active" aria-current="true">預設</a></li>
+                                            <li><a href="#" class="bBtY" title="文字對比-黑底黃字"><span aria-hidden=true>中</span></a></li>
+                                            <li><a href="#" class="bYtB" title="文字對比-黃底黑字"><span aria-hidden=true>中</span></a></li>
+                                            <li><a href="#" class="bBtW" title="文字對比-黑底白字"><span aria-hidden=true>中</span></a></li>
+                                            <li><a href="#" class="bWtB" title="文字對比-白底黑字"><span aria-hidden=true>中</span></a></li>
+                                        </ol>
+                                    </div>
                                 </div>
-                                <!-- text_contrast -->
-                                <div class="text_contrast">
-                                    <span id="text-contrast-label">文字對比</span>
-                                    <ol aria-labelledby="text-contrast-label">
-                                        <li><a href="#" class="preset active" aria-current="true">預設</a></li>
-                                        <li><a href="#" class="bBtY" title="文字對比-黑底黃字"><span aria-hidden=true>中</span></a></li>
-                                        <li><a href="#" class="bYtB" title="文字對比-黃底黑字"><span aria-hidden=true>中</span></a></li>
-                                        <li><a href="#" class="bBtW" title="文字對比-黑底白字"><span aria-hidden=true>中</span></a></li>
-                                        <li><a href="#" class="bWtB" title="文字對比-白底黑字"><span aria-hidden=true>中</span></a></li>
-                                    </ol>
-                                </div>
-                            </div>
-                        </li>
-                        <li><a href="#">登入</a></li>
-                        <li><a href="#">註冊</a></li>
-                        <li><a href="#">相關下載</a></li>
-                        <li><a href="#">問卷調查</a></li>
-                        <li><a href="#">回圖書館首頁</a></li>
-                    </ul>
+                            </li>
+                            <li><a href="#">登入</a></li>
+                            <li><a href="#">註冊</a></li>
+                            <li><a href="#">相關下載</a></li>
+                            <li><a href="#">問卷調查</a></li>
+                            <li><a href="#">回圖書館首頁</a></li>
+                        </ul>
+                    </nav>
                     <nav class="menu">
                         <ul>
                             <li><a href="http://www.google.com" target="_blank">最新消息</a></li>
@@ -192,203 +195,7 @@
             </header>
             <!-- header End -->
             <!-- main Start -->
-            <div id="center" class="main innerpage">
-                <div class="container">
-                    <a class="accesskey" href="#aL" id="aL" accesskey="L" title="左欄選單區">:::</a>
-                    <!-- menu Start -->
-                    <div class="main_menu">
-                        <nav class="menu">
-                            <ul>
-                                <li><a href="http://www.google.com" target="_blank">最新消息</a></li>
-                                <li><a href="#">圖書資訊</a></li>
-                                <li><a href="#">圖書精選</a></li>
-                                <li><a href="#">資源教室</a></li>
-                                <li><a href="#">資源網站</a></li>
-                                <li><a href="#">常見問題</a></li>
-                                <li><a href="#">聯絡我們</a></li>
-                                <li><a href="#">網站統計</a></li>
-                                <li><a href="#">相關下載</a>
-                                    <ul>
-                                        <li><a target="_blank" title="IOS APP,另外新視窗" href="https://itunes.apple.com/tw/app/id934249135?mt=8">IOS APP</a></li>
-                                        <li><a target="_blank" title="Android APP,另外新視窗" href="https://play.google.com/store/apps/details?id=tw.edu.ntl.viis.ntl_vilib">Android APP</a></li>
-                                        <li><a title="電子書閱讀器下載" target="_blank" href="http://viis.ntl.edu.tw/reader/VNTLReaderSetup.exe">電子書閱讀器下載</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">問卷調查</a></li>
-                            </ul>
-                        </nav>                   
-                    </div>
-                    <!-- menu end -->
-
-                    <!-- content為一定要存在之內容區 -->
-                    <div class="content">
-                        <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
-                        <h2 class="title">書目查詢<span class="help"><a href="#"><img src="images/icon-help.png" alt="操作說明，另開懸浮視窗"></a></span></h2>
-                        <div class="conbox">
-                            <!-- 書目查詢 star -->
-                            <form action="" class="s-inquiry">
-                                <!--最外層的form 或 radio_grp class加上form_inline-->
-                                <div class="radio_grp form_inline">
-                                    <label>輸入方式：
-                                        <input name="radioSample" type="radio" checked="checked" value=""> 國字輸入
-                                        <input name="radioSample" type="radio" value="">點字輸入
-                                    </label>
-                                </div>
-
-                                <div class="form_grp form_inline">
-                                    <label>
-                                        <input name="bookname" type="text" placeholder="書名">
-                                        <input name="bookname" type="text" placeholder="請輸入查詢詞">
-                                        <span>
-                                            <a href="#"><img src="images/plus1.png" tabindex="0" alt="增加搜尋框" name="add_field_button" id="add_field_button"></a>
-                                        </span>
-                                    </label>
-                                </div>
-                                <div class="searchMore">
-                                    <input name="" type="submit" value="更多搜尋選項" />
-                                </div>  
-                                <div class="btn_grp">
-                                    <input name="" type="submit" value="查詢" />
-                                    <input name="" type="reset" value="清除輸入" />
-                                    <input name="" type="submit" value="查詢紀錄" />
-
-                                </div>
-                            </form>
-                            <!-- 書目查詢 end -->
-                            <!-- 圖書瀏覽 star -->
-                            <h2>圖書瀏覽</h2>
-                            <div class="book-browse">
-                                <ul>
-                                    <li>
-                                        <a href="#"><img src="images/201921312418.png" alt="分類瀏覽圖示"><h3>分類瀏覽</h3></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><img src="images/201921312427.png" alt="適用年齡圖示"><h3>適用年齡</h3></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><img src="images/201921312436.png" alt="資料類型瀏覽圖示"><h3>資料類型瀏覽</h3></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><img src="images/201921312444.png" alt="主題瀏覽圖示"><h3>主題瀏覽</h3></a>
-                                    </li>
-                                </ul>
-
-                            </div>
-                            <!-- 圖書瀏覽 end -->
-                            <!-- 新進圖書 star -->
-                            <h2>新進圖書(共82筆)</h2>
-                            <div class="mpbook">
-                               <ul>
-                                <li>
-                                    <a href="#" title="三國到底怎麼回事?(開啟懸浮視窗)">
-                                        <span class="mlImg"> 
-                                            <img src="images/getImage1.jpg" alt="三國到底怎麼回事?" title="三國到底怎麼回事?">
-                                        </span> 
-                                        <span class="mlTitle">三國到底怎麼回事?</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" title="三國到底怎麼回事?(開啟懸浮視窗)">
-                                        <span class="mlImg"> 
-                                            <img src="images/getImage1.jpg" alt="三國到底怎麼回事?" title="三國到底怎麼回事?">
-                                        </span> 
-                                        <span class="mlTitle">三國到底怎麼回事?</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" title="聽不見的聲音(開啟懸浮視窗)">
-                                        <span class="mlImg"> 
-                                            <img src="images/getImage1.jpg" alt="聽不見的聲音" title="聽不見的聲音">
-                                        </span> 
-                                        <span class="mlTitle">三國到底怎麼回事?</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" title="走音天后(開啟懸浮視窗)">
-                                        <span class="mlImg"> 
-                                            <img src="images/getImage1.jpg" alt="走音天后" title="走音天后">
-                                        </span> 
-                                        <span class="mlTitle">走音天后</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" title="相信自己,你最棒!(開啟懸浮視窗)">
-                                        <span class="mlImg"> 
-                                            <img src="images/getImage1.jpg" alt="相信自己,你最棒!" title="相信自己,你最棒!">
-                                        </span> 
-                                        <span class="mlTitle">相信自己,你最棒!</span>
-                                    </a>
-                                </li>
-                            </ul>
-                            <div class="more"><a href="#" title="更多新進圖書">更多新進圖書</a></div>
-                        </div>
-                        <!-- 新進圖書 end -->
-                        <!-- 圖書製作預告 star -->
-                        <h2>圖書製作預告列表(共199筆)</h2>
-                        <div class="mpbook">
-                           <ul>
-                            <li>
-                                <a href="#" title="三國到底怎麼回事?(開啟懸浮視窗)">
-                                    <span class="mlImg"> 
-                                        <img src="images/getImage1.jpg" alt="三國到底怎麼回事?" title="三國到底怎麼回事?">
-                                    </span> 
-                                    <span class="mlTitle">三國到底怎麼回事?</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" title="三國到底怎麼回事?(開啟懸浮視窗)">
-                                    <span class="mlImg"> 
-                                        <img src="images/getImage1.jpg" alt="三國到底怎麼回事?" title="三國到底怎麼回事?">
-                                    </span> 
-                                    <span class="mlTitle">三國到底怎麼回事?</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" title="聽不見的聲音(開啟懸浮視窗)">
-                                    <span class="mlImg"> 
-                                        <img src="images/getImage1.jpg" alt="聽不見的聲音" title="聽不見的聲音">
-                                    </span> 
-                                    <span class="mlTitle">三國到底怎麼回事?</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" title="走音天后(開啟懸浮視窗)">
-                                    <span class="mlImg"> 
-                                        <img src="images/getImage1.jpg" alt="走音天后" title="走音天后">
-                                    </span> 
-                                    <span class="mlTitle">走音天后</span>
-                                </a>
-                            </li>
-                        </ul>
-                        <div class="more"><a href="#" title="更多圖書製作預告">更多圖書製作預告</a></div>
-                    </div>
-                    <!-- 圖書製作預告 end -->
-                    <!-- 搶鮮試閱 star -->
-                    <h2>搶鮮試閱(共82筆)</h2>
-                    <div class="mpbook">
-                       <ul>
-                        <li>
-                            <a href="#" title="三國到底怎麼回事?(開啟懸浮視窗)">
-                                <span class="mlImg"> 
-                                    <img src="images/getImage1.jpg" alt="三國到底怎麼回事?" title="三國到底怎麼回事?">
-                                </span> 
-                                <span class="mlTitle">三國到底怎麼回事?</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" title="三國到底怎麼回事?(開啟懸浮視窗)">
-                                <span class="mlImg"> 
-                                    <img src="images/getImage1.jpg" alt="三國到底怎麼回事?" title="三國到底怎麼回事?">
-                                </span> 
-                                <span class="mlTitle">三國到底怎麼回事?</span>
-                            </a>
-                        </li>
-
-                    </ul>
-                    <div class="more"><a href="#" title="更多搶鮮試閱">更多搶鮮試閱</a></div>
-                </div>
-                <!-- 搶鮮試閱 end -->
-            </div>
+            <div class="main innerpage"><div class="dialog-backdrop active"><div role="dialog" id="react-aria-modal-dialog" class="default_dialog" aria-label="modal"><div class="lightbox" id="reporth"><h2 tabindex="0">詳細資料</h2><div class="webimg"><a href="javascript:;" class="mlLink" title=""><img src="images/web.png" alt="操作說明" title="開啟操作說明懸浮視窗"></a></div><div></div><div></div><div></div><div></div><div class="accordionqa"><div id="modalDiv" tabindex="0"></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div class="accordionblock"><div class="Q"><h3 tabindex="0">書目資料(點選展開選單)</h3></div><div class="A" style="display: block;"><ul tabindex="0" class="info"><li><label for="書名">書名</label>(中學生)晨讀10分鐘 : 你的獨特, 我看見</li><li><label for="作者">作者</label></li><li><label for="出版社">出版社</label>臺北市立圖書館  </li><li><label for="出版年">出版年</label>  2019</li></ul><div class="Ablock"><h3 tabindex="0">簡介</h3><p tabindex="0"></p></div></div></div><div class="category"><div class="accordionblock"><div class="Q"><h3 tabindex="0">有聲書(MP3)(點選展開選單)</h3></div><div class="A" style="display: block;"><ul class="category"><li><a href="javascript:;" title="有聲書(MP3)下載3-臺北市立圖書館- <p>上次下載時間：</p>" class="gdblock" aria-description="按g+d將彈出詳細內容對話方塊">有聲書(MP3)下載3-臺北市立圖書館- <p>上次下載時間：</p></a><div class="more"><a title="”開啟懸浮視窗”" aria-hidden="true" href="javascript:;">更多資訊</a></div></li></ul></div></div></div></div><div class="accordionblock"><div class="Q"><h3 tabindex="0">分享(點選展開選單)</h3></div><div class="A" style="display: block;"><h3>社群分享</h3><section class="share"><ul><li><a href="javascript:;" id="icon-facebook" title="Facebook , 另開新視窗."><img src="images/facebook.png" alt="Facebook"></a></li><li><a href="javascript:;" id="icon-line" title="line, 另開新視窗."><img src="images/line.png" alt="line"></a></li><li><a href="javascript:;" id="icon-twiter" title="twiter, 另開新視窗."><img src="images/twiter.png" alt="twiter"></a></li><li><a href="javascript:;" id="icon-mail" title="mail, 開啟懸浮視窗."><img src="images/mail_a.png" alt="mail"></a></li><li><a href="javascript:;" id="icon-qrcode" title="產生QR-CODE, 開啟懸浮視窗."><img src="images/qrcode.png" alt="產生QR-CODE"></a></li><li><img src="images/copy.png" alt="複製網址功能, 開啟懸浮視窗."></li><div></div><div></div></ul></section></div></div><div></div><ul class="fuicon"><li><div class="searchMore"><a title="加入個人書架" href="javascript:;">加入個人書架</a></div></li><li><div class="searchMore"><a href="javascript:;" title="問題檔案回報">問題檔案回報</a></div></li></ul><div><input type="button" tabindex="0" title="下一筆資料" value="下一筆資料"></div><div class="facebook"><meta property="fb:admins" content="100005293576039"><meta property="fb:admins" content="1056543531"><meta property="fb:admins" content="100007863723385"><meta property="fb:app_id" content="782858918768576"><div class="facebook"><div class="fb-comments fb_iframe_widget fb_iframe_widget_fluid_desktop" data-href="http://192.192.170.97/BookDetail/48777" data-num-posts="2" data-width="500" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=782858918768576&amp;container_width=821&amp;height=100&amp;href=http%3A%2F%2F192.192.170.97%2FBookDetail%2F48777&amp;locale=zh_TW&amp;sdk=joey&amp;version=v3.0&amp;width=500"><span style="vertical-align: bottom; width: 500px; height: 216px;"><iframe name="f1f8dc377d296b8" width="500px" height="100px" data-testid="fb:comments Facebook Social Plugin" title="fb:comments Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="https://www.facebook.com/v3.0/plugins/comments.php?app_id=782858918768576&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df3d125641bf610c%26domain%3D192.192.170.97%26is_canvas%3Dfalse%26origin%3Dhttp%253A%252F%252F192.192.170.97%252Ff1976cc578837bc%26relation%3Dparent.parent&amp;container_width=821&amp;height=100&amp;href=http%3A%2F%2F192.192.170.97%2FBookDetail%2F48777&amp;locale=zh_TW&amp;sdk=joey&amp;version=v3.0&amp;width=500" style="border: none; visibility: visible; width: 500px; height: 216px;" class=""></iframe></span></div></div></div><noscript>TAB標籤功能，如不執行不影響您資料瀏覽</noscript><input type="hidden" name="brn" value="N00078490"></div><div id="modalDiv" tabindex="0"></div><div class="btnbox"><button tabindex="0" id="btn_close">關閉</button></div></div></div></div>
 
             <!-- dialog star -->
             <div class="dialog-backdrop active"><div tabindex="0"></div><div id="dialog1" role="dialog" aria-labelledby="dialog1_label" aria-describedby="dialog1_desc" aria-modal="true" class="default_dialog"> 

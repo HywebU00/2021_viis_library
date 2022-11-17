@@ -1,11 +1,11 @@
 <!doctype html>
-    <html lang="zh-Hant" class="no-js">
+<html lang="zh-Hant" class="no-js">
 
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>國立臺灣圖書館視障電子資源整合查詢系統</title>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>國立臺灣圖書館視障電子資源整合查詢系統</title>
     <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
@@ -72,7 +72,31 @@
                         <!-- 一組ul預設靠右 可同時存在2組-->
                         <ul>
                             <li><a href="#">網站說明</a></li>
-                            <li><a href="#">輔助閱讀設定</a></li>
+                            <li class="ass-setting"><a href="#">輔助閱讀設定</a>
+                                <div class="readset">
+                                    <!-- font_size -->
+                                    <div class="font_size">
+                                        <span>字型大小</span>
+                                        <ol>
+                                            <li><a href="#" class="large">大</a></li>
+                                            <li><a href="#" class="medium active" aria-current="true">中</a></li>
+                                            <li><a href="#" class="small">小</a></li>
+
+                                        </ol>
+                                    </div>
+                                    <!-- text_contrast -->
+                                    <div class="text_contrast">
+                                        <span id="text-contrast-label">文字對比</span>
+                                        <ol aria-labelledby="text-contrast-label">
+                                            <li><a href="#" class="preset active" aria-current="true">預設</a></li>
+                                            <li><a href="#" class="bBtY" title="文字對比-黑底黃字"><span aria-hidden=true>中</span></a></li>
+                                            <li><a href="#" class="bYtB" title="文字對比-黃底黑字"><span aria-hidden=true>中</span></a></li>
+                                            <li><a href="#" class="bBtW" title="文字對比-黑底白字"><span aria-hidden=true>中</span></a></li>
+                                            <li><a href="#" class="bWtB" title="文字對比-白底黑字"><span aria-hidden=true>中</span></a></li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </li>
                             <li><a href="#">登入</a></li>
                             <li><a href="#">註冊</a></li>
                             <li><a href="#">相關下載</a></li>
@@ -126,23 +150,23 @@
                                     <!-- font_size -->
                                     <div class="font_size">
                                         <span>字型大小</span>
-                                        <ul>
+                                        <ol>
                                             <li><a href="#" class="large">大</a></li>
-                                            <li><a href="#" class="medium active">中</a></li>
+                                            <li><a href="#" class="medium active" aria-current="true">中</a></li>
                                             <li><a href="#" class="small">小</a></li>
 
-                                        </ul>
+                                        </ol>
                                     </div>
                                     <!-- text_contrast -->
                                     <div class="text_contrast">
-                                        <span>文字對比</span>
-                                        <ul>
-                                            <li><a href="#" class="preset active">預設</a></li>
-                                            <li><a href="#" class="bBtY">中</a></li>
-                                            <li><a href="#" class="bYtB">中</a></li>
-                                            <li><a href="#" class="bBtW">中</a></li>
-                                            <li><a href="#" class="bWtB">中</a></li>
-                                        </ul>
+                                        <span id="text-contrast-label">文字對比</span>
+                                        <ol aria-labelledby="text-contrast-label">
+                                            <li><a href="#" class="preset active" aria-current="true">預設</a></li>
+                                            <li><a href="#" class="bBtY" title="文字對比-黑底黃字"><span aria-hidden=true>中</span></a></li>
+                                            <li><a href="#" class="bYtB" title="文字對比-黃底黑字"><span aria-hidden=true>中</span></a></li>
+                                            <li><a href="#" class="bBtW" title="文字對比-黑底白字"><span aria-hidden=true>中</span></a></li>
+                                            <li><a href="#" class="bWtB" title="文字對比-白底黑字"><span aria-hidden=true>中</span></a></li>
+                                        </ol>
                                     </div>
                                 </div>
                             </li>
