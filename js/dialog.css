@@ -395,7 +395,7 @@ ul.ul li a:hover {background-color: #035b7e; color: #fff;} */
 .lightbox  img {
   vertical-align: middle;
 }
-.buttonDiv { width: 100%; padding:1em 0 0;text-align: center;overflow: hidden;}
+.buttonDiv { width: 100%; padding:1em 0 0;overflow: hidden;}
 .buttonDiv #MOVID { width:60%!important;vertical-align: middle;height: 2.5em;}
 .buttonDiv #btn_change{}
 .buttonDiv #borrow_btn_send{padding: .5em!important;border: solid 1px #f60;}
