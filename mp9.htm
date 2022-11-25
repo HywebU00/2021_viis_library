@@ -10,12 +10,12 @@
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
 <![endif]-->
-<!-- slick css-->
-<link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
-<link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
-<!-- hyUI css -->
-<link rel="stylesheet" href="css/hyui.css">
-<link rel="stylesheet" type="text/css" href="css/design.css">
+    <!-- slick css-->
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+    <!-- hyUI css -->
+    <link rel="stylesheet" href="css/hyui.css">
+    <link rel="stylesheet" type="text/css" href="css/design.css">
 </link>
 <link rel="alternate stylesheet" type="text/css" title="color1" cat="color" href="css/design1.css">
 </link>
@@ -351,387 +351,77 @@
         </div>
 
         <!-- dialog star -->
-        <div class="dialog-backdrop active"><div tabindex="0"></div><div tabindex="0"></div><div role="dialog" id="dialogResearch" aria-labelledby="dialogResearch_label" aria-modal="true" class="default_dialog">
-            <div class="mp">
-          <!--      <a href="#" id="SearchHelp"  tabindex="0"  class="mlLink">
-         <img src="images/web.png" alt="操作說明，另開懸浮視窗" title="操作說明，另開懸浮視窗"/> </a> 
-         書目查詢 star -->
-         <h2 tabindex="0">書目查詢</h2>
-         <div class="page">
-            <form id="form1" name="form1" method="post" action="sp.asp?xdurl=superxd/SearchListNew.asp">   
-                <input type="hidden" name="ctNode" id="ctNode" value="749">
-                <input type="hidden" name="submitTask" id="submitTask" value="Advanced">
-                <input type="hidden" name="mp" value="1">
-                <input type="hidden" name="lib_all" value="all"> 
-                <label for="">輸入方式：</label>
-                <input name="tech" id="tech1" type="radio" title="國字輸入" value="0" checked="checked">   
-                <label for="tech1">國字輸入</label>
-                <input name="tech" id="tech2" type="radio" title="點字輸入" value="9"> 
-                <label for="tech2">點字輸入</label> 
-                <div class="buttonDiv">
-                    <ul id="buttonDiv"><li> 
-                        <select name="search_Field01" id="search_Field01" class="inputgray2">  
-                            <option value="fulltext">不限欄位</option><option value="stitle" selected="">書名</option><option value="author">作者</option><option value="publisher">出版社</option><option value="isbn">ISBN</option>
-                        </select>
-                        <input name="search_input01" id="search_input01" placeholder="請輸入查詢詞" title="請輸入查詢詞" value="你走慢了我的時間" type="text" size="20" autocomplete="off" class="ac_input"><label for="search_input01"></label>
-                        <span>
-                            <img src="images/plus1.png" tabindex="0" alt="增加搜尋框" name="add_field_button" title="增加搜尋框" id="add_field_button"></span>
-                        </li></ul>
-                    </div>
 
-                    <!--  <div class="searchMore"> <a href="#" id="searchMore" title="縮小搜尋選項">縮小搜尋選項</a></div>-->
-                    <div class="formbox2" id="searchMoreList">  
-
-                        <h3 tabindex="0">查詢標的資料庫</h3> 
-                        <ul>
-                            <li><input type="checkbox" checked="" name="htx_lib" id="lib_9" value="9" title="台灣雲端書庫"><label for="lib_9">台灣雲端書庫 </label> </li>
-
-                        <!--<li><label for="lib_2"> <input type="checkbox"  name="htx_lib" id="lib_2" value="2"  /> 臺北市立圖書館視障電子圖書館 </label>  </li>
-                        -->
-                        <li><input type="checkbox" name="htx_lib" id="lib_3" value="3" title="華文視障電子圖書館"><label for="lib_3">華文視障電子圖書館</label>  </li>
-
-                        <li><input type="checkbox" name="htx_lib" id="lib_7" value="7" title="視障數位有聲書資料庫平台"><label for="lib_7">視障數位有聲書資料庫平台  </label>  </li>
-
-                        <li><input type="checkbox" name="htx_lib" id="lib_8" value="8" title="愛盲基金會有聲書平台"><label for="lib_8">愛盲基金會有聲書平台  </label> </li>
-                        
-                    <!--    <li><label for="lib_4"> <input type="checkbox"  name="htx_lib" id="lib_4" value="4,5,6"   />
-                        一般圖書資料</label> </li>
-                
-                        <li><label for="lib_4"> <input type="checkbox"  name="htx_lib" id="lib_4" value="4"   />臺灣博碩士論文知識加值系統</label> </li>
-                
-                        <li><label for="lib_5"> <input type="checkbox"  name="htx_lib" id="lib_5" value="5"  /> 臺灣期刊論文索引系統</label>  </li>
-                    
-                        <li><label for="lib_6"><input type="checkbox"  name="htx_lib" id="lib_6" value="6"  />全國圖書書目資訊網</label>  </li>
-                    --></ul>
-                    
-                    <h3 tabindex="0">一般圖書資料</h3> 
-                    <ul> 
-                        <li><input type="checkbox" name="htx_lib" id="lib_4" value="4" title="臺灣博碩士論文知識加值系統">
-                            <label for="lib_4"> 臺灣博碩士論文知識加值系統</label> </li>
-
-                            <li><input type="checkbox" name="htx_lib" id="lib_5" value="5" title="臺灣期刊論文索引系統">
-                                <label for="lib_5">臺灣期刊論文索引系統</label>  </li>
-
-                                <li><input type="checkbox" name="htx_lib" id="lib_6" value="6" title="全國圖書書目資訊網">
-                                    <label for="lib_6">全國圖書書目資訊網</label>  </li>
-                                </ul>
-
-                                <h3 tabindex="0">語言</h3><ul>    
-                                    <li><input type="checkbox" name="htx_lang" id="htx_lang1" value="中文" title="中文"><label for="htx_lang1">中文</label> </li>   
-                                    <li><input type="checkbox" name="htx_lang" id="htx_lang2" value="外文" title="外文"><label for="htx_lang2">外文</label> </li>   
-                                </ul>
-
-                                <h3 tabindex="0">典藏地</h3><ul>   
-
-
-                                    <li><input type="checkbox" name="htx_local" id="htx_local1" value="臺灣圖書館" title="本館">
-                                        <label for="htx_local1">本館</label></li>   
-
-                                        <li><input type="checkbox" name="htx_local" id="htx_local2" value="彰化師大圖書館" title="彰化師大圖書館">
-                                            <label for="htx_local2">彰化師大圖書館</label></li>   
-
-                                            <li><input type="checkbox" name="htx_local" id="htx_local3" value="國立公共資訊圖書館" title="國立公共資訊圖書館">
-                                                <label for="htx_local3">國立公共資訊圖書館</label></li>   
-
-                                                <li><input type="checkbox" name="htx_local" id="htx_local4" value="高雄市立圖書館" title="高雄市立圖書館">
-                                                    <label for="htx_local4">高雄市立圖書館</label></li>   
-
-                                                    <li><input type="checkbox" name="htx_local" id="htx_local5" value="臺北市立圖書館視障電子圖書館" title="臺北市立圖書館視障電子圖書館">
-                                                        <label for="htx_local5">臺北市立圖書館視障電子圖書館</label></li>   
-
-                                                    </ul>
-
-                                                    <h3 tabindex="0">資料類型</h3>
-                                                    <ul>
-
-                                                     <li>
-                                                        <input type="checkbox" name="datatype" id="datatype_13819" value="有聲書(MP3)" title="有聲書(MP3)"><label for="datatype_13819">有聲書(MP3)</label>
-                                                    </li>
-
-                                                    <li>
-                                                        <input type="checkbox" name="datatype" id="datatype_11859" value="有聲書(錄音帶)" title="有聲書(錄音帶)"><label for="datatype_11859">有聲書(錄音帶)</label>
-                                                    </li>
-
-                                                    <li>
-                                                        <input type="checkbox" name="datatype" id="datatype_11611" value="電子點字書" title="電子點字書"><label for="datatype_11611">電子點字書</label>
-                                                    </li>
-
-                                                    <li>
-                                                        <input type="checkbox" name="datatype" id="datatype_4356" value="電子書(epub)" title="電子書(epub)"><label for="datatype_4356">電子書(epub)</label>
-                                                    </li>
-
-                                                    <li>
-                                                        <input type="checkbox" name="datatype" id="datatype_4336" value="紙本點字書" title="紙本點字書"><label for="datatype_4336">紙本點字書</label>
-                                                    </li>
-
-                                                    <li>
-                                                        <input type="checkbox" name="datatype" id="datatype_3964" value="有聲書(DAISY)" title="有聲書(DAISY)"><label for="datatype_3964">有聲書(DAISY)</label>
-                                                    </li>
-
-                                                    <li>
-                                                        <input type="checkbox" name="datatype" id="datatype_2778" value="雙視圖書" title="雙視圖書"><label for="datatype_2778">雙視圖書</label>
-                                                    </li>
-
-                                                    <li>
-                                                        <input type="checkbox" name="datatype" id="datatype_944" value="有聲書(CD)" title="有聲書(CD)"><label for="datatype_944">有聲書(CD)</label>
-                                                    </li>
-
-                                                    <li>
-                                                        <input type="checkbox" name="datatype" id="datatype_182" value="電子書(pdf)" title="電子書(pdf)"><label for="datatype_182">電子書(pdf)</label>
-                                                    </li>
-
-                                                    <li>
-                                                        <input type="checkbox" name="datatype" id="datatype_47" value="大字書" title="大字書"><label for="datatype_47">大字書</label>
-                                                    </li>
-
-                                                    <li>
-                                                        <input type="checkbox" name="datatype" id="datatype_32" value="紙本圖書" title="紙本圖書"><label for="datatype_32">紙本圖書</label>
-                                                    </li>
-
-                                                    <li>
-                                                        <input type="checkbox" name="datatype" id="datatype_23" value="視聽資料" title="視聽資料"><label for="datatype_23">視聽資料</label>
-                                                    </li>
-                                                    <li>
-                                                        <input type="checkbox" name="datatype" id="datatype_0" value="VIRESOUCES" title="資源教室檔案">
-                                                        <label for="datatype_0">資源教室檔案</label>
-                                                    </li>
-                                                </ul>
-
-                                                <h3 tabindex="0">分類類別</h3>
-                                                <ul>
-
-                                                    <li>
-                                                        <input type="checkbox" name="htx_subject" id="subjects_0" value="0" title="總類"><label for="subjects_0">總類</label>
-                                                    </li>
-
-                                                    <li>
-                                                        <input type="checkbox" name="htx_subject" id="subjects_1" value="1" title="哲學類"><label for="subjects_1">哲學類</label>
-                                                    </li>
-
-                                                    <li>
-                                                        <input type="checkbox" name="htx_subject" id="subjects_2" value="2" title="宗教類"><label for="subjects_2">宗教類</label>
-                                                    </li>
-
-                                                    <li>
-                                                        <input type="checkbox" name="htx_subject" id="subjects_3" value="3" title="科學類"><label for="subjects_3">科學類</label>
-                                                    </li>
-
-                                                    <li>
-                                                        <input type="checkbox" name="htx_subject" id="subjects_4" value="4" title="應用科學類"><label for="subjects_4">應用科學類</label>
-                                                    </li>
-
-                                                    <li>
-                                                        <input type="checkbox" name="htx_subject" id="subjects_5" value="5" title="社會科學類"><label for="subjects_5">社會科學類</label>
-                                                    </li>
-
-                                                    <li>
-                                                        <input type="checkbox" name="htx_subject" id="subjects_6" value="6" title="史地類：中國史地"><label for="subjects_6">史地類：中國史地</label>
-                                                    </li>
-
-                                                    <li>
-                                                        <input type="checkbox" name="htx_subject" id="subjects_7" value="7" title="史地類：世界史地"><label for="subjects_7">史地類：世界史地</label>
-                                                    </li>
-
-                                                    <li>
-                                                        <input type="checkbox" name="htx_subject" id="subjects_8" value="8" title="語言文學類"><label for="subjects_8">語言文學類</label>
-                                                    </li>
-
-                                                    <li>
-                                                        <input type="checkbox" name="htx_subject" id="subjects_9" value="9" title="藝術類"><label for="subjects_9">藝術類</label>
-                                                    </li>
-
-                                                </ul>
-
-                                                <h3 tabindex="0">主題類別</h3>
-                                                <ul>
-
-                                                    <li>
-                                                        <input type="checkbox" name="htx_subjectClass" id="subjectclass30" value="30" title="雜誌類"><label for="subjectclass30">雜誌類</label>
-                                                    </li>
-
-                                                    <li>
-                                                        <input type="checkbox" name="htx_subjectClass" id="subjectclass31" value="31" title="哲學類"><label for="subjectclass31">哲學類</label>
-                                                    </li>
-
-                                                    <li>
-                                                        <input type="checkbox" name="htx_subjectClass" id="subjectclass32" value="32" title="宗教類"><label for="subjectclass32">宗教類</label>
-                                                    </li>
-
-                                                    <li>
-                                                        <input type="checkbox" name="htx_subjectClass" id="subjectclass33" value="33" title="科學類"><label for="subjectclass33">科學類</label>
-                                                    </li>
-
-                                                    <li>
-                                                        <input type="checkbox" name="htx_subjectClass" id="subjectclass34" value="34" title="電腦"><label for="subjectclass34">電腦</label>
-                                                    </li>
-
-                                                    <li>
-                                                        <input type="checkbox" name="htx_subjectClass" id="subjectclass35" value="35" title="醫療健康"><label for="subjectclass35">醫療健康</label>
-                                                    </li>
-
-                                                    <li>
-                                                        <input type="checkbox" name="htx_subjectClass" id="subjectclass36" value="36" title="生活休閒"><label for="subjectclass36">生活休閒</label>
-                                                    </li>
-
-                                                    <li>
-                                                        <input type="checkbox" name="htx_subjectClass" id="subjectclass37" value="37" title="財經企管"><label for="subjectclass37">財經企管</label>
-                                                    </li>
-
-                                                    <li>
-                                                        <input type="checkbox" name="htx_subjectClass" id="subjectclass38" value="38" title="社會"><label for="subjectclass38">社會</label>
-                                                    </li>
-
-                                                    <li>
-                                                        <input type="checkbox" name="htx_subjectClass" id="subjectclass39" value="39" title="家庭親子"><label for="subjectclass39">家庭親子</label>
-                                                    </li>
-
-                                                    <li>
-                                                        <input type="checkbox" name="htx_subjectClass" id="subjectclass40" value="40" title="史地"><label for="subjectclass40">史地</label>
-                                                    </li>
-
-                                                    <li>
-                                                        <input type="checkbox" name="htx_subjectClass" id="subjectclass41" value="41" title="語言文學"><label for="subjectclass41">語言文學</label>
-                                                    </li>
-
-                                                    <li>
-                                                        <input type="checkbox" name="htx_subjectClass" id="subjectclass42" value="42" title="藝術類"><label for="subjectclass42">藝術類</label>
-                                                    </li>
-
-                                                    <li>
-                                                        <input type="checkbox" name="htx_subjectClass" id="subjectclass43" value="43" title="教科書"><label for="subjectclass43">教科書</label>
-                                                    </li>
-
-                                                </ul>
-
-                                                <h3 tabindex="0">適用年齡</h3>
-                                                <ul>
-
-                                                 <li>
-                                                    <input type="checkbox" name="htx_years" id="year_years0old" value="years0old,years15old" title="學前兒童（0~5歲）"><label for="year_years0old">學前兒童（0~5歲）</label>
-                                                </li>
-
-                                                <li>
-                                                    <input type="checkbox" name="htx_years" id="year_years8old" value="years8old,years15old" title="學齡兒童（6~8歲）"><label for="year_years8old">學齡兒童（6~8歲）</label>
-                                                </li>
-
-                                                <li>
-                                                    <input type="checkbox" name="htx_years" id="year_years9old" value="years9old,years15old" title="學齡兒童（9~13歲）"><label for="year_years9old">學齡兒童（9~13歲）</label>
-                                                </li>
-
-                                                <li>
-                                                    <input type="checkbox" name="htx_years" id="year_years15old" value="years0old,years8old,years9old,years15old" title="兒童青少年（0~17歲）"><label for="year_years15old">兒童青少年（0~17歲）</label>
-                                                </li>
-
-                                                <li>
-                                                    <input type="checkbox" name="htx_years" id="year_years14old" value="years14old,years15old" title="青少年（14~17歲）"><label for="year_years14old">青少年（14~17歲）</label>
-                                                </li>
-
-                                                <li>
-                                                    <input type="checkbox" name="htx_years" id="year_years20old" value="years20old,years60old,years18old" title="成人（一般）"><label for="year_years20old">成人（一般）</label>
-                                                </li>
-
-                                                <li>
-                                                    <input type="checkbox" name="htx_years" id="year_years21old" value="years21old" title="成人（學術）"><label for="year_years21old">成人（學術）</label>
-                                                </li>
-
-                                                <li>
-                                                    <input type="checkbox" name="htx_years" id="year_years60old" value="years60old,years20old" title="樂齡（60歲以上）"><label for="year_years60old">樂齡（60歲以上）</label>
-                                                </li>
-
-                                                <li>
-                                                    <input type="checkbox" name="htx_years" id="year_years18old" value="years18old" title="限閱圖書（限18歲以上閱讀）"><label for="year_years18old">限閱圖書（限18歲以上閱讀）</label>
-                                                </li>
-
-                                            </ul> 
-
-                                        </div> 
-                                    </form></div>
-                                    <div class="buttonDiv">
-                                        <input name="Search" type="button" id="btn_submitform" value="查詢" title="查詢">
-                                        <input name="" type="reset" value="清除輸入" title="清除輸入"> 
-                                        <input type="button" tabindex="0" id="btn_searchMore" onclick="closeDialog(this)" value="關閉">   
-                                    </div>
-
-                                </div>
-
-                                <link rel="stylesheet" type="text/css" href="/css/autocomplete.css"> 
-
-
-                                <!--書目查詢 end --> 
-
-
-                            </div><div tabindex="0"></div><div tabindex="0"></div></div>
-
-                            <!-- dialog end -->
-
-
-                            <!-- conbox End -->
-                        </div>
-                    </div>
-                </div>
-                <!-- fatfooter Start -->
-                <section class="fatfooter">
-                    <div class="container">
-                        <button type="button" name="收合" class="btn btn-fatfooter">收合</button>
-                        <nav>
-                            <ul>
-                                <li><a href="http://www.google.com" target="_blank">最新消息</a></li>
-                                <li><a href="#">圖書資訊</a></li>
-                                <li><a href="#">圖書精選</a></li>
-                                <li><a href="#">資源教室</a></li>
-                                <li><a href="#">資源網站</a></li>
-                                <li><a href="#">常見問題</a></li>
-                                <li><a href="#">聯絡我們</a></li>
-                                <li><a href="#">網站統計</a></li>
-                                <li><a href="#">相關下載</a>
-                                    <ul>
-                                        <li><a target="_blank" title="IOS APP,另外新視窗" href="https://itunes.apple.com/tw/app/id934249135?mt=8">IOS APP</a></li>
-                                        <li><a target="_blank" title="Android APP,另外新視窗" href="https://play.google.com/store/apps/details?id=tw.edu.ntl.viis.ntl_vilib">Android APP</a></li>
-                                        <li><a title="電子書閱讀器下載" target="_blank" href="http://viis.ntl.edu.tw/reader/VNTLReaderSetup.exe">電子書閱讀器下載</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">問卷調查</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </section>
-                <!-- footer -->
-                <footer>
-                    <div class="container">
-                        <a class="accesskey" href="#aF" id="aF" accesskey="F" title="頁尾區">:::</a>
-                        <div class="footer_icon">
-                            <a target="_blank" href="#" title="">
-                                <img src="images/basic/aaa.jpg" alt="">
-                            </a>
-                            <div class="counter">瀏覽人次:<em>46476653</em></div>
-                        </div>
-                        <div class="footer_info">
-                            <ul class="footer_link">
-                                <li><a href="http://www.ntl.edu.tw/ct.asp?xItem=1102&amp;ctNode=1869&amp;mp=1" target="_blank" title="隱私權保護政策">隱私權保護政策</a></li>
-                                <li><a href="http://www.ntl.edu.tw/ct.asp?xItem=59993&amp;ctNode=1783&amp;mp=1" target="_blank" title="資訊安全政策">資訊安全政策</a></li>
-                                <li><a href="ct.asp?xItem=145981&amp;ctNode=708&amp;mp=1" title="APP隱私權保護政策">APP隱私權保護政策</a></li>
-                            </ul>
-                            <p class="copyright">館址：23574 <a href="https://maps.google.com.tw/maps?q=%E5%9C%8B%E7%AB%8B%E5%8F%B0%E7%81%A3%E5%9C%96%E6%9B%B8%E9%A4%A8&amp;hl=zh-TW&amp;ie=UTF8&amp;ll=25.003367,121.512222&amp;spn=0.008187,0.015278&amp;cid=854761177722451895&amp;gl=TW&amp;t=m&amp;z=16&amp;iwloc=A&amp;brcurrent=3,0x3442a9c2a0f41215:0xb2aee41d223e5dca,0,0x345d5538b0b6645f:0x5aa90dfa6620edc0&amp;output=classic&amp;dg=brw" class="Map_link" title="Google Map(另開新視窗)" target="_blank">
-                            新北市中和區中安街八十五號</a> 電話：（02）2926-6888 視障資料中心服務專線（02）2926-1470 傳真 （02） 2926-3253 <br>No.85 Zhong-an St., Zhonghe District, New Taipei City 23574, Taiwan (R.O.C) 
-                            TEL：（+886）2-2926-6888  FAX：（+886）2-2926-3253  <br>
-                        系統操作諮詢電話 :(02)2926-1470 E-Mail:viic@mail.ntl.edu.tw 服務時間:週一到週五 09:00-17:00</p>
-                    </div>
-
-                </div>
-            </footer>
+        <!-- dialog end -->
+        <div class="dialog-backdrop active"><div role="dialog" id="react-aria-modal-dialog" class="default_dialog" aria-label="modal"><div class="mp"><h2 tabindex="0">書目查詢</h2><form><div class="page">輸入方式：<input name="phonetic" id="phonetic_1" type="radio" title="國字輸入" tabindex="0" value="1" checked=""><label for="phonetic_1">國字輸入</label><input name="phonetic" id="phonetic_5" type="radio" title="點字輸入" tabindex="0" value="5"><label for="phonetic_5">點字輸入</label><div class="buttonDiv"><ul id="buttonDiv"><li><select name="searchField"><option value="TI">題名</option><option value="PN">作者</option><option value="ISBN">ISBN</option><option value="ACN">條碼號</option><option value="CNO">索書號</option><option value="FullText">關鍵字</option></select><input name="searchInput" type="text" placeholder="請輸入查詢詞" title="請輸入查詢詞" value=""><span><a title="增加搜尋框"><img src="images/plus1.png" tabindex="0" alt="" name="add_field_button"></a></span></li><li><select name="op"><option value="and">AND</option><option value="or">OR</option><option value="not">NOT</option></select><select name="searchField"><option value="TI">題名</option><option value="PN">作者</option><option value="ISBN">ISBN</option><option value="ACN">條碼號</option><option value="CNO">索書號</option><option value="FullText">關鍵字</option></select><input name="searchInput" type="text" placeholder="請輸入查詢詞" title="請輸入查詢詞" value=""><span><a title="減少搜尋框"><img src="images/less1.png" tabindex="0" alt="減少搜尋框" name="add_field_button"></a></span></li></ul></div><div class="formbox2" id="searchMoreList"><ul><li><label><input name="excludesystem" type="checkbox" title="不包含本系統資源" value="Y">不包含本系統資源</label></li><li><label><input type="checkbox" name="usePhonetic" title="使用同音異字查詢" value="Y" checked="">使用同音異字查詢</label></li></ul><h3 tabindex="0">分散查詢資料庫</h3><ul><li><label><input type="checkbox" name="lib" title="華文視障電子圖書館" value="30801">華文視障電子圖書館</label></li><li><label><input type="checkbox" name="lib" title="愛盲基金會有聲點字圖書館" value="30806">愛盲基金會有聲點字圖書館</label></li></ul><h3 tabindex="0">一般圖書資料</h3><ul><li><input type="checkbox" name="lib" id="lib_40048" title="臺灣博碩士論文知識加值系統" value="40048"><label for="lib_40048">臺灣博碩士論文知識加值系統</label></li><li><input type="checkbox" name="lib" id="lib_20015" title="期刊文獻資訊網" value="20015"><label for="lib_20015">期刊文獻資訊網</label></li><li><input type="checkbox" name="lib" id="lib_30006" title="全國圖書書目資訊網" value="30006"><label for="lib_30006">全國圖書書目資訊網</label></li></ul><h3 tabindex="0">語言</h3><ul><li><input type="checkbox" id="lang1" name="chi" title="中文" value="1"><label for="lang1">中文</label></li><li><input type="checkbox" id="lang2" name="forex" title="外文" value="1"><label for="lang2">外文</label></li></ul><h3 tabindex="0">典藏地</h3><ul><li><input type="checkbox" name="loc" id="loc_A096M0000Q" title="國立陽明交通大學" value="A096M0000Q"><label for="loc_A096M0000Q">國立陽明交通大學</label></li><li><input type="checkbox" name="loc" id="loc_A09560000Q" title="國立清華大學" value="A09560000Q"><label for="loc_A09560000Q">國立清華大學</label></li><li><input type="checkbox" name="loc" id="loc_382330400E" title="新北市立圖書館" value="382330400E"><label for="loc_382330400E">新北市立圖書館</label></li><li><input type="checkbox" name="loc" id="loc_376612700E" title="臺南市立圖書館" value="376612700E"><label for="loc_376612700E">臺南市立圖書館</label></li><li><input type="checkbox" name="loc" id="loc_A095K0000Q" title="彰化師大圖書館" value="A095K0000Q"><label for="loc_A095K0000Q">彰化師大圖書館</label></li><li><input type="checkbox" name="loc" id="loc_379040300E" title="臺北市立圖書館" value="379040300E"><label for="loc_379040300E">臺北市立圖書館</label></li><li><input type="checkbox" name="loc" id="loc_397330100E-1" title="高雄市立圖書館(新興)" value="397330100E-1"><label for="loc_397330100E-1">高雄市立圖書館(新興)</label></li><li><input type="checkbox" name="loc" id="loc_397330100E" title="高雄市立圖書館總館" value="397330100E"><label for="loc_397330100E">高雄市立圖書館總館</label></li><li><input type="checkbox" name="loc" id="loc_A09120000E" title="國立臺灣圖書館" value="A09120000E"><label for="loc_A09120000E">國立臺灣圖書館</label></li><li><input type="checkbox" name="loc" id="loc_343120000E" title="國立公共資訊圖書館" value="343120000E"><label for="loc_343120000E">國立公共資訊圖書館</label></li></ul><h3 tabindex="0">主題類別</h3><ul><li><input type="checkbox" name="subject" id="subject_38" title="史地" value="38"><label for="subject_38">史地</label></li><li><input type="checkbox" name="subject" id="subject_17" title="生活休閒" value="17"><label for="subject_17">生活休閒</label></li><li><input type="checkbox" name="subject" id="subject_7" title="宗教類" value="7"><label for="subject_7">宗教類</label></li><li><input type="checkbox" name="subject" id="subject_28" title="社會" value="28"><label for="subject_28">社會</label></li><li><input type="checkbox" name="subject" id="subject_10" title="科學類" value="10"><label for="subject_10">科學類</label></li><li><input type="checkbox" name="subject" id="subject_3" title="哲學類" value="3"><label for="subject_3">哲學類</label></li><li><input type="checkbox" name="subject" id="subject_86" title="家庭親子" value="86"><label for="subject_86">家庭親子</label></li><li><input type="checkbox" name="subject" id="subject_24" title="財經企管" value="24"><label for="subject_24">財經企管</label></li><li><input type="checkbox" name="subject" id="subject_61" title="教科書" value="61"><label for="subject_61">教科書</label></li><li><input type="checkbox" name="subject" id="subject_13" title="電腦" value="13"><label for="subject_13">電腦</label></li><li><input type="checkbox" name="subject" id="subject_42" title="語言文學" value="42"><label for="subject_42">語言文學</label></li><li><input type="checkbox" name="subject" id="subject_14" title="醫療健康" value="14"><label for="subject_14">醫療健康</label></li><li><input type="checkbox" name="subject" id="subject_2" title="雜誌類" value="2"><label for="subject_2">雜誌類</label></li><li><input type="checkbox" name="subject" id="subject_53" title="藝術類" value="53"><label for="subject_53">藝術類</label></li></ul><h3 tabindex="0">資料類型</h3><ul><li><input type="checkbox" name="datatype" id="datatype_BREF" title="電子書" value="BREF"><label for="datatype_BREF">電子書</label></li><li><input type="checkbox" name="datatype" id="datatype_II" title="雙視圖書" value="II"><label for="datatype_II">雙視圖書</label></li><li><input type="checkbox" name="datatype" id="datatype_CD" title="電子點字書" value="CD"><label for="datatype_CD">電子點字書</label></li><li><input type="checkbox" name="datatype" id="datatype_pdf" title="電子書(pdf)" value="pdf"><label for="datatype_pdf">電子書(pdf)</label></li><li><input type="checkbox" name="datatype" id="datatype_epub" title="電子書(epub)" value="epub"><label for="datatype_epub">電子書(epub)</label></li><li><input type="checkbox" name="datatype" id="datatype_oral" title="視聽資料(口述影像版)" value="oral"><label for="datatype_oral">視聽資料(口述影像版)</label></li><li><input type="checkbox" name="datatype" id="datatype_A" title="紙本點字書" value="A"><label for="datatype_A">紙本點字書</label></li><li><input type="checkbox" name="datatype" id="datatype_book" title="紙本圖書" value="book"><label for="datatype_book">紙本圖書</label></li><li><input type="checkbox" name="datatype" id="datatype_C" title="有聲書(錄音帶)" value="C"><label for="datatype_C">有聲書(錄音帶)</label></li><li><input type="checkbox" name="datatype" id="datatype_MD" title="有聲書(MP3)" value="MD"><label for="datatype_MD">有聲書(MP3)</label></li><li><input type="checkbox" name="datatype" id="datatype_DS" title="有聲書(DAISY)" value="DS"><label for="datatype_DS">有聲書(DAISY)</label></li><li><input type="checkbox" name="datatype" id="datatype_AD" title="有聲書(CD)" value="AD"><label for="datatype_AD">有聲書(CD)</label></li><li><input type="checkbox" name="datatype" id="datatype_big" title="大字書" value="big"><label for="datatype_big">大字書</label></li><li><input type="checkbox" name="datatype" id="datatype_R" title="資源教室" value="R"><label for="datatype_R">資源教室</label></li><li><input type="checkbox" name="datatype" id="datatype_video" title="視聽資料" value="video"><label for="datatype_video">視聽資料</label></li><li><input type="checkbox" name="datatype" id="datatype_SL" title="手語書" value="SL"><label for="datatype_SL">手語書</label></li></ul><h3 tabindex="0">資源利用</h3><ul><li><input type="checkbox" id="if_download" name="if_download" value="Y"><label for="if_download">可下載</label></li><li><input type="checkbox" id="if_online" name="if_online" value="Y"><label for="if_online">可線上閱讀</label></li><li><input type="checkbox" id="if_borrow" name="if_borrow" value="Y"><label for="if_borrow">實體借閱</label></li></ul><h3 tabindex="0">適用年齡</h3><ul><li><input type="checkbox" name="suitableage" id="suitableage_0" title="成人（一般）" value="成人（1般）"><label for="suitableage_0">成人（一般）</label></li><li><input type="checkbox" name="suitableage" id="suitableage_1" title="成人（學術）" value="成人學術"><label for="suitableage_1">成人（學術）</label></li><li><input type="checkbox" name="suitableage" id="suitableage_2" title="兒童青少年（0~17歲）" value="兒童青少年，017歲"><label for="suitableage_2">兒童青少年（0~17歲）</label></li><li><input type="checkbox" name="suitableage" id="suitableage_3" title="青少年（14~17歲）" value="青少年，1417歲"><label for="suitableage_3">青少年（14~17歲）</label></li><li><input type="checkbox" name="suitableage" id="suitableage_4" title="限閱圖書（限18歲以上閱讀）" value="限閱圖書（限十8歲以上閱讀）"><label for="suitableage_4">限閱圖書（限18歲以上閱讀）</label></li><li><input type="checkbox" name="suitableage" id="suitableage_5" title="樂齡（60歲以上" value="樂齡，60歲以上"><label for="suitableage_5">樂齡（60歲以上</label></li><li><input type="checkbox" name="suitableage" id="suitableage_6" title="學前兒童（0~5歲）" value="學前兒童，05歲"><label for="suitableage_6">學前兒童（0~5歲）</label></li><li><input type="checkbox" name="suitableage" id="suitableage_7" title="學齡兒童（6~8歲）" value="學齡兒童，68歲"><label for="suitableage_7">學齡兒童（6~8歲）</label></li><li><input type="checkbox" name="suitableage" id="suitableage_8" title="學齡兒童（9~13歲）" value="學齡兒童，913歲"><label for="suitableage_8">學齡兒童（9~13歲）</label></li></ul><h3 tabindex="0">分類類別</h3><ul><li><input type="checkbox" name="classno" id="classno_0" title="總論" value="0"><label for="classno_0">總論</label></li><li><input type="checkbox" name="classno" id="classno_1" title="哲學類" value="1"><label for="classno_1">哲學類</label></li><li><input type="checkbox" name="classno" id="classno_2" title="宗教類" value="2"><label for="classno_2">宗教類</label></li><li><input type="checkbox" name="classno" id="classno_3" title="科學類" value="3"><label for="classno_3">科學類</label></li><li><input type="checkbox" name="classno" id="classno_4" title="應用科學類" value="4"><label for="classno_4">應用科學類</label></li><li><input type="checkbox" name="classno" id="classno_5" title="社會科學類" value="5"><label for="classno_5">社會科學類</label></li><li><input type="checkbox" name="classno" id="classno_6" title="史地類" value="6"><label for="classno_6">史地類</label></li><li><input type="checkbox" name="classno" id="classno_7" title="世界史地" value="7"><label for="classno_7">世界史地</label></li><li><input type="checkbox" name="classno" id="classno_8" title="語言文學類" value="8"><label for="classno_8">語言文學類</label></li><li><input type="checkbox" name="classno" id="classno_9" title="藝術類" value="9"><label for="classno_9">藝術類</label></li></ul></div></div><div class="buttonDiv"><input name="Search" type="submit" title="查詢" log-clicktext="進階查詢" value="查詢"><input name="" type="reset" title="清除輸入" value="清除輸入"></div></form></div><div tabindex="0"></div><div id="modalDiv" tabindex="0"></div><div class="btnbox"><button tabindex="0" id="btn_close">關閉</button></div></div></div>
+
+        <!-- conbox End -->
+    </div>
+</div>
+</div>
+<!-- fatfooter Start -->
+<section class="fatfooter">
+    <div class="container">
+        <button type="button" name="收合" class="btn btn-fatfooter">收合</button>
+        <nav>
+            <ul>
+                <li><a href="http://www.google.com" target="_blank">最新消息</a></li>
+                <li><a href="#">圖書資訊</a></li>
+                <li><a href="#">圖書精選</a></li>
+                <li><a href="#">資源教室</a></li>
+                <li><a href="#">資源網站</a></li>
+                <li><a href="#">常見問題</a></li>
+                <li><a href="#">聯絡我們</a></li>
+                <li><a href="#">網站統計</a></li>
+                <li><a href="#">相關下載</a>
+                    <ul>
+                        <li><a target="_blank" title="IOS APP,另外新視窗" href="https://itunes.apple.com/tw/app/id934249135?mt=8">IOS APP</a></li>
+                        <li><a target="_blank" title="Android APP,另外新視窗" href="https://play.google.com/store/apps/details?id=tw.edu.ntl.viis.ntl_vilib">Android APP</a></li>
+                        <li><a title="電子書閱讀器下載" target="_blank" href="http://viis.ntl.edu.tw/reader/VNTLReaderSetup.exe">電子書閱讀器下載</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">問卷調查</a></li>
+            </ul>
+        </nav>
+    </div>
+</section>
+<!-- footer -->
+<footer>
+    <div class="container">
+        <a class="accesskey" href="#aF" id="aF" accesskey="F" title="頁尾區">:::</a>
+        <div class="footer_icon">
+            <a target="_blank" href="#" title="">
+                <img src="images/basic/aaa.jpg" alt="">
+            </a>
+            <div class="counter">瀏覽人次:<em>46476653</em></div>
         </div>
-        <a href="javascript:;" class="scrollToTop">回頁首</a>
-        <script src="js/jquery-3.3.1.min.js"></script>
-        <script src="vendor/jquery.easing.min.js"></script>
-        <!-- lazyload -->
-        <script src="vendor/lazyload/lazyload.min.js"></script>
-        <!-- slick js -->
-        <script src="vendor/slick/slick.min.js "></script>
-        <script src="vendor/slick/slick-lightbox.js "></script>
-        <!-- hyUI -->
-        <script src="js/hyui.js"></script>
-        <!-- 客製js -->
-        <script src="js/customize.js"></script>
-    </body>
+        <div class="footer_info">
+            <ul class="footer_link">
+                <li><a href="http://www.ntl.edu.tw/ct.asp?xItem=1102&amp;ctNode=1869&amp;mp=1" target="_blank" title="隱私權保護政策">隱私權保護政策</a></li>
+                <li><a href="http://www.ntl.edu.tw/ct.asp?xItem=59993&amp;ctNode=1783&amp;mp=1" target="_blank" title="資訊安全政策">資訊安全政策</a></li>
+                <li><a href="ct.asp?xItem=145981&amp;ctNode=708&amp;mp=1" title="APP隱私權保護政策">APP隱私權保護政策</a></li>
+            </ul>
+            <p class="copyright">館址：23574 <a href="https://maps.google.com.tw/maps?q=%E5%9C%8B%E7%AB%8B%E5%8F%B0%E7%81%A3%E5%9C%96%E6%9B%B8%E9%A4%A8&amp;hl=zh-TW&amp;ie=UTF8&amp;ll=25.003367,121.512222&amp;spn=0.008187,0.015278&amp;cid=854761177722451895&amp;gl=TW&amp;t=m&amp;z=16&amp;iwloc=A&amp;brcurrent=3,0x3442a9c2a0f41215:0xb2aee41d223e5dca,0,0x345d5538b0b6645f:0x5aa90dfa6620edc0&amp;output=classic&amp;dg=brw" class="Map_link" title="Google Map(另開新視窗)" target="_blank">
+            新北市中和區中安街八十五號</a> 電話：（02）2926-6888 視障資料中心服務專線（02）2926-1470 傳真 （02） 2926-3253 <br>No.85 Zhong-an St., Zhonghe District, New Taipei City 23574, Taiwan (R.O.C) 
+            TEL：（+886）2-2926-6888  FAX：（+886）2-2926-3253  <br>
+        系統操作諮詢電話 :(02)2926-1470 E-Mail:viic@mail.ntl.edu.tw 服務時間:週一到週五 09:00-17:00</p>
+    </div>
 
-    </html>
+</div>
+</footer>
+</div>
+<a href="javascript:;" class="scrollToTop">回頁首</a>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="vendor/jquery.easing.min.js"></script>
+<!-- lazyload -->
+<script src="vendor/lazyload/lazyload.min.js"></script>
+<!-- slick js -->
+<script src="vendor/slick/slick.min.js "></script>
+<script src="vendor/slick/slick-lightbox.js "></script>
+<!-- hyUI -->
+<script src="js/hyui.js"></script>
+<!-- 客製js -->
+<script src="js/customize.js"></script>
+</body>
+
+</html>

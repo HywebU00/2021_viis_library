@@ -188,8 +188,8 @@
             <!-- main Start -->
             <div id="center" class="main innerpage">
                 <div class="container">
-                 <!-- menu Start -->
-                 <div class="main_menu">
+                   <!-- menu Start -->
+                   <div class="main_menu">
                     <nav class="menu">
                         <ul>
                             <li><a href="http://www.google.com" target="_blank">最新消息</a></li>
@@ -247,93 +247,123 @@
                                 <div class="sort-btn-group">
                                     <div class="title">排序條件：</div>
                                     <!-- 依使用次數排序 -->
-                                    <button data="" class="btn sort-btn">
-                                        <span data="">依</span><span data="">使用次數</span><span data="">排序</span>
-                                        <div data="" class="icon ml-1">
-                                            <span data="" class="fas icon-fa-sort"></span>
-                                        </div>
-                                    </bttton>
-                               <!--  <button data="" class="btn sort-btn text-e-red">
+                                    <div class="a_btndiv">
+                                        <a tabindex="0" role="button" id="toggle" aria-pressed="false" data="" class="btn sort-btn">
+                                            <span data="">依</span><span data="">使用次數</span><span data="">排序</span>
+                                            <div data="" class="icon ml-1">
+                                                <span data="" class="fas icon-fa-sort"></span>
+                                            </div>
+                                        </a>
+                                    </div>
+                               <!--  
+                               <div class="a_btndiv">
+                               <a tabindex="0" role="button" id="toggle" aria-pressed="false" data="" class="btn sort-btn text-e-red">
                                     <span data="">使用次數</span><span data="">少到多</span>
                                     <div data="" class="icon ml-1">
                                         <span data="" class="fas icon-fa-sort-up"></span>
                                     </div>
-                                </button> -->
-                                
-                                <!-- <button data="" class="btn sort-btn text-e-red">
+                                </a>
+                                </div>
+                            -->
+
+                                <!-- 
+                                <div class="a_btndiv">
+                                <a tabindex="0" role="button" id="toggle" aria-pressed="false" data="" class="btn sort-btn text-e-red">
                                     <span data="">使用次數</span><span data="">多到少</span>
                                     <div data="" class="icon ml-1">
                                         <span data="" class="fas icon-fa-sort-down"></span>
                                     </div>
-                                </button> -->
-                                <!-- 依原出版年排序 -->
-                                <button data="" class="btn sort-btn">
+                                </a>
+                                </div>
+                            -->
+                            <!-- 依原出版年排序 -->
+                            <div class="a_btndiv">
+                                <a tabindex="0" role="button" id="toggle" aria-pressed="false" data="" class="btn sort-btn">
                                     <span data="">依</span><span data="">原出版年</span><span data="">排序</span>
                                     <div data="" class="icon ml-1">
                                         <span data="" class="fas icon-fa-sort"></span>
                                     </div>
-                                </button>
-                               <!--  <button data="" class="btn sort-btn text-e-red">
+                                </a>
+                            </div>
+                             <!--  
+                            <div class="a_btndiv">
+                               <a tabindex="0" role="button" id="toggle" aria-pressed="false" data="" class="btn sort-btn text-e-red">
                                     <span data="">原出版年</span><span data="">遠到近</span>
                                     <div data="" class="icon ml-1">
                                         <span data="" class="fas icon-fa-sort-up"></span>
                                     </div>
-                                </button> -->
-<!--                                 <button data="" class="btn sort-btn text-e-red">
+                                </a>
+                            </div>
+                        -->
+                            <!-- 
+                            <div class="a_btndiv">                                
+                                <a tabindex="0" role="button" id="toggle" aria-pressed="false" data="" class="btn sort-btn text-e-red">
                                     <span data="">原出版年</span><span data="">近到遠</span>
                                     <div data="" class="icon ml-1">
                                         <span data="" class="fas icon-fa-sort-down"></span>
                                     </div>
-                                </button> -->
-                                <!-- 依上架日期排序 -->
-                                <!-- <button data="" class="btn sort-btn">
-                                    <span data="">依</span><span data="">上架日期</span><span data="">排序</span>
-                                    <div data="" class="icon ml-1">
-                                        <span data="" class="fas icon-fa-sort"></span>
-                                    </div>
-                                </button> -->
-                                <!-- <button data="" class="btn sort-btn text-e-red">
+                                </a>
+                            </div>
+                        -->
+                        <!-- 依上架日期排序 -->
+                            <!-- 
+                            <div class="a_btndiv">
+                            <a tabindex="0" role="button" id="toggle" aria-pressed="false" data="" class="btn sort-btn">
+                            <span data="">依</span><span data="">上架日期</span><span data="">排序</span>
+                            <div data="" class="icon ml-1">
+                            <span data="" class="fas icon-fa-sort"></span>
+                             </div>
+                            </a>
+                             </div>
+                         -->
+                            <!-- 
+                                <div class="a_btndiv">
+                                <a tabindex="0" role="button" id="toggle" aria-pressed="false" data="" class="btn sort-btn text-e-red">
                                     <span data="">上架日期</span><span data="">遠到近</span>
                                     <div data="" class="icon ml-1">
                                         <span data="" class="fas icon-fa-sort-up"></span>
                                     </div>
-                                </button> -->
-                                <button data="" class="btn sort-btn text-e-red">
+                                </a>
+                                </div>
+                            -->
+                            <div class="a_btndiv">
+                                <a  tabindex="0" role="button" id="toggle" aria-pressed="false" data="" class="btn sort-btn text-e-red">
                                     <span data="">上架日期</span><span data="">近到遠</span>
                                     <div data="" class="icon ml-1">
                                         <span data="" class="fas icon-fa-sort-down"></span>
                                     </div>
-                                </button>
+                                </a  tabindex="0" role="button" id="toggle" aria-pressed="false">
                             </div>
-                            <!-- 排序條件 end -->
-                            <!-- 結果格式 star -->
-                            <div class="sort-btn-group">
-                                <div class="title">結果格式：</div>
-                                <button class="icon-fa-graphicmode">圖文模式</button>
-                                <button class="icon-fa-iconmode">圖示模式</button>
-                            </div>
-                            <!-- 結果格式 end -->
-                            <!-- 批次處理 star -->
-                            <div class="sort-btn-group">
-                                <div class="title">批次處理：</div>
-                                <div class="checkbox" tabindex="0">
-                                    <label><input type="checkbox">全選勾選框</label>
-                                </div>
-                                <button class="btn2"><i class="i_mail"></i>Email轉寄</button>
-                                <button class="btn2"><i class="i_bookmark"></i>加入個人書架</button>
-                                <button class="btn2"><i class="i_export"></i>匯出檔案</button>
-                            </div>
-                            <!-- 批次處理 end -->
                         </div>
+                        <!-- 排序條件 end -->
+                        <!-- 結果格式 star -->
+                        <div class="sort-btn-group">
+                            <div class="title">結果格式：</div>
+                            <button class="icon-fa-graphicmode">圖文模式</button>
+                            <button class="icon-fa-iconmode">圖示模式</button>
+                        </div>
+                        <!-- 結果格式 end -->
+                        <!-- 批次處理 star -->
+                        <div class="sort-btn-group">
+                            <div class="title">批次處理：</div>
+                            <div class="checkbox">
+                                <label><input type="checkbox">全選勾選框</label>
+                            </div>
+                            <button class="btn2"><i class="i_mail"></i>Email轉寄</button>
+                            <button class="btn2"><i class="i_bookmark"></i>加入個人書架</button>
+                            <button class="btn2"><i class="i_export"></i>匯出檔案</button>
+                        </div>
+                        <!-- 批次處理 end -->
                     </div>
                 </div>
-                <!-- accordionblock  end-->
-
             </div>
-            <!--Accordionqa  end-->
+            <!-- accordionblock  end-->
 
-            <!-- LP Start -->
-            <section class="lp">
+        </div>
+        <!--Accordionqa  end-->
+
+        <!-- LP Start -->
+        <section class="lp">
 <!--                 <form action="" class="form_inline">
                     <div class="form_grp">
                         <button id="btnOpen">關閉勾選框與轉出功能 </button>

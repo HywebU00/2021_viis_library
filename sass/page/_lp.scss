@@ -1405,19 +1405,31 @@ label{
 .sort-btn-group{
     display: flex;
     margin-bottom: 1em;
+    width: 100%;
     @include screen('mobile') {
         flex-direction: column;
     }
     .title{
         padding: .5em .2em;  
     }
-    .btn{
+    .a_btndiv{
         flex:1 1 25%;
-        background: #fff;
+        // background: #fff;
         @include screen('mobile') {
             flex:1 1 100%;
         }
+        a{
+            display: block;
+            background: #fff;
+        }
     }
+    // .btn{
+    //     flex:1 1 25%;
+    //     background: #fff;
+    //     @include screen('mobile') {
+    //         flex:1 1 100%;
+    //     }
+    // }
     .btn2{
         background: rgba(255, 255, 255, 0);
         border: none;
@@ -1453,7 +1465,6 @@ label{
     }
     .icon{
         display: inline-block;
-
     }
     &:hover,
     &:focus {
