@@ -302,27 +302,27 @@
             width: 35%;
             float: left;
             background: #fff!important;
-                // @include aspect-ratio(3, 4);
-                vertical-align: top;
-
-                img{
-                    max-width: 100%!important;
-                    max-height: 100%!important;
-                    // margin: 0!important;
-                }
-                @include screen('notebook') {
-                    width: 45%;
-                }
-                @include screen('mobile') {
-                   width: 100%;
-                   float: none; 
-               }
-           }
-           .caption {
-            height: 15em;
-            overflow: hidden;
-            @include gutter;
+            vertical-align: top;
+            @include aspect-ratio(3, 4);
+            img{
+                max-width: 100%!important;
+                max-height: 100%!important;
+                // margin: 0!important;
+                object-fit: contain;
+            }
             @include screen('notebook') {
+                width: 45%;
+            }
+            @include screen('mobile') {
+               width: 100%;
+               float: none; 
+           }
+       }
+       .caption {
+        height: 15em;
+        overflow: hidden;
+        @include gutter;
+        @include screen('notebook') {
                 // height: 12.5em; 
             }
             @include screen('tablet') {
@@ -452,8 +452,8 @@
             vertical-align: top;
 
             img{
-                // max-width: 100%!important;
-                // max-height: 100%!important;
+                max-width: 100%!important;
+                max-height: 100%!important;
                 object-fit: contain;
                     // margin: 0!important;
                 }
