@@ -448,12 +448,13 @@
             // width: 35%;
             // float: left;
             background: #fff!important;
-                // @include aspect-ratio(3, 4);
-                vertical-align: top;
+            @include aspect-ratio(3, 4);
+            vertical-align: top;
 
-                img{
-                    max-width: 100%!important;
-                    max-height: 100%!important;
+            img{
+                // max-width: 100%!important;
+                // max-height: 100%!important;
+                object-fit: contain;
                     // margin: 0!important;
                 }
                 @include screen('notebook') {
