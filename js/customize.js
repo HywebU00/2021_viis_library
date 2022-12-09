@@ -1497,20 +1497,20 @@ _accordionItem.click(accordion3);
 //開啟勾選框與轉出功能
 $(".sort-btn-group .sort_block").each(function () {
     var _accordionItem = $(this).children(".morebtn");
-    var _openclose_btn = _accordionItem.children(".morebtn");
-  var _answercontent = $(this).children(".fun_btn");
-  if (_answercontent.length == 0) {
-    _openclose_btn.hide();
-} else {
-    function accordion3(e) {
-      if (_answercontent.is(":hidden")) {
-        _answercontent.slideDown();
-        _openclose_btn.text("關閉勾選框與轉出功能").addClass("open");
+    var _openclose_btn = _accordionItem.children("a");
+    var _answercontent = $(this).children(".fun_btn");
+    if (_answercontent.length == 0) {
+        _openclose_btn.hide();
     } else {
-        _answercontent.slideUp();
-        _openclose_btn.text("開啟勾選框與轉出功能").removeClass("open");
+        function accordion3(e) {
+          if (_answercontent.is(":hidden")) {
+            _answercontent.slideDown();
+            _openclose_btn.text("關閉勾選框與轉出功能").addClass("open");
+        } else {
+            _answercontent.slideUp();
+            _openclose_btn.text("開啟勾選框與轉出功能").removeClass("open");
+        }
     }
-}
-_accordionItem.click(accordion3);
+    _accordionItem.click(accordion3);
 }
 });
