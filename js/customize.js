@@ -1496,8 +1496,8 @@ _accordionItem.click(accordion3);
 
 //開啟勾選框與轉出功能
 $(".sort-btn-group .sort_block").each(function () {
-  var _accordionItem = $(this).children(".more");
-  var _openclose_btn = _accordionItem.children("a");
+    var _accordionItem = $(this).children(".morebtn");
+    var _openclose_btn = _accordionItem.children(".morebtn");
   var _answercontent = $(this).children(".fun_btn");
   if (_answercontent.length == 0) {
     _openclose_btn.hide();
