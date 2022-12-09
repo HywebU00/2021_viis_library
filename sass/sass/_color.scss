@@ -87,8 +87,71 @@ blockquote{
 //       color:$color-black2!important;  
 //   }
 // }
+.accordionqa .accordionblock button.question, .sort_block .more a{
+   background: $color-black2;
+   border: solid 1px $color-yellow2!important;
+   &:hover, &:focus{
+    background: $color-black2!important;
+    border: solid 1px $color-yellow2!important;
+    color:$color-yellow2!important;
+} 
+}
+.accordionqa .accordionblock button.question .openclose_btn:after {
+    border: 2px solid $color-yellow2;
+    border-top: none;
+    border-left: none;
+}
+.sClassroom_btn a {
+    display: inline-block;
+    padding: 0.5em 2em 0.5em 3em;
+    background: $color-black2 url(../images/icon_search3.png) no-repeat left 1em top 0.6em;
+    background-size: 1.3em auto;
+    color: $color-yellow2 !important;
+    border-radius: 5px;
+    border: solid 1px $color-yellow2!important;
 
-
+    &:hover, &:focus{
+        background: $color-black2 url(../images/icon_search3.png) no-repeat left 1em top 0.6em!important;
+        background-size: 1.3em auto!important;
+    } 
+}
+select{
+  background: $color-black2;
+  color: $color-yellow2;
+  border: solid 1px $color-yellow2!important;
+}
+.sort-btn-group .a_btndiv a {
+  border: solid 1px $color-yellow2!important;  
+}
+.sort-btn-group .icon-fa-graphicmode{
+    background: url(../images/icon-graphicmode3.png) no-repeat left center;
+    background-size: 18px auto;
+}
+.sort-btn-group .icon-fa-iconmode{
+    background: url(../images/icon-iconmode3.png) no-repeat left center;
+    background-size: 18px auto;
+}
+.sort-btn-group .icon-fa-sort{
+    &:before{
+        content:'';
+        background: url('../images/icon-updown_y.png')no-repeat center center;
+        background-size: 12px auto;
+    }
+}
+.sort-btn-group .icon-fa-sort-up{
+    &:before{
+        content:'';
+        background: url('../images/icon-up_y.png')no-repeat center center;
+        background-size: 12px auto;
+    }
+}
+.sort-btn-group .icon-fa-sort-down{
+    &:before{
+        content:'';
+        background: url('../images/icon-down_y.png')no-repeat center center;
+        background-size: 12px auto;
+    }
+}
 
 }
 
@@ -197,11 +260,11 @@ blockquote{
     }
 }
 
-.question{
-    span{
-        color:$color-white2!important;
-    }
-}
+// .question{
+//     span{
+//         color:$color-white2!important;
+//     }
+// }
 .q-sort{
     a{
       color:$color-white2!important;
@@ -219,7 +282,44 @@ blockquote{
       color:$color-white2!important;   
   }
 }
+.accordionqa .accordionblock button.question, .sort_block .more a{
+    background: $color-yellow2;
+    color:$color-black2!important;
+    border: solid 1px $color-black2!important;
+    &:hover, &:focus{
+        background: $color-yellow2!important;
+        border: solid 1px $color-black2!important;
+        color:$color-black2!important;
+    } 
+}
+.accordionqa .accordionblock button.question .openclose_btn:after{
+    border: 2px solid $color-black2;
+    border-top: none;
+    border-left: none;
+}
+.sClassroom_btn a {
+    display: inline-block;
+    padding: 0.5em 2em 0.5em 3em;
+    background: $color-yellow2 url(../images/icon_search.png) no-repeat left 1em top 0.6em;
+    background-size: 1.3em auto;
+    color: $color-black2 !important;
+    border-radius: 5px;
+    border: solid 1px $color-black2!important;
 
+    &:hover, &:focus{
+        background: $color-yellow2 url(../images/icon_search.png) no-repeat left 1em top 0.6em!important;
+        background-size: 1.3em auto!important;
+    } 
+}
+select{
+    border:solid 1px $color-black2!important;
+    background: $color-yellow2 url(../images/basic/icon_select_arrow.svg) no-repeat right center;
+    background-size: 20px;
+}
+.sort-btn-group .a_btndiv a{
+ background: $color-yellow2;
+ border:solid 1px $color-black2!important;
+}
 
 }
 
@@ -310,8 +410,61 @@ blockquote{
 //       color:$color-black2!important;  
 //   }
 // }
+.accordionqa .accordionblock button.question, .sort_block .more a{
+   background: $color-black2;
+   &:hover, &:focus{
+    background: $color-black2!important;
+    border: solid 1px $color-white2!important;
+    color:$color-white2!important;
+} 
+}
+.sClassroom_btn a {
+    display: inline-block;
+    padding: 0.5em 2em 0.5em 3em;
+    background: $color-black2 url(../images/icon_search2.png) no-repeat left 1em top 0.6em;
+    background-size: 1.3em auto;
+    color: #fff !important;
+    border-radius: 5px;
+    border: solid 1px $color-white2!important;
 
-
+    &:hover, &:focus{
+        background: $color-black2 url(../images/icon_search2.png) no-repeat left 1em top 0.6em!important;
+        background-size: 1.3em auto!important;
+    } 
+}
+select{
+  background: $color-black2;
+  color: $color-white2;
+}
+.sort-btn-group .icon-fa-graphicmode{
+    background: url(../images/icon-graphicmode2.png) no-repeat left center;
+    background-size: 18px auto;
+}
+.sort-btn-group .icon-fa-iconmode{
+    background: url(../images/icon-iconmode2.png) no-repeat left center;
+    background-size: 18px auto;
+}
+.sort-btn-group .icon-fa-sort{
+    &:before{
+        content:'';
+        background: url('../images/icon-updown_w.png')no-repeat center center;
+        background-size: 12px auto;
+    }
+}
+.sort-btn-group .icon-fa-sort-up{
+    &:before{
+        content:'';
+        background: url('../images/icon-up_w.png')no-repeat center center;
+        background-size: 12px auto;
+    }
+}
+.sort-btn-group .icon-fa-sort-down{
+    &:before{
+        content:'';
+        background: url('../images/icon-down_w.png')no-repeat center center;
+        background-size: 12px auto;
+    }
+}
 
 }
 
@@ -401,6 +554,36 @@ blockquote{
         text-decoration: underline;
     }
 }
+.accordionqa .accordionblock button.question, .sort_block .more a{
+    background: $color-white2;
+    color:$color-black2!important;
+    border: solid 1px $color-black2!important;
+    &:hover, &:focus{
+        background: $color-white2!important;
+        border: solid 1px $color-black2!important;
+        color:$color-black2!important;
+    } 
+}
+.accordionqa .accordionblock button.question .openclose_btn:after{
+    border: 2px solid $color-black2;
+    border-top: none;
+    border-left: none;
+}
+.sClassroom_btn a {
+    display: inline-block;
+    padding: 0.5em 2em 0.5em 3em;
+    background: $color-white2 url(../images/icon_search.png) no-repeat left 1em top 0.6em;
+    background-size: 1.3em auto;
+    color: $color-black2 !important;
+    border-radius: 5px;
+    border: solid 1px $color-black2!important;
+
+    &:hover, &:focus{
+        background: $color-white2 url(../images/icon_search.png) no-repeat left 1em top 0.6em!important;
+        background-size: 1.3em auto!important;
+    } 
+}
+
 .function{
     ul{
         li{
@@ -415,11 +598,11 @@ blockquote{
     }
 }
 
-.question{
-    span{
-        color:$color-white2!important;
-    }
-}
+// .question{
+//     span{
+//         color:$color-white2!important;
+//     }
+// }
 .q-sort{
     a{
       color:$color-white2!important;

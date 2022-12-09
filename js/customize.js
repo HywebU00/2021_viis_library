@@ -1388,8 +1388,8 @@ $(function() {
         }]
     });
       //不同語系
-      var weblang = $('html').attr('lang');
-      if (weblang.substring(0, 2) == 'zh') {
+    var weblang = $('html').attr('lang');
+    if (weblang.substring(0, 2) == 'zh') {
         // console.log("中文");
         $('.slick-prev').attr('title', '上一筆');
         $('.slick-next').attr('title', '下一筆');
@@ -1429,10 +1429,10 @@ $(function() {
 });
 
   // on/off 開關
-  var _switchOnOff = $('.switchOnOff');
-  const textOn = '已啟用自動播放功能';
-  const texOff = '已關閉自動播放功能';
-  _switchOnOff.click(function () {
+var _switchOnOff = $('.switchOnOff');
+const textOn = '已啟用自動播放功能';
+const texOff = '已關閉自動播放功能';
+_switchOnOff.click(function () {
     let _this = $(this);
     if(_this.hasClass('on')){
       _this.removeClass('on').attr('aria-checked', 'false').attr('aria-label' , texOff);
@@ -1442,8 +1442,8 @@ $(function() {
 });
 
   // 待播清單
-  var _playList = $('.playList');
-  _playList.each(function(){
+var _playList = $('.playList');
+_playList.each(function(){
     let _playItem = $(this).find('li>a');
     _playItem.click(function(){
       _playItem.attr('aria-selected','false').parent().removeClass('playing');
@@ -1453,15 +1453,15 @@ $(function() {
 
 
  //navigation readset收合區塊
- $('.navigation').find('li').has('.readset').addClass('hasChild');
- var _navlistChild = $('.navigation').find('li.hasChild');
- $('.navigation>ul>li>a').click(function() {
+$('.navigation').find('li').has('.readset').addClass('hasChild');
+var _navlistChild = $('.navigation').find('li.hasChild');
+$('.navigation>ul>li>a').click(function() {
     $(this).siblings('.readset').slideToggle();
 })
- _navlistChild.children('a').keyup(function() {
+_navlistChild.children('a').keyup(function() {
     $(this).siblings('.readset').fadeIn();
 });
- _navlistChild.find('.text_contrast li:last>a').focusout(function() {
+_navlistChild.find('.text_contrast li:last>a').focusout(function() {
     $(this).parents('.readset').hide();
 });
 
@@ -1488,6 +1488,27 @@ $(".accordionqa .accordionblock").each(function () {
     } else {
         _answercontent.slideUp();
         _openclose_btn.text("縮合頁面工具").removeClass("open");
+    }
+}
+_accordionItem.click(accordion3);
+}
+});
+
+//開啟勾選框與轉出功能
+$(".sort-btn-group .sort_block").each(function () {
+  var _accordionItem = $(this).children(".more");
+  var _openclose_btn = _accordionItem.children("a");
+  var _answercontent = $(this).children(".fun_btn");
+  if (_answercontent.length == 0) {
+    _openclose_btn.hide();
+} else {
+    function accordion3(e) {
+      if (_answercontent.is(":hidden")) {
+        _answercontent.slideDown();
+        _openclose_btn.text("關閉勾選框與轉出功能").addClass("open");
+    } else {
+        _answercontent.slideUp();
+        _openclose_btn.text("開啟勾選框與轉出功能").removeClass("open");
     }
 }
 _accordionItem.click(accordion3);

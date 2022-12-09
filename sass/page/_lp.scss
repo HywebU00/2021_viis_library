@@ -465,8 +465,8 @@
                }
            }
            .caption {
-            height: 8em;
-            overflow: hidden;
+            // height: 8em;
+            // overflow: hidden;
             padding: 0 0 0 5px;
             // @include gutter;
             @include screen('notebook') {
@@ -480,6 +480,7 @@
         //     display: block;
         // }
 
+
         h3, h4{
             line-height: 1.4em;
             font-size: 1.125em;
@@ -490,6 +491,7 @@
             color:#222;
             border-bottom: 0px solid #f6b37f;
             max-height: 3em;
+            clear:none;
             @include text-line(2);
 
             @include screen('notebook') {
@@ -501,7 +503,7 @@
             }
 
         }
-        h4 label{
+        h3 label, h4 label{
             // line-height: 1.4em;
             // font-size: 1.125em;
             // overflow: hidden;
@@ -531,6 +533,7 @@
         // }
         label{
             float: left;
+            margin: -.5em 0 0 0;
             input[type="checkbox"]{
                 margin:.75em .3em 0 0;
             }
@@ -538,13 +541,16 @@
     }
     ul{
         display: block;
+        margin:0 0 0 1.3em;
+        padding: 0;
         li{
             width: 100%;
             padding: 0;
             margin: 0;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
+            // overflow: hidden;
+            // white-space: nowrap;
+            // text-overflow: ellipsis;
+            @include text-line(3);
             float: both;
             flex-basis: calc(100% / 1);
             max-width: calc(100% / 1);
@@ -557,14 +563,15 @@
         }
     }
     p{
-        margin: .5em 0 .5em 1.3em;
+        margin: .2em 0 .2em 1.3em;
         padding: 0;
         color:#0068b7;
-        @include text-line(1);
+        @include text-line(3);
+
     }
     .usage{
         margin-left: 1.3em;
-        @include text-line(1);
+        @include text-line(3);
         color:#222;
         .count{
          color:#0068b7; 
@@ -1410,7 +1417,12 @@ label{
         flex-direction: column;
     }
     .title{
-        padding: .5em .2em;  
+        padding: .5em .2em;
+        min-width: 8em;
+        text-align: right;
+        @include screen('mobile') {
+            text-align: left;
+        }
     }
     .a_btndiv{
         flex:1 1 25%;
@@ -1445,6 +1457,7 @@ label{
         padding: .5em 0;
         margin: 0;
         vertical-align: middle;
+        display: inline-block;
         label{
           margin: 0;
       }
@@ -1544,4 +1557,53 @@ label{
     }
 }
 
+}
+
+.sClassroom_btn{
+    margin: .5em 1em;
+    a{
+        display: inline-block;
+        padding: .5em 2em .5em 3em;
+        background: $primaryColor url('../images/icon_search2.png')no-repeat left 1em top .6em;
+        background-size: 1.3em auto;
+        color:#fff!important;
+        border-radius: 5px;
+        &:hover{
+            color:#ffff41!important;
+            text-decoration: none!important;
+        }
+        &:focus{
+            color:#000000!important;
+            text-decoration: none!important;
+            background:$form-focusbg url('../images/icon_search.png')no-repeat left 1em top .5em!important;
+            background-size: 1.5em auto!important;
+        }
+
+    }
+}
+
+.sort_block{
+    position: relative;
+    .more{
+        margin-top: .2em;
+        a{
+            display: inline-block;
+            background: $primaryColor;
+            color:#fff;
+            border-radius: 5px;
+            padding: .5em;
+            line-height: 1em;
+            &:hover{
+                color:#ffff41!important;
+                text-decoration: none!important;
+            }
+            &:focus{
+                color:#000000!important;
+                text-decoration: none!important;
+            }
+        }
+    }
+    .fun_btn{
+        display: none;
+    }
 }

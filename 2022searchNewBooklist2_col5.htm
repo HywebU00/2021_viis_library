@@ -188,8 +188,8 @@
             <!-- main Start -->
             <div id="center" class="main innerpage">
                 <div class="container">
-                   <!-- menu Start -->
-                   <div class="main_menu">
+                 <!-- menu Start -->
+                 <div class="main_menu">
                     <nav class="menu">
                         <ul>
                             <li><a href="http://www.google.com" target="_blank">最新消息</a></li>
@@ -239,10 +239,24 @@
                     <div class="accordionqa">
                       <!-- accordionblock  start-->
                       <div class="accordionblock">
-                        <button type="button" class="question" aria-expanded="false">
+                        <button type="button" class="question" aria-expanded="false" aria-controls="question_btn">
                           <span class="openclose_btn">縮合頁面工具</span></button>
-                          <div class="answer">
+                          <div class="answer" id="question_btn">
                               <div class="Ablock">
+                                <div class="sClassroom_btn"><a href="#">搜尋資源教室</a></div>
+                                <!-- 新書月份選擇 star -->
+                                <div class="sort-btn-group">
+                                    <div class="title"><label for="pet-select">新書月份選擇：</label></div>
+                                    <select name="pets" id="pet-select">
+                                        <option value="">--請選擇月份--</option>
+                                        <option value="2022年12月">2022年12月</option>
+                                        <option value="2022年12月">2022年11月</option>
+                                        <option value="2022年12月">2022年10月</option>
+                                        <option value="2022年12月">2022年9月</option>
+                                        <option value="2022年12月">2022年8月</option>
+                                    </select>
+                                </div>
+                                <!-- 新書月份選擇 end -->
                                 <!-- 排序條件 star -->
                                 <div class="sort-btn-group">
                                     <div class="title">排序條件：</div>
@@ -346,12 +360,18 @@
                         <!-- 批次處理 star -->
                         <div class="sort-btn-group">
                             <div class="title">批次處理：</div>
-                            <div class="checkbox">
-                                <label><input type="checkbox">全選勾選框</label>
+                            <div class="sort_block">
+                                <div class="more"><a href="javascript:;" aria-expanded="false" aria-controls="openclose_btn">開啟勾選框與轉出功能</a></div>
+                                <div class="fun_btn" id="openclose_bt">
+                                    <div class="checkbox">
+                                        <label><input type="checkbox">全選勾選框</label>
+                                    </div>
+                                    <button class="btn2"><i class="i_mail" aria-hidden="true" focusable="false"></i>Email轉寄</button>
+                                    <button class="btn2"><i class="i_bookmark" aria-hidden="true" focusable="false"></i>加入個人書架</button>
+                                    <button class="btn2"><i class="i_export" aria-hidden="true" focusable="false"></i>匯出檔案</button>
+                                    <button class="btn2"><i class="i_close" aria-hidden="true" focusable="false"></i>批次移除</button>
+                                </div>
                             </div>
-                            <button class="btn2"><i class="i_mail"></i>Email轉寄</button>
-                            <button class="btn2"><i class="i_bookmark"></i>加入個人書架</button>
-                            <button class="btn2"><i class="i_export"></i>匯出檔案</button>
                         </div>
                         <!-- 批次處理 end -->
                     </div>
@@ -407,9 +427,12 @@
                                 </div>
                                 <div class="caption">
                                     <label for="ckbox[]"><input type="checkbox" checked="" title="N00059282" name="ckbox2" id="ckbox[]" style="" value="Y" rel="N00059282"></label>
-                                    <h4>1.走音天后部</h4>
-                                    <p>電子書(epub);電子點字書</p>
-                                    <div class="usage">使用次數：<span class="count">12345</span></div>
+                                    <h3>100個偉大音樂家</h3>
+                                    <p>有聲書(MP3) ; 有聲書(錄音帶) ; 紙本點字書 ; 電子點字書有聲書(MP3) ; 有聲書(錄音帶) ; 紙本點字書 ; 電子點字書</p>
+                                    <ul>
+                                        <li>出版者：志文出版</li>
+                                        <li>適用年齡：成人（一般）</li>
+                                    </ul>
                                 </div>
                             </a>
                         </li>
@@ -420,9 +443,12 @@
                                 </div>
                                 <div class="caption">
                                     <label for="ckbox[]"><input type="checkbox" title="N00059282" name="ckbox2" id="ckbox[]" style="" value="Y" rel="N00059282"></label>
-                                    <h4>2.聽不見的聲音></h4>
+                                    <h3>20不惑：大學校長親授33堂生涯必修課</h3>
                                     <p>電子點字書</p>
-                                    <div class="usage">使用次數：<span class="count">12345</span></div>
+                                    <ul>
+                                        <li>出版者：志文出版</li>
+                                        <li>適用年齡：成人（一般）</li>
+                                    </ul>
                                 </div>
                             </a>
                         </li>
@@ -433,9 +459,14 @@
                                 </div>
                                 <div class="caption">
                                     <label for="ckbox[]"><input type="checkbox" title="N00059282" name="ckbox2" id="ckbox[]" style="" value="Y" rel="N00059282"></label>
-                                    <h4>3.紫禁城裡很有事 明清宮廷小人物的日常生活</h4>
-                                    <p>電子書(epub)</p>
-                                    <div class="usage">使用次數：<span class="count">12345</span></div>
+                                    <h4>世界雖然殘酷, 我們還是...... 生命最痛的省思, 最美的領悟</h4>
+                                    <p>電子點字書 ; 有聲書(MP3) ; 電子書(epub)</p>
+                                    <ul>
+                                        <li>作者：小野著</li>
+                                        <li>出版者：究竟</li>
+                                        <li>出版年：2016</li>
+                                        <li>適用年齡：限視覺障礙者、學習障礙者、聽覺障礙者或其他感知著作有困難之障礙者使用  成人（一般）</li>
+                                    </ul>
                                 </div>
                             </a>
                         </li>
@@ -446,9 +477,14 @@
                                 </div>
                                 <div class="caption">
                                     <label for="ckbox[]"><input type="checkbox" title="N00059282" name="ckbox2" id="ckbox[]" style="" value="Y" rel="N00059282"></label>
-                                    <h4>4.三國到底怎麼回事?</h4>
-                                    <p>電子書(epub)</p>
-                                    <div class="usage">使用次數：<span class="count">12345</span></div>
+                                    <h4>在最暗處看見光</h4>
+                                    <p>有聲書(DAISY) ; 有聲書(MP3) ; 電子書(epub)</p>
+                                    <ul>
+                                        <li>作者：甘仲維 著</li>
+                                        <li>出版者：國立臺灣圖書館</li>
+                                        <li>出版年：2016</li>
+                                        <li>適用年齡：限視覺障礙者、學習障礙者、聽覺障礙者或其他感知著作有困難之障礙者使用  青少年，14-17歲；成人（一般）；樂齡，60歲以上</li>
+                                    </ul>
                                 </div>
                             </a>
                         </li>
@@ -459,9 +495,12 @@
                                 </div>
                                 <div class="caption">
                                     <label for="ckbox[]"><input type="checkbox" title="N00059282" name="ckbox2" id="ckbox[]" style="" value="Y" rel="N00059282"></label>
-                                    <h4>5.李偉文的退休進行式]</h4>
-                                    <p>電子書(epub)</p>
-                                    <div class="usage">使用次數：<span class="count">12345</span></div>
+                                    <h4>西線無戰事</h4>
+                                    <p>紙本點字書 ; 有聲書(DAISY) ; 有聲書(MP3) ; 有聲書(錄音帶)</p>
+                                    <ul>
+                                        <li>出版者：志文出版</li>
+                                        <li>適用年齡：成人（一般）</li>
+                                    </ul>
                                 </div>
                             </a>
                         </li>
@@ -472,9 +511,14 @@
                                 </div>
                                 <div class="caption">
                                     <label for="ckbox[]"><input type="checkbox" title="N00059282" name="ckbox2" id="ckbox[]" style="" value="Y" rel="N00059282"></label>
-                                    <h4>6.三國到底怎麼回事?</h4>
-                                    <p>電子書(epub)</p>
-                                    <div class="usage">使用次數：<span class="count">12345</span></div>
+                                    <h4>世界雖然殘酷, 我們還是...... 生命最痛的省思, 最美的領悟</h4>
+                                    <p>電子點字書 ; 有聲書(MP3) ; 電子書(epub)</p>
+                                    <ul>
+                                        <li>作者：小野著</li>
+                                        <li>出版者：究竟</li>
+                                        <li>出版年：2016</li>
+                                        <li>適用年齡：限視覺障礙者、學習障礙者、聽覺障礙者或其他感知著作有困難之障礙者使用  成人（一般）</li>
+                                    </ul>
                                 </div>
                             </a>
                         </li>
@@ -485,9 +529,12 @@
                                 </div>
                                 <div class="caption">
                                     <label for="ckbox[]"><input type="checkbox" title="N00059282" name="ckbox2" id="ckbox[]" style="" value="Y" rel="N00059282"></label>
-                                    <h4>7.三國到底怎麼回事?</h4>
-                                    <p>電子書(epub)</p>
-                                    <div class="usage">使用次數：<span class="count">12345</span></div>
+                                    <h4>西線無戰事</h4>
+                                    <p>紙本點字書 ; 有聲書(DAISY) ; 有聲書(MP3) ; 有聲書(錄音帶)</p>
+                                    <ul>
+                                        <li>出版者：志文出版</li>
+                                        <li>適用年齡：成人（一般）</li>
+                                    </ul>
                                 </div>
                             </a>
                         </li>
@@ -498,9 +545,12 @@
                                 </div>
                                 <div class="caption">
                                     <label for="ckbox[]"><input type="checkbox" title="N00059282" name="ckbox2" id="ckbox[]" style="" value="Y" rel="N00059282"></label>
-                                    <h4>8.三國到底怎麼回事?</h4>
-                                    <p>電子書(epub)</p>
-                                    <div class="usage">使用次數：<span class="count">12345</span></div>
+                                    <h3>20不惑：大學校長親授33堂生涯必修課</h3>
+                                    <p>電子點字書</p>
+                                    <ul>
+                                        <li>出版者：志文出版</li>
+                                        <li>適用年齡：成人（一般）</li>
+                                    </ul>
                                 </div>
                             </a>
                         </li>
