@@ -289,12 +289,14 @@ img.img-responsive {
             }
         }
         a {
-            padding: .6em 50px .6em 24px;
+            padding: .6em 30px .6em 24px;
             position: relative;
             height: auto;
             line-height: 1.45em;
-            display: block;
+            display: inline-block;
             color:$primaryColor;
+            vertical-align: middle;
+
             @include text-overflow;
             &:before {
                 position: absolute; // outline: 1px solid red;
@@ -328,6 +330,7 @@ img.img-responsive {
                 // top: 2px;
                 // right: 35px;
                 text-align: right;
+                margin-left: 5px;
             }
             &[href$="doc"]:after,&[href$="docx"]:after {
                 background: url(../images/basic/icon_doc.jpg);
@@ -370,6 +373,14 @@ img.img-responsive {
                 color: $aHover !important;
             }
         }
+    }
+    .down_num{
+        padding:  .1em .3em;
+        color:#333;
+        font-size: .875em;
+        background: #eee;
+        line-height: 1em;
+        border-radius: 3px;
     }
 }
 // 外部連結
