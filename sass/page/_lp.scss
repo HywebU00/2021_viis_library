@@ -319,7 +319,6 @@
          }
      }
      .caption {
-        min-height: 15em;
         overflow: hidden;
         @include gutter;
         @include screen('notebook') {
