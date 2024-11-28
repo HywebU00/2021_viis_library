@@ -502,9 +502,9 @@ label{
         img{
             width: 17px;
             height: auto;
-        }    }
+            }    }
 
-    }
+        }
 
 //合作館
 .cooperate{
@@ -535,6 +535,24 @@ label{
                 margin: .5em auto;
                 border: solid 1px #ccc;
             }
+        }
+    }
+}
+
+.sbtnBlock{
+    .sClassroom_btn{
+        margin: .2em 1em 1em;
+        border: solid 1px #1c5f7f;
+    }
+
+    &.f_right{
+        float: right;
+        margin-top: -2.5em;
+
+    }
+    @include screen('mobile') {
+        &.f_right{
+            margin: 0;
         }
     }
 }

@@ -258,6 +258,7 @@ body {
         @include screen('mobile') {
             padding-right: .8em;
             margin-top: 1em;
+            clear: both;
         }
        //  @include screen('xs_mobile') {
        //     margin-top: 2.5em; 
